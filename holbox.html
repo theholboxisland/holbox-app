@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Holbox Tours">
+<title>Holbox Tours</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;background:#f5f5f5;color:#333;overflow-x:hidden}
+header{background:linear-gradient(135deg,#00BCD4,#0097A7);color:white;padding:50px 20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+header h1{font-size:36px;margin-bottom:10px}
+header p{font-size:14px;opacity:0.9}
+.container{max-width:600px;margin:0 auto;padding:20px}
+.card{background:white;border-radius:12px;padding:20px;margin:15px 0;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.card h2{color:#00BCD4;margin:15px 0;font-size:20px}
+.card p{color:#666;font-size:15px;line-height:1.6;margin:10px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0}
+.stat{background:white;padding:15px;text-align:center;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.stat .label{font-size:12px;color:#999;text-transform:uppercase;margin-bottom:10px}
+.stat .value{font-size:28px;font-weight:bold;color:#00BCD4}
+.btn{display:block;width:100%;padding:15px;background:#00BCD4;color:white;border:none;border-radius:8px;font-size:16px;font-weight:600;margin:10px 0;cursor:pointer;transition:all 0.3s}
+.btn:active{background:#0097A7;transform:scale(0.98)}
+.tour-list{margin:15px 0}
+.tour-item{padding:10px;background:#f9f9f9;border-left:4px solid #00BCD4;margin:8px 0;border-radius:4px}
+.contact-info{font-size:15px;line-height:1.8}
+.contact-info a{color:#00BCD4;text-decoration:none;font-weight:600}
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🏝️ Holbox Tours</h1>
+<p>Sistema Financiero</p>
+</header>
+
+<div class="container">
+
+<div class="stats">
+<div class="stat">
+<div class="label">Reservas</div>
+<div class="value">0</div>
+</div>
+<div class="stat">
+<div class="label">Ingreso</div>
+<div class="value">$0</div>
+</div>
+</div>
+
+<div class="card">
+<h2>🎉 ¡Bienvenido!</h2>
+<p>Tu app de administración de tours en Holbox está lista para usar.</p>
+<p><strong>Tours disponibles:</strong></p>
+<div class="tour-list">
+<div class="tour-item">🦈 <strong>Tiburón Ballena</strong> - $2,650 p/p</div>
+<div class="tour-item">✨ <strong>Bioluminiscencia</strong> - $450 p/p</div>
+<div class="tour-item">🚣 <strong>Bio Kayak</strong> - $1,000 p/p</div>
+<div class="tour-item">🏝️ <strong>Tres Islas</strong> - $1,300 p/p</div>
+</div>
+</div>
+
+<div class="card">
+<h2>📱 Instalar como App en iOS</h2>
+<p><strong>Sigue estos pasos:</strong></p>
+<p><strong>1.</strong> Tap en el ícono <strong>Compartir</strong> (cuadrado con flecha ⬆️)</p>
+<p><strong>2.</strong> Selecciona <strong>"Añadir a pantalla de inicio"</strong></p>
+<p><strong>3.</strong> Nombre: <strong>"Holbox Tours"</strong></p>
+<p><strong>4.</strong> Tap en <strong>"Añadir"</strong></p>
+<p style="margin-top:15px;padding:10px;background:#e8f5e9;border-radius:8px;color:#2e7d32;"><strong>✅ ¡La app aparecerá en tu pantalla de inicio!</strong></p>
+</div>
+
+<div class="card">
+<h2>📊 Dashboard</h2>
+<p>Aquí podrás ver:</p>
+<p>📈 Reservas del mes<br>💰 Ingresos totales<br>💸 Gastos y comisiones<br>📈 Ganancia neta<br>👥 Clientes nuevos</p>
+</div>
+
+<div class="card">
+<h2>🎯 Funcionalidades</h2>
+<p>✅ Ver todas tus reservas<br>✅ Crear nuevas reservas<br>✅ Editar reservas existentes<br>✅ Ver estadísticas de ingresos<br>✅ Exportar datos a CSV<br>✅ Datos privados en tu iPhone</p>
+</div>
+
+<div class="card">
+<h2>📞 Contacto</h2>
+<div class="contact-info">
+<p>📱 <strong>+52 984 111 3302</strong></p>
+<p>🌐 <strong>www.theholboxisland.com</strong></p>
+<p>📧 <strong>info@theholboxisland.com</strong></p>
+<p style="margin-top:15px;">💬 <a href="https://wa.me/5298411133302">Enviar WhatsApp</a></p>
+</div>
+</div>
+
+<div class="card">
+<h2>ℹ️ Información</h2>
+<p><strong>Versión:</strong> 1.0.0</p>
+<p><strong>Tipo:</strong> Web App iOS</p>
+<p><strong>Almacenamiento:</strong> Local (en tu iPhone)</p>
+<p><strong>Internet:</strong> Opcional</p>
+<p style="margin-top:15px;font-size:12px;color:#999;">Hecha con ❤️ para Holbox Island Tours</p>
+</div>
+
+</div>
+
+<script>
+console.log('🏝️ Holbox Tours App cargada correctamente');
+</script>
+
+</body>
+</html>
