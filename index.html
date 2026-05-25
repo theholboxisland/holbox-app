@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holbox Island Tours</title>
+    <title>Holbox Island Tours - Reservas</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 480px;
+            max-width: 500px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -27,30 +27,31 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 90vh;
+            min-height: 90vh;
         }
 
         .header {
             background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-            padding: 15px 20px;
+            padding: 20px;
             text-align: center;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            position: relative;
         }
 
         .logo {
             width: 150px;
             height: auto;
-            margin: 5px 0;
+            max-width: 100%;
         }
 
-        .logo img {
+        .logo svg {
             width: 100%;
             height: auto;
-            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
         }
 
         .header h1 {
@@ -61,64 +62,34 @@
         }
 
         .header p {
-            font-size: 10px;
+            font-size: 11px;
             opacity: 0.9;
             margin: 0;
         }
 
-        .tabs {
-            display: flex;
-            background: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
-            overflow-x: auto;
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 12px 8px;
-            background: none;
-            border: none;
-            font-size: 11px;
-            font-weight: 600;
-            color: #666;
-            cursor: pointer;
-            white-space: nowrap;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .tab-btn.active {
-            color: #0099cc;
-        }
-
-        .tab-btn.active::after {
-            content: '';
+        .language-toggle {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            top: 10px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid white;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255,255,255,0.3);
         }
 
         .content {
             flex: 1;
             overflow-y: auto;
             padding: 20px;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         .form-group {
@@ -135,7 +106,7 @@
 
         input, select, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 11px;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 13px;
@@ -149,8 +120,25 @@
             box-shadow: 0 0 0 3px rgba(0, 153, 204, 0.1);
         }
 
+        .price-display {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
         .btn {
-            width: 100%;
+            flex: 1;
             padding: 12px;
             background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
             color: white;
@@ -160,7 +148,6 @@
             font-size: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 10px;
         }
 
         .btn:hover {
@@ -172,114 +159,20 @@
             transform: translateY(0);
         }
 
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .btn-secondary {
             background: #f0f0f0;
             color: #666;
-            margin-top: 8px;
         }
 
         .btn-secondary:hover {
             background: #e0e0e0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid #0099cc;
-        }
-
-        .card h3 {
-            margin: 0 0 8px 0;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .card p {
-            margin: 0;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 12px;
-            margin-bottom: 12px;
-        }
-
-        .stat-number {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .stat-label {
-            font-size: 12px;
-            opacity: 0.9;
-            margin: 5px 0 0 0;
-        }
-
-        .tour-item {
-            background: linear-gradient(135deg, #00d4ff15 0%, #0099cc15 100%);
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border-left: 3px solid #0099cc;
-        }
-
-        .tour-item h4 {
-            margin: 0 0 4px 0;
-            font-size: 13px;
-            color: #333;
-        }
-
-        .tour-price {
-            font-weight: 700;
-            color: #0099cc;
-            font-size: 14px;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 12px;
-        }
-
-        .contact-info a {
-            color: #0099cc;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 13px;
-        }
-
-        .contact-info p {
-            margin: 8px 0;
-            font-size: 13px;
-            color: #333;
-        }
-
-        .booking-list {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .delete-btn {
-            background: #ff4757;
-            padding: 6px 12px;
-            font-size: 11px;
-            width: auto;
-            margin-top: 5px;
-        }
-
-        .delete-btn:hover {
-            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
         }
 
         .success-message {
@@ -290,9 +183,26 @@
             margin-bottom: 15px;
             font-size: 13px;
             display: none;
+            text-align: center;
         }
 
         .success-message.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        .error-message {
+            background: #ff4757;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            display: none;
+            text-align: center;
+        }
+
+        .error-message.show {
             display: block;
             animation: slideDown 0.3s ease;
         }
@@ -308,276 +218,332 @@
             }
         }
 
-        .price-calc {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-            padding: 12px;
-            border-radius: 8px;
-            margin: 15px 0;
-            text-align: center;
-            font-weight: 700;
-            color: #333;
+        .stripe-link {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
         }
 
-        h2 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 15px;
+        .stripe-link:hover {
+            opacity: 0.9;
+        }
+
+        .payment-info {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #1565c0;
+        }
+
+        .required {
+            color: #ff4757;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #ffffff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 6px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <button class="language-toggle" onclick="toggleLanguage()" id="langBtn">EN / ES</button>
             <div class="logo">
-                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAYbBhsDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBgkDBAUCAv/EAGYQAQABAwMBAwYGCQ0LCgUACwABAgMEBQYRBxIhMQgTQVFhcRQiMoGRoRUjN0JScrGzwQkzOGJ0dYKSorK0wtEWFyRDU1RmdpOU0hg0VWNkg6PT4fAlJjZFVkSEw1ek4meVpeTx/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAUGAwQHAQII/8QARBEBAAECAwMJBQMKBQUBAQAAAAECAwQFEQYhMRJBUWFxgZGx0RMUIqHBMuHwFRYjMzRCUlNiciRDkrLxNYKiwtIl4v/aAAwDAQACEQMRAD8AuWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8rrpt0VV11RTTTHNVUzxER62H7P3tTuTdGoaldi2KYwse127N2ee1XxVETM+qJ57v8A3x0Otm4J07QadIx6+MjP5ivie+m1Hj9M93u5eD5P2NNWdq2Xx3UWrduJ/GmZ/qpexgaYwNeIuR2ePFVcZnNyrOLOAsTujfV4TOnhv8EvAIhagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDdTdza3tfM0/Mw7Vi9p92Krd23cp+/jvj41Z7pZsPYqxFyLdHGWpjsbbwVmb93Xkxppv4zozkY1s/eujblpi1j3Jx83s81Y12fje3sz4VR7u/1xDJXzds12auRXGksmGxVnFW4u2aoqpnngAY2cAAfNyui3bquXKppopyLlVU8RET6nhaoAAAAAAAAA" alt="Holbox Island Tours Logo">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="95" fill="#00d4ff"/>
+                    <path d="M100 20 L120 60 L130 40 L110 80 L135 50 L115 90 L140 70 L120 100 L140 85 L125 110 L135 100 L130 120 L120 110 L115 130 L110 115 L105 135 L100 120 L95 135 L90 115 L85 130 L80 110 L75 120 L70 100 L90 85 L75 70 L95 90 L80 50 L100 80 L85 40 L105 60 Z" fill="white"/>
+                    <path d="M70 120 Q100 160 130 120" stroke="black" stroke-width="8" fill="none" stroke-linecap="round"/>
+                </svg>
             </div>
-            <div>
-                <h1>Holbox Island Tours</h1>
-                <p>🌴 Tours de lujo en la Isla de Holbox 🌴</p>
-            </div>
-        </div>
-
-        <div class="tabs">
-            <button class="tab-btn active" onclick="openTab(event, 'dashboard')">Dashboard</button>
-            <button class="tab-btn" onclick="openTab(event, 'book')">Nueva Reserva</button>
-            <button class="tab-btn" onclick="openTab(event, 'bookings')">Reservas</button>
-            <button class="tab-btn" onclick="openTab(event, 'tours')">Tours</button>
-            <button class="tab-btn" onclick="openTab(event, 'contact')">Contacto</button>
+            <h1 id="headerTitle">Holbox Island Tours</h1>
+            <p id="headerSubtitle">🌴 Tours de lujo en la Isla de Holbox 🌴</p>
         </div>
 
         <div class="content">
-            <!-- DASHBOARD -->
-            <div id="dashboard" class="tab-content active">
-                <h2>📊 Dashboard</h2>
-                <div class="stat">
-                    <p class="stat-number" id="totalBookings">0</p>
-                    <p class="stat-label">Reservas Totales</p>
-                </div>
-                <div class="stat">
-                    <p class="stat-number" id="totalRevenue">$0</p>
-                    <p class="stat-label">Ingresos Totales</p>
-                </div>
-                <button class="btn btn-secondary" onclick="exportCSV()">📥 Exportar CSV</button>
-            </div>
+            <div id="successMsg" class="success-message"></div>
+            <div id="errorMsg" class="error-message"></div>
 
-            <!-- NEW BOOKING -->
-            <div id="book" class="tab-content">
-                <h2>✏️ Nueva Reserva</h2>
-                <div class="success-message" id="successMsg">✅ ¡Reserva guardada correctamente!</div>
-                <form onsubmit="addBooking(event)">
-                    <div class="form-group">
-                        <label>Nombre Completo *</label>
-                        <input type="text" id="name" required placeholder="Ej: Juan García">
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" id="email" required placeholder="tu@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Teléfono *</label>
-                        <input type="tel" id="phone" required placeholder="+52 984 111 3302">
-                    </div>
-                    <div class="form-group">
-                        <label>Tour *</label>
-                        <select id="tour" required onchange="updatePrice()">
-                            <option value="">Selecciona un tour...</option>
-                            <option value="Whale Shark Tour">Whale Shark Tour - $2,800</option>
-                            <option value="Bioluminiscencia Clásica">Bioluminiscencia Clásica - $450</option>
-                            <option value="Bioluminiscencia Kayak">Bioluminiscencia Kayak - $1,000</option>
-                            <option value="3 Islands Tour">3 Islands Tour - $750</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Cantidad de Personas *</label>
-                        <input type="number" id="guests" min="1" max="50" required placeholder="1" onchange="updatePrice()">
-                    </div>
-                    <div class="form-group">
-                        <label>Fecha del Tour *</label>
-                        <input type="date" id="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Notas (Opcional)</label>
-                        <textarea id="notes" placeholder="Preferencias especiales..." rows="3"></textarea>
-                    </div>
-                    <div class="price-calc" id="priceDisplay">Precio Total: $0</div>
-                    <button type="submit" class="btn">💳 Guardar Reserva</button>
-                </form>
-            </div>
+            <h2 id="formTitle" style="font-size: 16px; margin-bottom: 15px;">✏️ Nueva Reserva</h2>
 
-            <!-- BOOKINGS LIST -->
-            <div id="bookings" class="tab-content">
-                <h2>📋 Mis Reservas</h2>
-                <div class="booking-list" id="bookingsList">
-                    <p style="color: #999; text-align: center; padding: 20px;">No hay reservas aún</p>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label id="labelName">Nombre Completo <span class="required">*</span></label>
+                    <input type="text" id="name" required>
                 </div>
-            </div>
 
-            <!-- TOURS INFO -->
-            <div id="tours" class="tab-content">
-                <h2>🏖️ Nuestros Tours</h2>
-                <div class="tour-item">
-                    <h4>🦈 Whale Shark Tour</h4>
-                    <p>Nada con los tiburones ballena más grandes del mundo. Experiencia única e inolvidable.</p>
-                    <div class="tour-price">$2,800 p/p</div>
+                <div class="form-group">
+                    <label id="labelEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="email" required>
                 </div>
-                <div class="tour-item">
-                    <h4>✨ Bioluminiscencia Clásica</h4>
-                    <p>Observa el brillo mágico del mar nocturno. Un espectáculo natural increíble.</p>
-                    <div class="tour-price">$450 p/p</div>
-                </div>
-                <div class="tour-item">
-                    <h4>🚣 Bioluminiscencia Kayak</h4>
-                    <p>Kayak nocturno en las aguas brillantes. Adrenalina + naturaleza.</p>
-                    <div class="tour-price">$1,000 p/p</div>
-                </div>
-                <div class="tour-item">
-                    <h4>⛱️ 3 Islands Tour</h4>
-                    <p>Visita las 3 islas más hermosas de Holbox en un solo día.</p>
-                    <div class="tour-price">$750 p/p</div>
-                </div>
-            </div>
 
-            <!-- CONTACT -->
-            <div id="contact" class="tab-content">
-                <h2>📞 Contacto</h2>
-                <div class="contact-info">
-                    <p><strong>🌐 Website</strong></p>
-                    <a href="https://www.theholboxisland.com" target="_blank">www.theholboxisland.com</a>
+                <div class="form-group">
+                    <label id="labelPhone">Teléfono <span class="required">*</span></label>
+                    <input type="tel" id="phone" required>
                 </div>
-                <div class="contact-info">
-                    <p><strong>📱 Teléfono</strong></p>
-                    <p>+52 984 111 3302</p>
+
+                <div class="form-group">
+                    <label id="labelTour">Tour <span class="required">*</span></label>
+                    <select id="tour" onchange="updatePrice()" required>
+                        <option value="">Selecciona un tour...</option>
+                        <option value="Whale Shark Tour">🦈 Whale Shark Tour - $2,800 MXN p/p</option>
+                        <option value="Bioluminiscencia Clásica">✨ Bioluminiscencia Clásica - $450 MXN p/p</option>
+                        <option value="Bioluminiscencia Kayak">🚣 Bioluminiscencia Kayak - $1,000 MXN p/p</option>
+                        <option value="3 Islands Tour">🏝️ 3 Islands Tour - $800 MXN p/p</option>
+                    </select>
                 </div>
-                <div class="contact-info">
-                    <p><strong>✉️ Email</strong></p>
-                    <a href="mailto:info@theholboxisland.com">info@theholboxisland.com</a><br>
-                    <a href="mailto:erwinayvar@gmail.com">erwinayvar@gmail.com</a>
+
+                <div class="form-group">
+                    <label id="labelGuests">Cantidad de Personas <span class="required">*</span></label>
+                    <input type="number" id="guests" min="1" value="1" onchange="updatePrice()" required>
                 </div>
-                <div class="contact-info">
-                    <p><strong>📍 Ubicación</strong></p>
-                    <p>Isla Holbox, Quintana Roo, México</p>
+
+                <div class="price-display" id="priceDisplay">Precio Total: $0</div>
+
+                <div class="form-group">
+                    <label id="labelDate">Fecha del Tour <span class="required">*</span></label>
+                    <input type="date" id="date" required>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label id="labelHotel">Hotel / Ubicación de Pick Up <span class="required">*</span></label>
+                    <input type="text" id="hotel" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="labelNotes">Notas / Comentarios (Opcional)</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+
+                <div id="paymentInfo" class="payment-info"></div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn" id="btnSubmit">💳 Guardar Reserva</button>
+                    <button type="reset" class="btn btn-secondary" id="btnReset">Limpiar</button>
+                </div>
+            </form>
         </div>
     </div>
 
     <script>
-        const TOUR_PRICES = {
-            'Whale Shark Tour': 2800,
-            'Bioluminiscencia Clásica': 450,
-            'Bioluminiscencia Kayak': 1000,
-            '3 Islands Tour': 750
+        // Configuración
+        const CONFIG = {
+            googleSheetId: '1h70J77X5hRaUcN_AbV5sizM0i2ErnYxgb4FRLaDo4dk',
+            webhookUrl: 'https://script.google.com/macros/s/AKfycbzgrOb6RYT3QAxBMUu5uELOvbtFU2o2-65oPOE0e0tXiW2DCaJuFGbznQ2dN6gzqfkn/exec',
+            stripeLinks: {
+                'Whale Shark Tour': 'https://buy.stripe.com/4gMfZgfLNbqH9U964743T2x',
+                'Bioluminiscencia Clásica': 'https://buy.stripe.com/7sYcN4dDFcuL0jzbor43T2y',
+                'Bioluminiscencia Kayak': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z',
+                '3 Islands Tour': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z'
+            },
+            tourPrices: {
+                'Whale Shark Tour': 2800,
+                'Bioluminiscencia Clásica': 450,
+                'Bioluminiscencia Kayak': 1000,
+                '3 Islands Tour': 800
+            }
         };
 
-        let bookings = JSON.parse(localStorage.getItem('holbox_bookings')) || [];
+        const translations = {
+            es: {
+                headerTitle: 'Holbox Island Tours',
+                headerSubtitle: '🌴 Tours de lujo en la Isla de Holbox 🌴',
+                formTitle: '✏️ Nueva Reserva',
+                labelName: 'Nombre Completo',
+                labelEmail: 'Email',
+                labelPhone: 'Teléfono',
+                labelTour: 'Tour',
+                labelGuests: 'Cantidad de Personas',
+                labelDate: 'Fecha del Tour',
+                labelHotel: 'Hotel / Ubicación de Pick Up',
+                labelNotes: 'Notas / Comentarios (Opcional)',
+                paymentTitle: '💳 Pago',
+                btnText: '💳 Guardar Reserva',
+                btnReset: 'Limpiar',
+                successMsg: '✅ ¡Reserva guardada correctamente! El equipo de Holbox se contactará pronto.',
+                errorMsg: '❌ Error al guardar la reserva. Intenta de nuevo.',
+                priceTotal: 'Precio Total: ',
+                required: '*',
+                selectTour: 'Selecciona un tour...',
+                paymentText: '<strong>Anticipo requerido:</strong> Usa el link de Stripe para realizar el pago del 50% del tour. El saldo se liquida el día del tour.'
+            },
+            en: {
+                headerTitle: 'Holbox Island Tours',
+                headerSubtitle: '🌴 Luxury Tours at Holbox Island 🌴',
+                formTitle: '✏️ New Booking',
+                labelName: 'Full Name',
+                labelEmail: 'Email',
+                labelPhone: 'Phone',
+                labelTour: 'Tour',
+                labelGuests: 'Number of People',
+                labelDate: 'Tour Date',
+                labelHotel: 'Hotel / Pick Up Location',
+                labelNotes: 'Notes / Comments (Optional)',
+                paymentTitle: '💳 Payment',
+                btnText: '💳 Save Booking',
+                btnReset: 'Clear',
+                successMsg: '✅ Booking saved successfully! The Holbox team will contact you soon.',
+                errorMsg: '❌ Error saving booking. Try again.',
+                priceTotal: 'Total Price: ',
+                required: '*',
+                selectTour: 'Select a tour...',
+                paymentText: '<strong>Deposit required:</strong> Use the Stripe link to pay 50% of the tour. The balance is settled on tour day.'
+            }
+        };
 
-        function openTab(event, tabName) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+        let currentLanguage = 'es';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const t = translations[currentLanguage];
+            document.getElementById('headerTitle').textContent = t.headerTitle;
+            document.getElementById('headerSubtitle').textContent = t.headerSubtitle;
+            document.getElementById('formTitle').textContent = t.formTitle;
+            document.getElementById('labelName').innerHTML = t.labelName + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelEmail').innerHTML = t.labelEmail + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelPhone').innerHTML = t.labelPhone + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelTour').innerHTML = t.labelTour + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelGuests').innerHTML = t.labelGuests + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelDate').innerHTML = t.labelDate + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelHotel').innerHTML = t.labelHotel + ' <span class="required">' + t.required + '</span>';
+            document.getElementById('labelNotes').textContent = t.labelNotes;
+            document.getElementById('btnSubmit').innerHTML = '<span id="btnText">' + t.btnText + '</span>';
+            document.getElementById('btnReset').textContent = t.btnReset;
             
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
+            const tourSelect = document.getElementById('tour');
+            if (currentLanguage === 'en') {
+                tourSelect.innerHTML = `
+                    <option value="">Select a tour...</option>
+                    <option value="Whale Shark Tour">🦈 Whale Shark Tour - $2,800 MXN p/p</option>
+                    <option value="Bioluminiscencia Clásica">✨ Classic Bioluminescence - $450 MXN p/p</option>
+                    <option value="Bioluminiscencia Kayak">🚣 Bioluminescence Kayak - $1,000 MXN p/p</option>
+                    <option value="3 Islands Tour">🏝️ 3 Islands Tour - $800 MXN p/p</option>
+                `;
+            } else {
+                tourSelect.innerHTML = `
+                    <option value="">Selecciona un tour...</option>
+                    <option value="Whale Shark Tour">🦈 Whale Shark Tour - $2,800 MXN p/p</option>
+                    <option value="Bioluminiscencia Clásica">✨ Bioluminiscencia Clásica - $450 MXN p/p</option>
+                    <option value="Bioluminiscencia Kayak">🚣 Bioluminiscencia Kayak - $1,000 MXN p/p</option>
+                    <option value="3 Islands Tour">🏝️ 3 Islands Tour - $800 MXN p/p</option>
+                `;
+            }
+            updatePrice();
         }
 
         function updatePrice() {
             const tour = document.getElementById('tour').value;
             const guests = parseInt(document.getElementById('guests').value) || 1;
-            const price = TOUR_PRICES[tour] || 0;
+            const price = CONFIG.tourPrices[tour] || 0;
             const total = price * guests;
-            document.getElementById('priceDisplay').textContent = `Precio Total: $${total.toLocaleString()}`;
+            const t = translations[currentLanguage];
+            
+            document.getElementById('priceDisplay').textContent = t.priceTotal + '$' + total.toLocaleString();
+            
+            const stripeLink = CONFIG.stripeLinks[tour];
+            if (stripeLink && tour) {
+                const paymentHtml = t.paymentText + ' <a href="' + stripeLink + '" class="stripe-link" target="_blank">💳 Ir a Pagar Anticipo</a>';
+                document.getElementById('paymentInfo').innerHTML = paymentHtml;
+            } else {
+                document.getElementById('paymentInfo').innerHTML = '';
+            }
         }
 
-        function addBooking(event) {
+        async function handleSubmit(event) {
             event.preventDefault();
             
-            const booking = {
-                id: Date.now(),
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                tour: document.getElementById('tour').value,
-                guests: parseInt(document.getElementById('guests').value),
-                date: document.getElementById('date').value,
-                notes: document.getElementById('notes').value,
-                totalPrice: TOUR_PRICES[document.getElementById('tour').value] * parseInt(document.getElementById('guests').value),
-                createdAt: new Date().toLocaleDateString('es-MX')
-            };
-
-            bookings.push(booking);
-            localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
-
-            // Show success message
+            const btnSubmit = document.getElementById('btnSubmit');
+            const originalText = btnSubmit.innerHTML;
+            btnSubmit.disabled = true;
+            btnSubmit.innerHTML = '<span class="loading-spinner"></span>Procesando...';
+            
             const successMsg = document.getElementById('successMsg');
-            successMsg.classList.add('show');
-            setTimeout(() => successMsg.classList.remove('show'), 3000);
+            const errorMsg = document.getElementById('errorMsg');
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
 
-            // Reset form
-            event.target.reset();
+            try {
+                const booking = {
+                    nombre: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    telefono: document.getElementById('phone').value,
+                    tour: document.getElementById('tour').value,
+                    personas: parseInt(document.getElementById('guests').value),
+                    fecha: document.getElementById('date').value,
+                    hotel: document.getElementById('hotel').value,
+                    comentarios: document.getElementById('notes').value,
+                    precio: CONFIG.tourPrices[document.getElementById('tour').value] * parseInt(document.getElementById('guests').value),
+                    montoPendiente: (CONFIG.tourPrices[document.getElementById('tour').value] * parseInt(document.getElementById('guests').value)) * 0.5,
+                    source: 'app-reservas'
+                };
+
+                console.log('📤 Enviando reserva:', booking);
+                
+                // Disparar webhook del Apps Script
+                const response = await fetch(CONFIG.webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(booking)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error en webhook: ' + response.statusText);
+                }
+
+                // Mostrar éxito
+                const t = translations[currentLanguage];
+                successMsg.textContent = t.successMsg;
+                successMsg.classList.add('show');
+                
+                // Limpiar formulario
+                setTimeout(() => {
+                    resetForm();
+                    successMsg.classList.remove('show');
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerHTML = originalText;
+                }, 3000);
+
+            } catch (error) {
+                console.error('❌ Error:', error);
+                const t = translations[currentLanguage];
+                errorMsg.textContent = t.errorMsg + ' (' + error.message + ')';
+                errorMsg.classList.add('show');
+                btnSubmit.disabled = false;
+                btnSubmit.innerHTML = originalText;
+            }
+        }
+
+        function resetForm() {
+            document.querySelector('form').reset();
             updatePrice();
-            updateDashboard();
-            displayBookings();
-        }
-
-        function displayBookings() {
-            const list = document.getElementById('bookingsList');
-            if (bookings.length === 0) {
-                list.innerHTML = '<p style="color: #999; text-align: center; padding: 20px;">No hay reservas aún</p>';
-                return;
-            }
-
-            list.innerHTML = bookings.map(booking => `
-                <div class="card">
-                    <h3>${booking.name}</h3>
-                    <p><strong>Tour:</strong> ${booking.tour}</p>
-                    <p><strong>Personas:</strong> ${booking.guests}</p>
-                    <p><strong>Fecha:</strong> ${booking.date}</p>
-                    <p><strong>Precio Total:</strong> $${booking.totalPrice.toLocaleString()}</p>
-                    <p><strong>Email:</strong> ${booking.email}</p>
-                    <p><strong>Teléfono:</strong> ${booking.phone}</p>
-                    ${booking.notes ? `<p><strong>Notas:</strong> ${booking.notes}</p>` : ''}
-                    <button class="btn delete-btn" onclick="deleteBooking(${booking.id})">🗑️ Eliminar</button>
-                </div>
-            `).join('');
-        }
-
-        function deleteBooking(id) {
-            bookings = bookings.filter(b => b.id !== id);
-            localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
-            updateDashboard();
-            displayBookings();
-        }
-
-        function updateDashboard() {
-            document.getElementById('totalBookings').textContent = bookings.length;
-            const total = bookings.reduce((sum, b) => sum + b.totalPrice, 0);
-            document.getElementById('totalRevenue').textContent = `$${total.toLocaleString()}`;
-        }
-
-        function exportCSV() {
-            if (bookings.length === 0) {
-                alert('No hay reservas para exportar');
-                return;
-            }
-
-            let csv = 'Nombre,Email,Teléfono,Tour,Personas,Fecha,Precio Total,Notas,Creado\n';
-            bookings.forEach(b => {
-                csv += `"${b.name}","${b.email}","${b.phone}","${b.tour}",${b.guests},"${b.date}",${b.totalPrice},"${b.notes}","${b.createdAt}"\n`;
-            });
-
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'holbox-bookings.csv';
-            a.click();
         }
 
         // Initialize
-        displayBookings();
-        updateDashboard();
+        updateLanguage();
+        updatePrice();
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
     </script>
 </body>
 </html>
