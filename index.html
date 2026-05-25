@@ -1,118 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Holbox Tours">
-<title>Holbox Tours</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Holbox Tours"><title>Holbox Tours</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;background:#f5f5f5;color:#333;overflow-x:hidden}
-header{background:linear-gradient(135deg,#00BCD4,#0097A7);color:white;padding:50px 20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-header h1{font-size:36px;margin-bottom:10px}
-header p{font-size:14px;opacity:0.9}
-.container{max-width:600px;margin:0 auto;padding:20px}
-.card{background:white;border-radius:12px;padding:20px;margin:15px 0;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
-.card h2{color:#00BCD4;margin:15px 0;font-size:20px}
-.card p{color:#666;font-size:15px;line-height:1.6;margin:10px 0}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0}
-.stat{background:white;padding:15px;text-align:center;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
-.stat .label{font-size:12px;color:#999;text-transform:uppercase;margin-bottom:10px}
-.stat .value{font-size:28px;font-weight:bold;color:#00BCD4}
-.btn{display:block;width:100%;padding:15px;background:#00BCD4;color:white;border:none;border-radius:8px;font-size:16px;font-weight:600;margin:10px 0;cursor:pointer;transition:all 0.3s}
-.btn:active{background:#0097A7;transform:scale(0.98)}
-.tour-list{margin:15px 0}
-.tour-item{padding:10px;background:#f9f9f9;border-left:4px solid #00BCD4;margin:8px 0;border-radius:4px}
-.contact-info{font-size:15px;line-height:1.8}
-.contact-info a{color:#00BCD4;text-decoration:none;font-weight:600}
-@supports (padding: max(0px)) {
-  body {
-    padding-left: max(0px, env(safe-area-inset-left));
-    padding-right: max(0px, env(safe-area-inset-right));
-    padding-bottom: max(0px, env(safe-area-inset-bottom));
-  }
-}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;background:#f5f5f5;color:#333}header{background:linear-gradient(135deg,#00BCD4,#0097A7);color:white;padding:40px 20px;text-align:center}header h1{font-size:32px;margin-bottom:5px}header p{font-size:13px;opacity:.9}.container{max-width:600px;margin:0 auto;padding:20px}.tabs{display:flex;gap:8px;margin:20px 0;overflow-x:auto;padding:0 20px}.tab-btn{padding:10px 16px;background:white;border:2px solid #ddd;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}.tab-btn.active{background:#00BCD4;color:white;border-color:#00BCD4}.tab-content{display:none}.tab-content.active{display:block}.card{background:white;border-radius:12px;padding:20px;margin:15px 0;box-shadow:0 1px 4px rgba(0,0,0,.1)}.card h2{color:#00BCD4;margin:0 0 15px 0;font-size:20px}.card h3{color:#333;margin:15px 0 10px 0;font-size:16px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px 0}.stat{background:white;padding:15px;text-align:center;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.1)}.stat .label{font-size:12px;color:#999;text-transform:uppercase;margin-bottom:10px}.stat .value{font-size:28px;font-weight:bold;color:#00BCD4}.form-group{margin:15px 0}.form-group label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:#333}.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:2px solid #ddd;border-radius:8px;font-size:14px;font-family:inherit}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:#00BCD4;background:#f0f9fb}.btn{display:block;width:100%;padding:14px;background:#00BCD4;color:white;border:none;border-radius:8px;font-size:16px;font-weight:600;margin:10px 0;cursor:pointer}.btn:active{background:#0097A7}.btn-secondary{background:#666}.tour-card{background:#f9f9f9;padding:15px;border-left:4px solid #00BCD4;margin:10px 0;border-radius:8px}.tour-card h4{color:#00BCD4;margin:0 0 8px 0;font-size:15px}.tour-card p{font-size:13px;color:#666;margin:5px 0}.price{font-size:18px;font-weight:bold;color:#00BCD4}.reservation{background:#f0f9fb;padding:12px;border-radius:8px;margin:10px 0;border-left:4px solid #00BCD4}.reservation .name{font-weight:600;color:#333}.reservation .tour{color:#00BCD4;font-size:13px}.reservation .date{color:#999;font-size:12px}.success-msg{background:#e8f5e9;color:#2e7d32;padding:12px;border-radius:8px;margin:10px 0;font-size:13px;font-weight:600}
 </style>
 </head>
 <body>
-
-<header>
-<h1>🏝️ Holbox Tours</h1>
-<p>Sistema Financiero</p>
-</header>
-
+<header><h1>🏝️ Holbox Tours</h1><p>Sistema de Gestión de Reservas</p></header>
 <div class="container">
+<div class="tabs">
+<button class="tab-btn active" onclick="showTab('dashboard')">📊 Dashboard</button>
+<button class="tab-btn" onclick="showTab('nueva')">➕ Nueva Reserva</button>
+<button class="tab-btn" onclick="showTab('reservas')">📋 Reservas</button>
+<button class="tab-btn" onclick="showTab('tours')">🏖️ Tours</button>
+<button class="tab-btn" onclick="showTab('contacto')">📞 Contacto</button>
+</div>
 
+<div id="dashboard" class="tab-content active">
 <div class="stats">
-<div class="stat">
-<div class="label">Reservas</div>
-<div class="value">0</div>
+<div class="stat"><div class="label">Reservas</div><div class="value" id="countReservas">0</div></div>
+<div class="stat"><div class="label">Ingreso</div><div class="value" id="totalIngresos">$0</div></div>
 </div>
-<div class="stat">
-<div class="label">Ingreso</div>
-<div class="value">$0</div>
+<div class="card"><h2>📈 Resumen Financiero</h2><p id="resumenDash" style="color:#666;font-size:14px">Sin reservas aún. ¡Crea la primera!</p></div>
+<div class="card"><h2>🎯 Reservas Recientes</h2><div id="reservasRecientes" style="font-size:13px;color:#666"><p>No hay reservas todavía.</p></div></div>
+</div>
+
+<div id="nueva" class="tab-content">
+<div class="card"><h2>➕ Nueva Reserva</h2>
+<form id="formReserva" onsubmit="crearReserva(event)">
+<div class="form-group"><label>📛 Nombre del Cliente</label><input type="text" id="nombre" placeholder="Ej: Juan Pérez" required></div>
+<div class="form-group"><label>📞 Teléfono</label><input type="tel" id="telefono" placeholder="Ej: +52 984 123 4567"></div>
+<div class="form-group"><label>✉️ Email</label><input type="email" id="email" placeholder="Ej: juan@email.com"></div>
+<div class="form-group"><label>🏖️ Tour</label><select id="tour" required onchange="actualizarPrecio()"><option value="">-- Elige un tour --</option><option value="Tiburón Ballena|2650">🦈 Tiburón Ballena - $2,650</option><option value="Bioluminiscencia Clásica|450">✨ Bioluminiscencia Clásica - $450</option><option value="Bioluminiscencia Kayak|1000">🚣 Bioluminiscencia Kayak - $1,000</option><option value="Tres Islas|1300">🏝️ Tres Islas - $1,300</option></select></div>
+<div class="form-group"><label>👥 Cantidad de Personas</label><input type="number" id="personas" min="1" value="1" required onchange="actualizarPrecio()"></div>
+<div class="form-group"><label>📅 Fecha del Tour</label><input type="date" id="fecha" required></div>
+<div class="form-group"><label>💰 Precio por Persona</label><input type="number" id="precioPersona" readonly></div>
+<div class="form-group"><label>💵 Total (Anticipo)</label><input type="number" id="total" readonly style="background:#e8f5e9;font-weight:bold;font-size:16px;color:#2e7d32"></div>
+<div class="form-group"><label>💳 Método de Pago</label><select id="metodo" required><option value="">-- Selecciona --</option><option value="Transferencia">Transferencia</option><option value="Tarjeta">Tarjeta Crédito/Débito</option><option value="WhatsApp Pay">WhatsApp Pay</option><option value="Efectivo">Efectivo</option></select></div>
+<div class="form-group"><label>📝 Notas (Opcional)</label><textarea id="notas" placeholder="Alergias, preferencias..." rows="3"></textarea></div>
+<button type="submit" class="btn">✅ Guardar Reserva</button><button type="reset" class="btn btn-secondary">🔄 Limpiar</button>
+<div id="mensajeReserva"></div>
+</form>
 </div>
 </div>
 
-<div class="card">
-<h2>🎉 ¡Bienvenido!</h2>
-<p>Tu app de administración de tours en Holbox está lista para usar.</p>
-<p><strong>Tours disponibles:</strong></p>
-<div class="tour-list">
-<div class="tour-item">🦈 <strong>Tiburón Ballena</strong> - $2,650 p/p</div>
-<div class="tour-item">✨ <strong>Bioluminiscencia</strong> - $450 p/p</div>
-<div class="tour-item">🚣 <strong>Bio Kayak</strong> - $1,000 p/p</div>
-<div class="tour-item">🏝️ <strong>Tres Islas</strong> - $1,300 p/p</div>
+<div id="reservas" class="tab-content">
+<div class="card"><h2>📋 Mis Reservas</h2><div id="listaReservas" style="font-size:13px"><p style="color:#999">No hay reservas guardadas.</p></div><button class="btn btn-secondary" onclick="exportarCSV()">📥 Exportar a CSV</button></div>
+</div>
+
+<div id="tours" class="tab-content">
+<div class="card"><h2>🏖️ Tours Disponibles</h2>
+<div class="tour-card"><h4>🦈 Tiburón Ballena</h4><p><strong>Incluye:</strong> Pick up, Seguro, Agua, Fruta, Ceviche, Snorkel, Lifevest</p><p><strong>Duración:</strong> 8 horas | 7:00 AM</p><p class="price">$2,650 p/p</p></div>
+<div class="tour-card"><h4>✨ Bioluminiscencia Clásica</h4><p><strong>Incluye:</strong> Transportación, Guía Bilingüe</p><p><strong>Duración:</strong> 60-90 minutos | Atardecer</p><p class="price">$450 p/p</p></div>
+<div class="tour-card"><h4>🚣 Bioluminiscencia Kayak</h4><p><strong>Incluye:</strong> Transportación, Guía, Kayak</p><p><strong>Duración:</strong> 3 horas | Atardecer</p><p class="price">$1,000 p/p</p></div>
+<div class="tour-card"><h4>🏝️ Tres Islas</h4><p><strong>Incluye:</strong> Pick up hotel, Tour compartido/privado</p><p><strong>Duración:</strong> 3.5 horas | Islas: Pájaro, Pasión, Mosquito</p><p class="price">$1,300 p/p</p></div>
 </div>
 </div>
 
-<div class="card">
-<h2>📱 Instalar como App en iOS</h2>
-<p><strong>Sigue estos pasos:</strong></p>
-<p><strong>1.</strong> Tap en el ícono <strong>Compartir</strong> (cuadrado con flecha ⬆️)</p>
-<p><strong>2.</strong> Selecciona <strong>"Añadir a pantalla de inicio"</strong></p>
-<p><strong>3.</strong> Nombre: <strong>"Holbox Tours"</strong></p>
-<p><strong>4.</strong> Tap en <strong>"Añadir"</strong></p>
-<p style="margin-top:15px;padding:10px;background:#e8f5e9;border-radius:8px;color:#2e7d32;"><strong>✅ ¡La app aparecerá en tu pantalla de inicio!</strong></p>
-</div>
-
-<div class="card">
-<h2>📊 Dashboard</h2>
-<p>Aquí podrás ver:</p>
-<p>📈 Reservas del mes<br>💰 Ingresos totales<br>💸 Gastos y comisiones<br>📈 Ganancia neta<br>👥 Clientes nuevos</p>
-</div>
-
-<div class="card">
-<h2>🎯 Funcionalidades</h2>
-<p>✅ Ver todas tus reservas<br>✅ Crear nuevas reservas<br>✅ Editar reservas existentes<br>✅ Ver estadísticas de ingresos<br>✅ Exportar datos a CSV<br>✅ Datos privados en tu iPhone</p>
-</div>
-
-<div class="card">
-<h2>📞 Contacto</h2>
-<div class="contact-info">
+<div id="contacto" class="tab-content">
+<div class="card"><h2>📞 Contacto</h2>
 <p>📱 <strong>+52 984 111 3302</strong></p>
 <p>🌐 <strong>www.theholboxisland.com</strong></p>
 <p>📧 <strong>info@theholboxisland.com</strong></p>
-<p style="margin-top:15px;">💬 <a href="https://wa.me/5298411133302">Enviar WhatsApp</a></p>
+<p style="margin-top:15px;"><a href="https://wa.me/5298411133302" style="display:inline-block;background:#25D366;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;">💬 Enviar WhatsApp</a></p>
 </div>
-</div>
-
-<div class="card">
-<h2>ℹ️ Información</h2>
-<p><strong>Versión:</strong> 1.0.0</p>
-<p><strong>Tipo:</strong> Web App iOS</p>
-<p><strong>Almacenamiento:</strong> Local (en tu iPhone)</p>
-<p><strong>Internet:</strong> Opcional</p>
-<p style="margin-top:15px;font-size:12px;color:#999;">Hecha con ❤️ para Holbox Island Tours</p>
 </div>
 
 </div>
 
 <script>
-console.log('🏝️ Holbox Tours App cargada correctamente');
+function showTab(t){document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));document.getElementById(t).classList.add('active');event.target.classList.add('active');if(t==='dashboard')actualizarDashboard();if(t==='reservas')actualizarListaReservas()}
+function cargarReservas(){return JSON.parse(localStorage.getItem('holboxReservas'))||[]}
+function guardarReservas(r){localStorage.setItem('holboxReservas',JSON.stringify(r))}
+function actualizarPrecio(){const t=document.getElementById('tour').value;const p=parseInt(document.getElementById('personas').value)||1;if(t){const[n,pr]=t.split('|');const pn=parseInt(pr);document.getElementById('precioPersona').value=pn;document.getElementById('total').value=pn*p}}
+function crearReserva(e){e.preventDefault();const t=document.getElementById('tour').value;if(!t){alert('Selecciona un tour');return}const[tn,tp]=t.split('|');const r={id:Date.now(),nombre:document.getElementById('nombre').value,telefono:document.getElementById('telefono').value,email:document.getElementById('email').value,tour:tn,personas:parseInt(document.getElementById('personas').value),fecha:document.getElementById('fecha').value,precioPersona:parseInt(tp),total:parseInt(document.getElementById('total').value),metodo:document.getElementById('metodo').value,notas:document.getElementById('notas').value,fechaRegistro:new Date().toLocaleDateString('es-MX')};let rs=cargarReservas();rs.push(r);guardarReservas(rs);document.getElementById('mensajeReserva').innerHTML='<div class="success-msg">✅ ¡Reserva guardada!</div>';document.getElementById('formReserva').reset();actualizarDashboard();setTimeout(()=>{showTab('reservas');document.querySelector('[onclick="showTab(\'reservas\')"]').click()},1000)}
+function actualizarDashboard(){const rs=cargarReservas();const ti=rs.reduce((s,r)=>s+r.total,0);document.getElementById('countReservas').textContent=rs.length;document.getElementById('totalIngresos').textContent='$'+ti.toLocaleString();if(rs.length===0){document.getElementById('resumenDash').innerHTML='📊 Sin reservas aún. ¡Crea la primera!';document.getElementById('reservasRecientes').innerHTML='<p>No hay reservas todavía.</p>'}else{const pt={};rs.forEach(r=>{pt[r.tour]=(pt[r.tour]||0)+r.total});let h='<strong>Ingresos por Tour:</strong><br>';Object.entries(pt).forEach(([to,to2])=>{h+=to+': $'+to2.toLocaleString()+'<br>'});document.getElementById('resumenDash').innerHTML=h;const rec=rs.slice(-3).reverse();let rh='';rec.forEach(r=>{rh+='<div class="reservation"><div class="name">'+r.nombre+'</div><div class="tour">'+r.tour+' - '+r.personas+' pers.</div><div class="date">'+r.fecha+' | $'+r.total.toLocaleString()+'</div></div>'});document.getElementById('reservasRecientes').innerHTML=rh}}
+function actualizarListaReservas(){const rs=cargarReservas();let h='';if(rs.length===0){h='<p style="color:#999">No hay reservas guardadas.</p>'}else{rs.forEach((r,i)=>{h+='<div class="reservation"><div class="name">'+r.nombre+'</div><div class="tour">'+r.tour+' | '+r.personas+' pers.</div><div class="date">📅 '+r.fecha+' | 💵 $'+r.total.toLocaleString()+'</div><div class="date">📞 '+(r.telefono||'Sin teléfono')+' | '+r.metodo+'</div>'+(r.notas?'<div class="date">📝 '+r.notas+'</div>':'')+'<button class="btn btn-secondary" style="margin-top:8px;padding:8px;font-size:12px" onclick="eliminarReserva('+r.id+')">🗑️ Eliminar</button></div>'})}document.getElementById('listaReservas').innerHTML=h}
+function eliminarReserva(id){if(confirm('¿Eliminar?')){let rs=cargarReservas();rs=rs.filter(r=>r.id!==id);guardarReservas(rs);actualizarListaReservas();actualizarDashboard()}}
+function exportarCSV(){const rs=cargarReservas();if(rs.length===0){alert('No hay reservas');return}let csv='Nombre,Teléfono,Email,Tour,Personas,Fecha,Precio,Total,Método,Notas\n';rs.forEach(r=>{csv+='"'+r.nombre+'","'+r.telefono+'","'+r.email+'","'+r.tour+'",'+r.personas+',"'+r.fecha+'",'+r.precioPersona+','+r.total+',"'+r.metodo+'","'+r.notas+'"\n'});const b=new Blob([csv],{type:'text/csv'});const u=window.URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='reservas-holbox.csv';document.body.appendChild(a);a.click();window.URL.revokeObjectURL(u);document.body.removeChild(a)}
+actualizarDashboard();
 </script>
-
 </body>
 </html>
