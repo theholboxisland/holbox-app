@@ -436,66 +436,68 @@ const WEBHOOK_URL = 'https://holbox-app.vercel.app/api/webhook';
             }
         }
 
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+       document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="loading"></span>Guardando reserva...';
+
+    const tourData = JSON.parse(localStorage.getItem('tourData') || '{}');
+
+    // Preparar datos COMO JSON
+    const datos = {
+        nombre: document.getElementById('nombre').value,
+        email: document.getElementById('email').value,
+        telefono: document.getElementById('telefono').value,
+        tour: tourData.tour || '',
+        personas: tourData.personas || '1',
+        fecha: document.getElementById('fecha').value,
+        hotel: document.getElementById('hotel').value,
+        comentarios: document.getElementById('comentarios').value,
+        precio: tourData.precioTotal || '0',
+        montoPendiente: tourData.saldoTotal || '0',
+        source: 'app-reservas'
+    };
+
+    console.log('📤 Enviando datos:', datos);
+
+    // ENVIAR COMO JSON A VERCEL
+    fetch('/api/webhook', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(datos),
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('✅ Respuesta:', result);
+        mostrarAlerta('✅ ¡Reserva confirmada! Revisa tu email.', 'success');
+
+        setTimeout(() => {
+            localStorage.removeItem('tourData');
+            localStorage.removeItem('paymentPending');
+            document.getElementById('bookingForm').reset();
+            document.getElementById('tour').value = '';
+            document.getElementById('personas').value = '1';
+            document.getElementById('priceBox').style.display = 'none';
+            document.getElementById('btnPago').style.display = 'none';
+            currentTourData = {};
             
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="loading"></span>Guardando reserva...';
-
-            // Obtener datos del tour desde localStorage
-            const tourData = JSON.parse(localStorage.getItem('tourData') || '{}');
-
-            const formData = new FormData();
-            formData.append('nombre', document.getElementById('nombre').value);
-            formData.append('email', document.getElementById('email').value);
-            formData.append('telefono', document.getElementById('telefono').value);
-            formData.append('tour', tourData.tour || '');
-            formData.append('personas', tourData.personas || '1');
-            formData.append('fecha', document.getElementById('fecha').value);
-            formData.append('hotel', document.getElementById('hotel').value);
-            formData.append('comentarios', document.getElementById('comentarios').value);
-            formData.append('precio', tourData.precioTotal || '0');
-            formData.append('montoPendiente', tourData.saldoTotal || '0');
-            formData.append('source', 'app-reservas');
-
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = WEBHOOK_URL;
-            form.target = 'hidden_iframe';
-
-            for (let [key, value] of formData.entries()) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                form.appendChild(input);
-            }
-
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
-
-            mostrarAlerta('✅ ¡Reserva confirmada! Revisa tu email.', 'success');
-
-            setTimeout(() => {
-                // Limpiar
-                localStorage.removeItem('tourData');
-                localStorage.removeItem('paymentPending');
-                document.getElementById('bookingForm').reset();
-                document.getElementById('tour').value = '';
-                document.getElementById('personas').value = '1';
-                document.getElementById('priceBox').style.display = 'none';
-                document.getElementById('btnPago').style.display = 'none';
-                currentTourData = {};
-                
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '✅ CONFIRMAR RESERVA';
-                
-                mostrarPaso(1);
-            }, 3000);
-        });
-
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '✅ CONFIRMAR RESERVA';
+            
+            mostrarPaso(1);
+        }, 3000);
+    })
+    .catch(error => {
+        console.error('❌ Error:', error);
+        mostrarAlerta('❌ Error al guardar. Intenta de nuevo.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '✅ CONFIRMAR RESERVA';
+    });
+});
         // Fecha mínima = hoy
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('fecha').setAttribute('min', today);
