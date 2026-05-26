@@ -1,0 +1,10 @@
+[build]
+  command = "echo 'Build complete'"
+  publish = "."
+
+[[redirects]]
+  from = "/.netlify/functions/webhook"
+  to = "https://script.google.com/macros/s/AKfycbzgrOb6RYT3QAxBMUu5uELOvbtFU2o2-65oPOE0e0tXiW2DCaJuFGbznQ2dN6gzqfkn/exec"
+  status = 200
+  force = false
+  headers = {Access-Control-Allow-Origin = "*"}
