@@ -129,22 +129,22 @@
         <div class="form-content">
             <h2 style="color: #333; margin-bottom: 20px; font-size: 20px;">📝 Nueva Reserva</h2>
             <div id="alertBox" class="alert"></div>
-            <form id="bookingForm" action="https://formspree.io/f/xyzgwneg" method="POST">
+            <form id="bookingForm">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                    <input type="text" id="nombre" required placeholder="Tu nombre completo">
                 </div>
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <input type="email" id="email" required placeholder="tu@email.com">
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono <span class="required">*</span></label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="+52 984 111 3302">
+                    <input type="tel" id="telefono" required placeholder="+52 984 111 3302">
                 </div>
                 <div class="form-group">
                     <label for="tour">Tour <span class="required">*</span></label>
-                    <select id="tour" name="tour" required onchange="actualizarPrecio()">
+                    <select id="tour" required onchange="actualizarPrecio()">
                         <option value="">Selecciona un tour...</option>
                         <option value="Whale Shark Tour">Whale Shark Tour - $2,800 MXN</option>
                         <option value="Bioluminiscencia Clásica">Bioluminiscencia Clásica - $450 MXN</option>
@@ -155,26 +155,26 @@
                 </div>
                 <div class="form-group">
                     <label for="personas">Cantidad de Personas <span class="required">*</span></label>
-                    <input type="number" id="personas" name="personas" value="1" min="1" max="20" required onchange="actualizarPrecio()">
+                    <input type="number" id="personas" value="1" min="1" max="20" required onchange="actualizarPrecio()">
                 </div>
                 <div class="form-group">
                     <label for="fecha">Fecha del Tour <span class="required">*</span></label>
-                    <input type="date" id="fecha" name="fecha" required>
+                    <input type="date" id="fecha" required>
                 </div>
                 <div class="form-group">
                     <label for="hotel">Hotel / Pick Up <span class="required">*</span></label>
-                    <input type="text" id="hotel" name="hotel" required placeholder="Ej: Hotel Paraíso">
+                    <input type="text" id="hotel" required placeholder="Ej: Hotel Paraíso">
                 </div>
                 <div class="form-group">
                     <label for="comentarios">Comentarios (Opcional)</label>
-                    <textarea id="comentarios" name="comentarios" placeholder="Algún comentario adicional..."></textarea>
+                    <textarea id="comentarios" placeholder="Algún comentario adicional..."></textarea>
                 </div>
-                <input type="hidden" id="precio" name="precio">
-                <input type="hidden" id="montoPendiente" name="montoPendiente">
                 <button type="submit" id="submitBtn">Guardar Reserva</button>
             </form>
         </div>
     </div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <script>
         const TOUR_PRICES = {
@@ -183,6 +183,8 @@
             'Bioluminiscencia Kayak': 1000,
             '3 Islands Tour': 800
         };
+
+        const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzgrOb6RYT3QAxBMUu5uELOvbtFU2o2-65oPOE0e0tXiW2DCaJuFGbznQ2dN6gzqfkn/exec';
 
         function actualizarPrecio() {
             const tour = document.getElementById('tour').value;
@@ -204,9 +206,67 @@
                 Anticipo requerido (50%): $${montoPendiente.toLocaleString('es-MX')} MXN
             `;
 
-            document.getElementById('precio').value = precioTotal;
-            document.getElementById('montoPendiente').value = montoPendiente;
+            window.currentPrice = precioTotal;
+            window.currentMontoPendiente = montoPendiente;
         }
+
+        function mostrarAlerta(mensaje, tipo) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.textContent = mensaje;
+            alertBox.className = `alert ${tipo}`;
+            
+            if (tipo === 'success') {
+                setTimeout(() => {
+                    alertBox.className = 'alert';
+                }, 5000);
+            }
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner"></span>Guardando...';
+
+            const formData = new FormData();
+            formData.append('nombre', document.getElementById('nombre').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('telefono', document.getElementById('telefono').value);
+            formData.append('tour', document.getElementById('tour').value);
+            formData.append('personas', document.getElementById('personas').value);
+            formData.append('fecha', document.getElementById('fecha').value);
+            formData.append('hotel', document.getElementById('hotel').value);
+            formData.append('comentarios', document.getElementById('comentarios').value);
+            formData.append('precio', window.currentPrice || 0);
+            formData.append('montoPendiente', window.currentMontoPendiente || 0);
+            formData.append('source', 'app-reservas');
+
+            const iframe = document.getElementById('hidden_iframe');
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = WEBHOOK_URL;
+            form.target = 'hidden_iframe';
+
+            for (let [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+
+            mostrarAlerta('✅ ¡Reserva guardada exitosamente! Te enviaremos un email de confirmación.', 'success');
+            document.getElementById('bookingForm').reset();
+            document.getElementById('priceInfo').innerHTML = '';
+            
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Guardar Reserva';
+        });
 
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('fecha').setAttribute('min', today);
