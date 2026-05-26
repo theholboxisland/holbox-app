@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holbox Island Tours - Nueva Reserva</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
@@ -20,7 +15,6 @@
             justify-content: center;
             padding: 20px;
         }
-
         .container {
             background: white;
             border-radius: 20px;
@@ -29,33 +23,16 @@
             max-width: 600px;
             overflow: hidden;
         }
-
         .header {
             background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
             padding: 40px 20px;
             text-align: center;
             color: white;
         }
-
-        .header h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .form-content {
-            padding: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
+        .header h1 { font-size: 24px; font-weight: 600; margin-bottom: 5px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        .form-content { padding: 30px; }
+        .form-group { margin-bottom: 20px; }
         label {
             display: block;
             margin-bottom: 8px;
@@ -63,11 +40,7 @@
             color: #333;
             font-size: 14px;
         }
-
-        .required {
-            color: #ff6b6b;
-        }
-
+        .required { color: #ff6b6b; }
         input, select, textarea {
             width: 100%;
             padding: 12px;
@@ -77,18 +50,12 @@
             font-family: inherit;
             transition: border-color 0.3s;
         }
-
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: #00d4ff;
             box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
         }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
+        textarea { resize: vertical; min-height: 100px; }
         .price-info {
             background: #f0f9ff;
             padding: 12px;
@@ -98,7 +65,6 @@
             color: #0099cc;
             border-left: 4px solid #00d4ff;
         }
-
         .alert {
             padding: 12px 16px;
             border-radius: 8px;
@@ -106,21 +72,18 @@
             font-size: 14px;
             display: none;
         }
-
         .alert.success {
             background: #d4edda;
             color: #155724;
             border: 1px solid #c3e6cb;
             display: block;
         }
-
         .alert.error {
             background: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
             display: block;
         }
-
         button {
             width: 100%;
             padding: 14px;
@@ -134,22 +97,15 @@
             transition: transform 0.2s, box-shadow 0.2s;
             margin-top: 10px;
         }
-
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
         }
-
-        button:active {
-            transform: translateY(0);
-        }
-
         button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
-
         .spinner {
             display: inline-block;
             width: 16px;
@@ -160,39 +116,7 @@
             animation: spin 1s linear infinite;
             margin-right: 8px;
         }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .stripe-section {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-        }
-
-        .stripe-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-size: 14px;
-        }
-
-        .stripe-button:hover {
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        @media (max-width: 600px) {
-            .form-content {
-                padding: 20px;
-            }
-
-            .header {
-                padding: 30px 20px;
-            }
-
-            .header h1 {
-                font-size: 20px;
-            }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -202,31 +126,25 @@
             <h1>Holbox Island Tours</h1>
             <p>Tours de lujo en la Isla de Holbox 🌴</p>
         </div>
-
         <div class="form-content">
             <h2 style="color: #333; margin-bottom: 20px; font-size: 20px;">📝 Nueva Reserva</h2>
-
             <div id="alertBox" class="alert"></div>
-
             <form id="bookingForm">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                    <input type="text" id="nombre" required placeholder="Tu nombre completo">
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <input type="email" id="email" required placeholder="tu@email.com">
                 </div>
-
                 <div class="form-group">
                     <label for="telefono">Teléfono <span class="required">*</span></label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="+52 984 111 3302">
+                    <input type="tel" id="telefono" required placeholder="+52 984 111 3302">
                 </div>
-
                 <div class="form-group">
                     <label for="tour">Tour <span class="required">*</span></label>
-                    <select id="tour" name="tour" required onchange="actualizarPrecio()">
+                    <select id="tour" required onchange="actualizarPrecio()">
                         <option value="">Selecciona un tour...</option>
                         <option value="Whale Shark Tour">Whale Shark Tour - $2,800 MXN</option>
                         <option value="Bioluminiscencia Clásica">Bioluminiscencia Clásica - $450 MXN</option>
@@ -235,70 +153,48 @@
                     </select>
                     <div id="priceInfo" class="price-info"></div>
                 </div>
-
                 <div class="form-group">
                     <label for="personas">Cantidad de Personas <span class="required">*</span></label>
-                    <input type="number" id="personas" name="personas" value="1" min="1" max="20" required onchange="actualizarPrecio()">
+                    <input type="number" id="personas" value="1" min="1" max="20" required onchange="actualizarPrecio()">
                 </div>
-
                 <div class="form-group">
                     <label for="fecha">Fecha del Tour <span class="required">*</span></label>
-                    <input type="date" id="fecha" name="fecha" required>
+                    <input type="date" id="fecha" required>
                 </div>
-
                 <div class="form-group">
                     <label for="hotel">Hotel / Pick Up <span class="required">*</span></label>
-                    <input type="text" id="hotel" name="hotel" required placeholder="Ej: Hotel Paraíso">
+                    <input type="text" id="hotel" required placeholder="Ej: Hotel Paraíso">
                 </div>
-
                 <div class="form-group">
                     <label for="comentarios">Comentarios (Opcional)</label>
-                    <textarea id="comentarios" name="comentarios" placeholder="Algún comentario adicional..."></textarea>
+                    <textarea id="comentarios" placeholder="Algún comentario adicional..."></textarea>
                 </div>
-
-                <button type="submit" id="submitBtn">
-                    Guardar Reserva
-                </button>
+                <button type="submit" id="submitBtn">Guardar Reserva</button>
             </form>
-
-            <div class="stripe-section">
-                <p style="color: #666; font-size: 13px; margin-bottom: 15px; text-align: center;">
-                    💳 Pagar con tarjeta (selecciona tu tour arriba)
-                </p>
-                <button id="stripeBtn" type="button" class="stripe-button" style="display: none;">
-                    Ir a Pago Seguro
-                </button>
-            </div>
         </div>
     </div>
 
     <script>
-        const CONFIG = {
-webhookUrl: '/api/webhook.html',                'Bioluminiscencia Clásica': 'https://buy.stripe.com/7sYcN4dDFcuL0jzbor43T2y',
-                'Bioluminiscencia Kayak': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z',
-                '3 Islands Tour': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z'
-            },
-            tourPrices: {
-                'Whale Shark Tour': 2800,
-                'Bioluminiscencia Clásica': 450,
-                'Bioluminiscencia Kayak': 1000,
-                '3 Islands Tour': 800
-            }
+        const TOUR_PRICES = {
+            'Whale Shark Tour': 2800,
+            'Bioluminiscencia Clásica': 450,
+            'Bioluminiscencia Kayak': 1000,
+            '3 Islands Tour': 800
         };
+
+        const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzgrOb6RYT3QAxBMUu5uELOvbtFU2o2-65oPOE0e0tXiW2DCaJuFGbznQ2dN6gzqfkn/exec';
 
         function actualizarPrecio() {
             const tour = document.getElementById('tour').value;
             const personas = parseInt(document.getElementById('personas').value) || 1;
             const priceInfo = document.getElementById('priceInfo');
-            const stripeBtn = document.getElementById('stripeBtn');
 
             if (!tour) {
                 priceInfo.innerHTML = '';
-                stripeBtn.style.display = 'none';
                 return;
             }
 
-            const precioUnitario = CONFIG.tourPrices[tour];
+            const precioUnitario = TOUR_PRICES[tour];
             const precioTotal = precioUnitario * personas;
             const montoPendiente = precioTotal * 0.5;
 
@@ -307,11 +203,6 @@ webhookUrl: '/api/webhook.html',                'Bioluminiscencia Clásica': 'ht
                 <strong>Total: $${precioTotal.toLocaleString('es-MX')} MXN</strong><br>
                 Anticipo requerido (50%): $${montoPendiente.toLocaleString('es-MX')} MXN
             `;
-
-            if (CONFIG.stripeLinks[tour]) {
-                stripeBtn.style.display = 'block';
-                stripeBtn.onclick = () => window.open(CONFIG.stripeLinks[tour], '_blank');
-            }
 
             window.currentPrice = precioTotal;
             window.currentMontoPendiente = montoPendiente;
@@ -336,43 +227,31 @@ webhookUrl: '/api/webhook.html',                'Bioluminiscencia Clásica': 'ht
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner"></span>Guardando...';
 
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                tour: document.getElementById('tour').value,
-                personas: document.getElementById('personas').value,
-                fecha: document.getElementById('fecha').value,
-                hotel: document.getElementById('hotel').value,
-                comentarios: document.getElementById('comentarios').value,
-                precio: window.currentPrice || 0,
-                montoPendiente: window.currentMontoPendiente || 0,
-                source: 'app-reservas'
-            };
+            const formData = new FormData();
+            formData.append('nombre', document.getElementById('nombre').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('telefono', document.getElementById('telefono').value);
+            formData.append('tour', document.getElementById('tour').value);
+            formData.append('personas', document.getElementById('personas').value);
+            formData.append('fecha', document.getElementById('fecha').value);
+            formData.append('hotel', document.getElementById('hotel').value);
+            formData.append('comentarios', document.getElementById('comentarios').value);
+            formData.append('precio', window.currentPrice || 0);
+            formData.append('montoPendiente', window.currentMontoPendiente || 0);
+            formData.append('source', 'app-reservas');
 
             try {
-                const response = await fetch(CONFIG.webhookUrl, {
+                const response = await fetch(WEBHOOK_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
+                    body: formData
                 });
 
-                const data = await response.json();
-
-                if (response.ok && data.success) {
-                    mostrarAlerta('✅ ¡Reserva guardada exitosamente! Te enviaremos un email de confirmación.', 'success');
-                    document.getElementById('bookingForm').reset();
-                    document.getElementById('priceInfo').innerHTML = '';
-                    document.getElementById('stripeBtn').style.display = 'none';
-                } else {
-                    mostrarAlerta('❌ Error al guardar la reserva. Intenta de nuevo.', 'error');
-                    console.error('Error response:', data);
-                }
+                mostrarAlerta('✅ ¡Reserva guardada exitosamente! Te enviaremos un email de confirmación.', 'success');
+                document.getElementById('bookingForm').reset();
+                document.getElementById('priceInfo').innerHTML = '';
             } catch (error) {
                 mostrarAlerta('❌ Error de conexión. Intenta de nuevo.', 'error');
-                console.error('Fetch error:', error);
+                console.error('Error:', error);
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Guardar Reserva';
@@ -380,8 +259,7 @@ webhookUrl: '/api/webhook.html',                'Bioluminiscencia Clásica': 'ht
         }
 
         document.getElementById('bookingForm').addEventListener('submit', enviarReserva);
-
-        // Establecer fecha mínima como hoy
+        
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('fecha').setAttribute('min', today);
     </script>
