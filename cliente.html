@@ -56,14 +56,26 @@
             box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
         }
         textarea { resize: vertical; min-height: 100px; }
-        .price-info {
+        .price-box {
             background: #f0f9ff;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 8px;
-            font-size: 13px;
-            color: #0099cc;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 20px 0;
             border-left: 4px solid #00d4ff;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .price-row.total {
+            font-weight: 700;
+            color: #0099cc;
+            font-size: 18px;
+            border-top: 1px solid #ddd;
+            padding-top: 8px;
+            margin-top: 8px;
         }
         .alert {
             padding: 12px 16px;
@@ -97,7 +109,7 @@
             transition: transform 0.2s, box-shadow 0.2s;
             margin-top: 10px;
         }
-        button:hover {
+        button:hover:not(:disabled) {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
         }
@@ -106,7 +118,49 @@
             cursor: not-allowed;
             transform: none;
         }
-        .spinner {
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        .step-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #666;
+            font-size: 12px;
+        }
+        .step-dot.active {
+            background: #00d4ff;
+            color: white;
+        }
+        .step-dot.completed {
+            background: #22d3a0;
+            color: white;
+        }
+        .step-line {
+            flex: 1;
+            height: 2px;
+            background: #ddd;
+            margin: 0 10px;
+        }
+        .step-line.completed {
+            background: #22d3a0;
+        }
+        h2 { color: #333; margin-bottom: 20px; font-size: 20px; }
+        .loading {
             display: inline-block;
             width: 16px;
             height: 16px;
@@ -126,51 +180,136 @@
             <h1>Holbox Island Tours</h1>
             <p>Tours de lujo en la Isla de Holbox 🌴</p>
         </div>
+
         <div class="form-content">
-            <h2 style="color: #333; margin-bottom: 20px; font-size: 20px;">📝 Nueva Reserva</h2>
+            <div class="step-indicator">
+                <div class="step-dot active" id="dot1">1</div>
+                <div class="step-line" id="line1"></div>
+                <div class="step-dot" id="dot2">2</div>
+                <div class="step-line" id="line2"></div>
+                <div class="step-dot" id="dot3">3</div>
+            </div>
+
             <div id="alertBox" class="alert"></div>
-            <form id="bookingForm">
+
+            <!-- PASO 1: SELECCIONAR TOUR -->
+            <div class="step active" id="step1">
+                <h2>🎯 Paso 1: Elige tu Tour</h2>
+                
                 <div class="form-group">
-                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                    <input type="text" id="nombre" required placeholder="Tu nombre completo">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email <span class="required">*</span></label>
-                    <input type="email" id="email" required placeholder="tu@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono <span class="required">*</span></label>
-                    <input type="tel" id="telefono" required placeholder="+52 984 111 3302">
-                </div>
-                <div class="form-group">
-                    <label for="tour">Tour <span class="required">*</span></label>
+                    <label for="tour">Selecciona tu Tour <span class="required">*</span></label>
                     <select id="tour" required onchange="actualizarPrecio()">
-                        <option value="">Selecciona un tour...</option>
-                        <option value="Whale Shark Tour">Whale Shark Tour - $2,800 MXN</option>
-                        <option value="Bioluminiscencia Clásica">Bioluminiscencia Clásica - $450 MXN</option>
-                        <option value="Bioluminiscencia Kayak">Bioluminiscencia Kayak - $1,000 MXN</option>
-                        <option value="3 Islands Tour">3 Islands Tour - $800 MXN</option>
+                        <option value="">-- Selecciona un tour --</option>
+                        <option value="Whale Shark Tour">🦈 Whale Shark Tour</option>
+                        <option value="Bioluminiscencia Clásica">✨ Bioluminiscencia Clásica</option>
+                        <option value="Bioluminiscencia Kayak">🚣 Bioluminiscencia Kayak</option>
+                        <option value="3 Islands Tour">🏝️ 3 Islands Tour</option>
                     </select>
-                    <div id="priceInfo" class="price-info"></div>
                 </div>
+
                 <div class="form-group">
                     <label for="personas">Cantidad de Personas <span class="required">*</span></label>
                     <input type="number" id="personas" value="1" min="1" max="20" required onchange="actualizarPrecio()">
                 </div>
-                <div class="form-group">
-                    <label for="fecha">Fecha del Tour <span class="required">*</span></label>
-                    <input type="date" id="fecha" required>
+
+                <div class="price-box" id="priceBox" style="display:none;">
+                    <div class="price-row">
+                        <span>Precio por persona:</span>
+                        <span id="pricePerPerson">-</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Cantidad de personas:</span>
+                        <span id="quantityDisplay">-</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">-</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Anticipo requerido (50%):</span>
+                        <span id="depositRequired" style="color: #ff6b6b; font-weight: 600;">-</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total a pagar ahora:</span>
+                        <span id="totalPayment">-</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="hotel">Hotel / Pick Up <span class="required">*</span></label>
-                    <input type="text" id="hotel" required placeholder="Ej: Hotel Paraíso">
+
+                <button type="button" onclick="irAlPago()" id="btnPago" style="display:none;">
+                    💳 Proceder al Pago
+                </button>
+            </div>
+
+            <!-- PASO 2: PAGO -->
+            <div class="step" id="step2">
+                <h2>💳 Paso 2: Realizar Pago</h2>
+                
+                <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+                    <p style="color: #856404; margin-bottom: 12px;">
+                        ℹ️ Se abrirá una ventana para completar el pago de seguridad en Stripe.
+                    </p>
+                    <p style="color: #856404; font-size: 13px;">
+                        Después de pagar, vuelve a esta ventana para confirmar tu reserva.
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="comentarios">Comentarios (Opcional)</label>
-                    <textarea id="comentarios" placeholder="Algún comentario adicional..."></textarea>
-                </div>
-                <button type="submit" id="submitBtn">Guardar Reserva</button>
-            </form>
+
+                <div id="paymentDetails" class="price-box"></div>
+
+                <button type="button" id="btnPaymentConfirm" onclick="confirmarPago()">
+                    ✅ Ya pagué - Continuar
+                </button>
+
+                <button type="button" onclick="volverAlPaso(1)" style="background: #ccc; color: #333;">
+                    ← Volver
+                </button>
+            </div>
+
+            <!-- PASO 3: CONFIRMAR DATOS -->
+            <div class="step" id="step3">
+                <h2>📋 Paso 3: Confirmar Reserva</h2>
+                
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" required placeholder="Tu nombre completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono <span class="required">*</span></label>
+                        <input type="tel" id="telefono" required placeholder="+52 984 111 3302">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha del Tour <span class="required">*</span></label>
+                        <input type="date" id="fecha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hotel">Hotel / Punto de Pick Up <span class="required">*</span></label>
+                        <input type="text" id="hotel" required placeholder="Ej: Hotel Paraíso">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios Especiales (Opcional)</label>
+                        <textarea id="comentarios" placeholder="Alergias, preferencias especiales..."></textarea>
+                    </div>
+
+                    <div id="resumenBox" class="price-box"></div>
+
+                    <button type="submit" id="submitBtn">
+                        ✅ Confirmar Reserva
+                    </button>
+
+                    <button type="button" onclick="volverAlPaso(2)" style="background: #ccc; color: #333;">
+                        ← Volver
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -184,30 +323,132 @@
             '3 Islands Tour': 800
         };
 
+        const STRIPE_LINKS = {
+            'Whale Shark Tour': 'https://buy.stripe.com/4gMfZgfLNbqH9U964743T2x',
+            'Bioluminiscencia Clásica': 'https://buy.stripe.com/7sYcN4dDFcuL0jzbor43T2y',
+            'Bioluminiscencia Kayak': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z',
+            '3 Islands Tour': 'https://buy.stripe.com/eVqbJ06bdbqHeap3VZ43T2z'
+        };
+
         const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzgrOb6RYT3QAxBMUu5uELOvbtFU2o2-65oPOE0e0tXiW2DCaJuFGbznQ2dN6gzqfkn/exec';
+
+        let currentTourData = {};
 
         function actualizarPrecio() {
             const tour = document.getElementById('tour').value;
             const personas = parseInt(document.getElementById('personas').value) || 1;
-            const priceInfo = document.getElementById('priceInfo');
+            const priceBox = document.getElementById('priceBox');
+            const btnPago = document.getElementById('btnPago');
 
             if (!tour) {
-                priceInfo.innerHTML = '';
+                priceBox.style.display = 'none';
+                btnPago.style.display = 'none';
                 return;
             }
 
             const precioUnitario = TOUR_PRICES[tour];
-            const precioTotal = precioUnitario * personas;
-            const montoPendiente = precioTotal * 0.5;
+            const subtotal = precioUnitario * personas;
+            const anticipo = subtotal * 0.5;
 
-            priceInfo.innerHTML = `
-                💰 Precio por persona: $${precioUnitario.toLocaleString('es-MX')} MXN<br>
-                <strong>Total: $${precioTotal.toLocaleString('es-MX')} MXN</strong><br>
-                Anticipo requerido (50%): $${montoPendiente.toLocaleString('es-MX')} MXN
+            document.getElementById('pricePerPerson').textContent = '$' + precioUnitario.toLocaleString('es-MX') + ' MXN';
+            document.getElementById('quantityDisplay').textContent = personas + ' persona' + (personas > 1 ? 's' : '');
+            document.getElementById('subtotal').textContent = '$' + subtotal.toLocaleString('es-MX') + ' MXN';
+            document.getElementById('depositRequired').textContent = '$' + anticipo.toLocaleString('es-MX') + ' MXN';
+            document.getElementById('totalPayment').textContent = '$' + anticipo.toLocaleString('es-MX') + ' MXN';
+
+            currentTourData = {
+                tour: tour,
+                personas: personas,
+                precioUnitario: precioUnitario,
+                subtotal: subtotal,
+                anticipo: anticipo
+            };
+
+            priceBox.style.display = 'block';
+            btnPago.style.display = 'block';
+        }
+
+        function irAlPago() {
+            const tour = currentTourData.tour;
+            const link = STRIPE_LINKS[tour];
+            
+            if (!link) {
+                mostrarAlerta('Tour no válido', 'error');
+                return;
+            }
+
+            document.getElementById('paymentDetails').innerHTML = `
+                <div class="price-row">
+                    <span>Tour:</span>
+                    <span>${tour}</span>
+                </div>
+                <div class="price-row">
+                    <span>Personas:</span>
+                    <span>${currentTourData.personas}</span>
+                </div>
+                <div class="price-row total">
+                    <span>A pagar ahora (50%):</span>
+                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN</span>
+                </div>
             `;
 
-            window.currentPrice = precioTotal;
-            window.currentMontoPendiente = montoPendiente;
+            mostrarPaso(2);
+
+            setTimeout(() => {
+                window.open(link, 'stripe_payment', 'width=500,height=600');
+            }, 500);
+        }
+
+        function confirmarPago() {
+            mostrarAlerta('✅ Pago confirmado. Completa tus datos para finalizar.', 'success');
+            
+            document.getElementById('resumenBox').innerHTML = `
+                <div class="price-row">
+                    <span>Tour:</span>
+                    <span><strong>${currentTourData.tour}</strong></span>
+                </div>
+                <div class="price-row">
+                    <span>Personas:</span>
+                    <span>${currentTourData.personas}</span>
+                </div>
+                <div class="price-row">
+                    <span>Anticipo pagado:</span>
+                    <span style="color: #22d3a0;">$${currentTourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
+                </div>
+                <div class="price-row total">
+                    <span>Saldo a pagar en tour:</span>
+                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN</span>
+                </div>
+            `;
+
+            setTimeout(() => {
+                mostrarPaso(3);
+            }, 1500);
+        }
+
+        function mostrarPaso(paso) {
+            ['step1', 'step2', 'step3'].forEach(s => {
+                document.getElementById(s).classList.remove('active');
+            });
+
+            for (let i = 1; i <= 3; i++) {
+                const dot = document.getElementById('dot' + i);
+                dot.classList.remove('active', 'completed');
+                
+                if (i < paso) {
+                    dot.classList.add('completed');
+                    if (i < 3) document.getElementById('line' + i).classList.add('completed');
+                } else if (i === paso) {
+                    dot.classList.add('active');
+                }
+            }
+
+            document.getElementById('step' + paso).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function volverAlPaso(paso) {
+            mostrarPaso(paso);
         }
 
         function mostrarAlerta(mensaje, tipo) {
@@ -218,7 +459,7 @@
             if (tipo === 'success') {
                 setTimeout(() => {
                     alertBox.className = 'alert';
-                }, 5000);
+                }, 4000);
             }
         }
 
@@ -227,22 +468,21 @@
             
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner"></span>Guardando...';
+            submitBtn.innerHTML = '<span class="loading"></span>Guardando...';
 
             const formData = new FormData();
             formData.append('nombre', document.getElementById('nombre').value);
             formData.append('email', document.getElementById('email').value);
             formData.append('telefono', document.getElementById('telefono').value);
-            formData.append('tour', document.getElementById('tour').value);
-            formData.append('personas', document.getElementById('personas').value);
+            formData.append('tour', currentTourData.tour);
+            formData.append('personas', currentTourData.personas);
             formData.append('fecha', document.getElementById('fecha').value);
             formData.append('hotel', document.getElementById('hotel').value);
             formData.append('comentarios', document.getElementById('comentarios').value);
-            formData.append('precio', window.currentPrice || 0);
-            formData.append('montoPendiente', window.currentMontoPendiente || 0);
+            formData.append('precio', currentTourData.subtotal);
+            formData.append('montoPendiente', currentTourData.anticipo);
             formData.append('source', 'app-reservas');
 
-            const iframe = document.getElementById('hidden_iframe');
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = WEBHOOK_URL;
@@ -260,12 +500,21 @@
             form.submit();
             document.body.removeChild(form);
 
-            mostrarAlerta('✅ ¡Reserva guardada exitosamente! Te enviaremos un email de confirmación.', 'success');
-            document.getElementById('bookingForm').reset();
-            document.getElementById('priceInfo').innerHTML = '';
-            
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Guardar Reserva';
+            mostrarAlerta('✅ ¡Reserva confirmada! Revisa tu email.', 'success');
+
+            setTimeout(() => {
+                document.getElementById('bookingForm').reset();
+                document.getElementById('tour').value = '';
+                document.getElementById('personas').value = '1';
+                document.getElementById('priceBox').style.display = 'none';
+                document.getElementById('btnPago').style.display = 'none';
+                currentTourData = {};
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '✅ Confirmar Reserva';
+                
+                mostrarPaso(1);
+            }, 3000);
         });
 
         const today = new Date().toISOString().split('T')[0];
