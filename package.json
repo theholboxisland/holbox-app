@@ -1,0 +1,10 @@
+{
+  "name": "holbox-tours",
+  "version": "1.0.0",
+  "description": "Holbox Island Tours Booking App",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {}
+}
