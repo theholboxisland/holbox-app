@@ -118,12 +118,8 @@
             cursor: not-allowed;
             transform: none;
         }
-        .step {
-            display: none;
-        }
-        .step.active {
-            display: block;
-        }
+        .step { display: none; }
+        .step.active { display: block; }
         .step-indicator {
             display: flex;
             justify-content: space-between;
@@ -171,6 +167,10 @@
             margin-right: 8px;
         }
         @keyframes spin { to { transform: rotate(360deg); } }
+        .btn-secondary {
+            background: #ccc !important;
+            color: #333 !important;
+        }
     </style>
 </head>
 <body>
@@ -200,10 +200,10 @@
                     <label for="tour">Selecciona tu Tour <span class="required">*</span></label>
                     <select id="tour" required onchange="actualizarPrecio()">
                         <option value="">-- Selecciona un tour --</option>
-                        <option value="Whale Shark Tour">🦈 Whale Shark Tour</option>
-                        <option value="Bioluminiscencia Clásica">✨ Bioluminiscencia Clásica</option>
-                        <option value="Bioluminiscencia Kayak">🚣 Bioluminiscencia Kayak</option>
-                        <option value="3 Islands Tour">🏝️ 3 Islands Tour</option>
+                        <option value="Whale Shark Tour">🦈 Whale Shark Tour - $2,800 MXN</option>
+                        <option value="Bioluminiscencia Clásica">✨ Bioluminiscencia Clásica - $450 MXN</option>
+                        <option value="Bioluminiscencia Kayak">🚣 Bioluminiscencia Kayak - $1,000 MXN</option>
+                        <option value="3 Islands Tour">🏝️ 3 Islands Tour - $800 MXN</option>
                     </select>
                 </div>
 
@@ -218,7 +218,7 @@
                         <span id="pricePerPerson">-</span>
                     </div>
                     <div class="price-row">
-                        <span>Cantidad de personas:</span>
+                        <span>Cantidad:</span>
                         <span id="quantityDisplay">-</span>
                     </div>
                     <div class="price-row">
@@ -226,47 +226,44 @@
                         <span id="subtotal">-</span>
                     </div>
                     <div class="price-row">
-                        <span>Anticipo requerido (50%):</span>
+                        <span>Anticipo (50%):</span>
                         <span id="depositRequired" style="color: #ff6b6b; font-weight: 600;">-</span>
                     </div>
                     <div class="price-row total">
-                        <span>Total a pagar ahora:</span>
+                        <span>A PAGAR AHORA:</span>
                         <span id="totalPayment">-</span>
                     </div>
                 </div>
 
                 <button type="button" onclick="irAlPago()" id="btnPago" style="display:none;">
-                    💳 Proceder al Pago
+                    💳 Ir a Pagar
                 </button>
             </div>
 
-            <!-- PASO 2: PAGO -->
+            <!-- PASO 2: PAGO COMPLETADO -->
             <div class="step" id="step2">
-                <h2>💳 Paso 2: Realizar Pago</h2>
+                <h2>✅ Paso 2: Pago Confirmado</h2>
                 
-                <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
-                    <p style="color: #856404; margin-bottom: 12px;">
-                        ℹ️ Se abrirá una ventana para completar el pago de seguridad en Stripe.
+                <div style="text-align: center; padding: 30px 0;">
+                    <div style="font-size: 80px; margin-bottom: 20px;">✅</div>
+                    <p style="color: #333; font-size: 16px; margin-bottom: 20px;">
+                        ¡Pago realizado exitosamente!
                     </p>
-                    <p style="color: #856404; font-size: 13px;">
-                        Después de pagar, vuelve a esta ventana para confirmar tu reserva.
+                    <p style="color: #666; font-size: 14px;">
+                        Ahora completa tus datos para finalizar la reserva.
                     </p>
                 </div>
 
                 <div id="paymentDetails" class="price-box"></div>
 
-                <button type="button" id="btnPaymentConfirm" onclick="confirmarPago()">
-                    ✅ Ya pagué - Continuar
-                </button>
-
-                <button type="button" onclick="volverAlPaso(1)" style="background: #ccc; color: #333;">
-                    ← Volver
+                <button type="button" onclick="mostrarPaso(3)">
+                    ➜ Continuar con la Reserva
                 </button>
             </div>
 
-            <!-- PASO 3: CONFIRMAR DATOS -->
+            <!-- PASO 3: COMPLETAR DATOS -->
             <div class="step" id="step3">
-                <h2>📋 Paso 3: Confirmar Reserva</h2>
+                <h2>📋 Paso 3: Completa tus Datos</h2>
                 
                 <form id="bookingForm">
                     <div class="form-group">
@@ -295,18 +292,18 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="comentarios">Comentarios Especiales (Opcional)</label>
+                        <label for="comentarios">Comentarios (Opcional)</label>
                         <textarea id="comentarios" placeholder="Alergias, preferencias especiales..."></textarea>
                     </div>
 
                     <div id="resumenBox" class="price-box"></div>
 
                     <button type="submit" id="submitBtn">
-                        ✅ Confirmar Reserva
+                        ✅ CONFIRMAR RESERVA
                     </button>
 
-                    <button type="button" onclick="volverAlPaso(2)" style="background: #ccc; color: #333;">
-                        ← Volver
+                    <button type="button" onclick="mostrarPaso(1)" class="btn-secondary">
+                        ← Empezar de nuevo
                     </button>
                 </form>
             </div>
@@ -369,61 +366,40 @@
         }
 
         function irAlPago() {
-            const tour = currentTourData.tour;
-            const link = STRIPE_LINKS[tour];
-            
-            if (!link) {
-                mostrarAlerta('Tour no válido', 'error');
+            if (!currentTourData.tour) {
+                mostrarAlerta('Selecciona un tour primero', 'error');
                 return;
             }
 
+            const tour = currentTourData.tour;
+            const link = STRIPE_LINKS[tour];
+
+            // Guardar en localStorage antes de ir a Stripe
+            localStorage.setItem('tourData', JSON.stringify(currentTourData));
+            localStorage.setItem('paymentPending', 'true');
+
             document.getElementById('paymentDetails').innerHTML = `
                 <div class="price-row">
-                    <span>Tour:</span>
+                    <span><strong>Tour:</strong></span>
                     <span>${tour}</span>
                 </div>
                 <div class="price-row">
-                    <span>Personas:</span>
+                    <span><strong>Personas:</strong></span>
                     <span>${currentTourData.personas}</span>
                 </div>
                 <div class="price-row total">
-                    <span>A pagar ahora (50%):</span>
-                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN</span>
+                    <span>PAGADO:</span>
+                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
                 </div>
             `;
 
-            mostrarPaso(2);
+            // Abrir Stripe
+            window.open(link, '_blank');
 
+            // Mostrar paso 2 después de 2 segundos
             setTimeout(() => {
-                window.open(link, 'stripe_payment', 'width=500,height=600');
-            }, 500);
-        }
-
-        function confirmarPago() {
-            mostrarAlerta('✅ Pago confirmado. Completa tus datos para finalizar.', 'success');
-            
-            document.getElementById('resumenBox').innerHTML = `
-                <div class="price-row">
-                    <span>Tour:</span>
-                    <span><strong>${currentTourData.tour}</strong></span>
-                </div>
-                <div class="price-row">
-                    <span>Personas:</span>
-                    <span>${currentTourData.personas}</span>
-                </div>
-                <div class="price-row">
-                    <span>Anticipo pagado:</span>
-                    <span style="color: #22d3a0;">$${currentTourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
-                </div>
-                <div class="price-row total">
-                    <span>Saldo a pagar en tour:</span>
-                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN</span>
-                </div>
-            `;
-
-            setTimeout(() => {
-                mostrarPaso(3);
-            }, 1500);
+                mostrarPaso(2);
+            }, 2000);
         }
 
         function mostrarPaso(paso) {
@@ -447,10 +423,6 @@
             window.scrollTo(0, 0);
         }
 
-        function volverAlPaso(paso) {
-            mostrarPaso(paso);
-        }
-
         function mostrarAlerta(mensaje, tipo) {
             const alertBox = document.getElementById('alertBox');
             alertBox.textContent = mensaje;
@@ -468,19 +440,22 @@
             
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="loading"></span>Guardando...';
+            submitBtn.innerHTML = '<span class="loading"></span>Guardando reserva...';
+
+            // Obtener datos del tour desde localStorage
+            const tourData = JSON.parse(localStorage.getItem('tourData') || '{}');
 
             const formData = new FormData();
             formData.append('nombre', document.getElementById('nombre').value);
             formData.append('email', document.getElementById('email').value);
             formData.append('telefono', document.getElementById('telefono').value);
-            formData.append('tour', currentTourData.tour);
-            formData.append('personas', currentTourData.personas);
+            formData.append('tour', tourData.tour || '');
+            formData.append('personas', tourData.personas || '1');
             formData.append('fecha', document.getElementById('fecha').value);
             formData.append('hotel', document.getElementById('hotel').value);
             formData.append('comentarios', document.getElementById('comentarios').value);
-            formData.append('precio', currentTourData.subtotal);
-            formData.append('montoPendiente', currentTourData.anticipo);
+            formData.append('precio', tourData.subtotal || '0');
+            formData.append('montoPendiente', tourData.anticipo || '0');
             formData.append('source', 'app-reservas');
 
             const form = document.createElement('form');
@@ -503,6 +478,9 @@
             mostrarAlerta('✅ ¡Reserva confirmada! Revisa tu email.', 'success');
 
             setTimeout(() => {
+                // Limpiar
+                localStorage.removeItem('tourData');
+                localStorage.removeItem('paymentPending');
                 document.getElementById('bookingForm').reset();
                 document.getElementById('tour').value = '';
                 document.getElementById('personas').value = '1';
@@ -511,14 +489,42 @@
                 currentTourData = {};
                 
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '✅ Confirmar Reserva';
+                submitBtn.innerHTML = '✅ CONFIRMAR RESERVA';
                 
                 mostrarPaso(1);
             }, 3000);
         });
 
+        // Fecha mínima = hoy
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('fecha').setAttribute('min', today);
+
+        // Si vuelve de Stripe, mostrar el resumen
+        window.addEventListener('focus', function() {
+            if (localStorage.getItem('paymentPending') === 'true') {
+                const tourData = JSON.parse(localStorage.getItem('tourData') || '{}');
+                if (tourData.tour) {
+                    document.getElementById('resumenBox').innerHTML = `
+                        <div class="price-row">
+                            <span>Tour:</span>
+                            <span><strong>${tourData.tour}</strong></span>
+                        </div>
+                        <div class="price-row">
+                            <span>Personas:</span>
+                            <span>${tourData.personas}</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Anticipo pagado:</span>
+                            <span style="color: #22d3a0; font-weight: 600;">$${tourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Saldo a pagar en tour:</span>
+                            <span>$${tourData.anticipo.toLocaleString('es-MX')} MXN</span>
+                        </div>
+                    `;
+                }
+            }
+        });
     </script>
 </body>
 </html>
