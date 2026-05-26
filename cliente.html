@@ -214,20 +214,16 @@
 
                 <div class="price-box" id="priceBox" style="display:none;">
                     <div class="price-row">
-                        <span>Precio por persona:</span>
-                        <span id="pricePerPerson">-</span>
+                        <span>Precio total del tour:</span>
+                        <span id="totalTour">-</span>
                     </div>
                     <div class="price-row">
-                        <span>Cantidad:</span>
-                        <span id="quantityDisplay">-</span>
-                    </div>
-                    <div class="price-row">
-                        <span>Subtotal:</span>
-                        <span id="subtotal">-</span>
-                    </div>
-                    <div class="price-row">
-                        <span>Anticipo (50%):</span>
+                        <span>Anticipo requerido:</span>
                         <span id="depositRequired" style="color: #ff6b6b; font-weight: 600;">-</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Saldo a pagar en tour:</span>
+                        <span id="balanceDue" style="color: #0099cc;">-</span>
                     </div>
                     <div class="price-row total">
                         <span>A PAGAR AHORA:</span>
@@ -313,11 +309,11 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <script>
-        const TOUR_PRICES = {
-            'Whale Shark Tour': 2800,
-            'Bioluminiscencia Clásica': 450,
-            'Bioluminiscencia Kayak': 1000,
-            '3 Islands Tour': 800
+        const TOURS = {
+            'Whale Shark Tour': { precio: 2800, anticipo: 500 },
+            'Bioluminiscencia Clásica': { precio: 450, anticipo: 250 },
+            'Bioluminiscencia Kayak': { precio: 1000, anticipo: 400 },
+            '3 Islands Tour': { precio: 800, anticipo: 350 }
         };
 
         const STRIPE_LINKS = {
@@ -343,22 +339,24 @@
                 return;
             }
 
-            const precioUnitario = TOUR_PRICES[tour];
-            const subtotal = precioUnitario * personas;
-            const anticipo = subtotal * 0.5;
+            const tourInfo = TOURS[tour];
+            const precioTotal = tourInfo.precio * personas;
+            const anticipo = tourInfo.anticipo * personas;
+            const saldo = precioTotal - anticipo;
 
-            document.getElementById('pricePerPerson').textContent = '$' + precioUnitario.toLocaleString('es-MX') + ' MXN';
-            document.getElementById('quantityDisplay').textContent = personas + ' persona' + (personas > 1 ? 's' : '');
-            document.getElementById('subtotal').textContent = '$' + subtotal.toLocaleString('es-MX') + ' MXN';
+            document.getElementById('totalTour').textContent = '$' + precioTotal.toLocaleString('es-MX') + ' MXN';
             document.getElementById('depositRequired').textContent = '$' + anticipo.toLocaleString('es-MX') + ' MXN';
+            document.getElementById('balanceDue').textContent = '$' + saldo.toLocaleString('es-MX') + ' MXN';
             document.getElementById('totalPayment').textContent = '$' + anticipo.toLocaleString('es-MX') + ' MXN';
 
             currentTourData = {
                 tour: tour,
                 personas: personas,
-                precioUnitario: precioUnitario,
-                subtotal: subtotal,
-                anticipo: anticipo
+                precioUnitario: tourInfo.precio,
+                anticipo: tourInfo.anticipo,
+                precioTotal: precioTotal,
+                anticipoTotal: anticipo,
+                saldoTotal: saldo
             };
 
             priceBox.style.display = 'block';
@@ -387,9 +385,13 @@
                     <span><strong>Personas:</strong></span>
                     <span>${currentTourData.personas}</span>
                 </div>
+                <div class="price-row">
+                    <span><strong>Anticipo pagado:</strong></span>
+                    <span style="color: #22d3a0; font-weight: 600;">$${currentTourData.anticipoTotal.toLocaleString('es-MX')} MXN ✅</span>
+                </div>
                 <div class="price-row total">
-                    <span>PAGADO:</span>
-                    <span>$${currentTourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
+                    <span>Saldo a pagar en tour:</span>
+                    <span>$${currentTourData.saldoTotal.toLocaleString('es-MX')} MXN</span>
                 </div>
             `;
 
@@ -454,8 +456,8 @@
             formData.append('fecha', document.getElementById('fecha').value);
             formData.append('hotel', document.getElementById('hotel').value);
             formData.append('comentarios', document.getElementById('comentarios').value);
-            formData.append('precio', tourData.subtotal || '0');
-            formData.append('montoPendiente', tourData.anticipo || '0');
+            formData.append('precio', tourData.precioTotal || '0');
+            formData.append('montoPendiente', tourData.saldoTotal || '0');
             formData.append('source', 'app-reservas');
 
             const form = document.createElement('form');
@@ -515,11 +517,11 @@
                         </div>
                         <div class="price-row">
                             <span>Anticipo pagado:</span>
-                            <span style="color: #22d3a0; font-weight: 600;">$${tourData.anticipo.toLocaleString('es-MX')} MXN ✅</span>
+                            <span style="color: #22d3a0; font-weight: 600;">$${tourData.anticipoTotal.toLocaleString('es-MX')} MXN ✅</span>
                         </div>
                         <div class="price-row total">
                             <span>Saldo a pagar en tour:</span>
-                            <span>$${tourData.anticipo.toLocaleString('es-MX')} MXN</span>
+                            <span>$${tourData.saldoTotal.toLocaleString('es-MX')} MXN</span>
                         </div>
                     `;
                 }
