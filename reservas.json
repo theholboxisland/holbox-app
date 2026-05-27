@@ -442,5 +442,17 @@
     "hotel": "Holbox Deluxe Apartments",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 38,
+    "nombre": "Natalia  Rakauskene",
+    "telefono": "+447366474062",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "30 Dec 2025",
+    "hotel": "Marina Sunrise",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
