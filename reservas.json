@@ -130,5 +130,17 @@
     "hotel": "Naj Casa Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 12,
+    "nombre": "Tomas  Brizzi",
+    "telefono": "+541168215466",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "12 Jun 2026",
+    "hotel": "CASA MUUCH HOLLBOX",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
