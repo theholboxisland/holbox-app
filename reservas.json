@@ -346,5 +346,17 @@
     "hotel": "Casa Peregrino",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 30,
+    "nombre": "Josie  Accrocco",
+    "telefono": "+12812174956",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26 Jul 2026",
+    "hotel": "Mapache Hostel",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
