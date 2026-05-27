@@ -382,5 +382,17 @@
     "hotel": "Mapache Hostel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 33,
+    "nombre": "Valerio  Ferrante",
+    "telefono": "+393808917751",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "27 Aug 2026",
+    "hotel": "Holbox midtown suites",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
