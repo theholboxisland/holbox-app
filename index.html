@@ -206,47 +206,42 @@ a.download = 'holbox-bookings.csv';
 a.click();
 }
 
-async function cargarAnalytics() {
-try {
-const response = await fetch('./reservas.json');
-if (!response.ok) throw new Error('No se pudo cargar reservas.json');
-const data = await response.json();
-let allReservas = [];
-if (Array.isArray(data)) {
-if (data.length > 0) {
-if (Array.isArray(data[0])) {
-allReservas = data.flat();
-} else {
-allReservas = data;
-}
-}
-}
-if (!allReservas || allReservas.length === 0) {
-document.getElementById('analyticsData').innerHTML = '<p style="color: #999;">No hay datos en reservas.json</p>';
-document.getElementById('analyticsTotal').textContent = '0';
-return;
-}
-document.getElementById('analyticsTotal').textContent = allReservas.length;
-let html = '<div style="text-align: left; padding: 10px 0;">';
-allReservas.forEach((row) => {
-          const nombre = row.nombre || row[1] || 'Sin nombre';
-          const telefono = row.telefono || row[2] || 'N/A';
-          const pax = row.pax || row[3] || 'N/A';
-          const monto = row.monto || row[4] || 0;
-          const monto_pendiente = row.monto_pendiente !== undefined ? row.monto_pendiente : (row[4] || 0);
-          const fecha = row.fecha || row[5] || 'N/A';
-          const hotel = row.hotel || row[6] || 'N/A';
-          const tour = row.tour || row[7] || 'N/A';
-          const notas = row.notas || row[8] || '';
-          html += `<div class="card" style="margin: 10px 0; padding: 10px;"><h4 style="margin: 0 0 5px 0;">${nombre}</h4><p style="margin: 3px 0; font-size: 12px;"><strong>Tour:</strong> ${tour}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Pax:</strong> ${pax}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Fecha:</strong> ${fecha}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Hotel:</strong> ${hotel}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Monto Total:</strong> $${monto}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Monto Pendiente:</strong> $${monto_pendiente}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Teléfono:</strong> ${telefono}</p>${notas ? `<p style="margin: 3px 0; font-size: 12px;"><strong>Notas:</strong> ${notas}</p>` : ''}</div>`;
-});
-html += '</div>';
-document.getElementById('analyticsData').innerHTML = html;
-} catch (error) {
-console.error('Error cargando reservas.json:', error);
-document.getElementById('analyticsData').innerHTML = `<p style="color: #ff4444;">Error: ${error.message}</p>`;
-}
-}
+    if (!allReservas || allReservas.length === 0) {
+                    document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
+                    document.getElementById('analyticsTotal').textContent = '0';
+                    return;
+    }
+
+              // Poblar filtros
+              const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+              const selMes  = document.getElementById('filtroMes');
+              const selAnio = document.getElementById('filtroAnio');
+              const anios = [...new Set(allReservas.map(r => {
+                              const m = (r.fecha||'').match(/\d{4}/);
+                              return m ? m[0] : null;
+              }).filter(Boolean))].sort().reverse();
+              if (selAnio && selAnio.options.length <= 1) {
+                              anios.forEach(a => { const o = document.createElement('option'); o.value=a; o.textContent=a; selAnio.appendChild(o); });
+              }
+
+              // Filtrar
+              const mesVal  = selMes  ? selMes.value  : '';
+              const anioVal = selAnio ? selAnio.value : '';
+              let filtradas = allReservas.filter(r => {
+                              const f = r.fecha || '';
+                              let ok = true;
+                              if (anioVal) ok = ok && f.includes(anioVal);
+                              if (mesVal)  ok = ok && f.toLowerCase().includes(meses[parseInt(mesVal)-1].toLowerCase());
+                              return ok;
+              });
+
+              document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
+              let html = '<div style="text-align:left;padding:10px 0;">';
+              filtradas.forEach((row) => {
+                              const nombre  = row.nombre   || 'Sin nombre';
+                              const tel     = row.telefono || 'N/A';
+                              const pax     = row.pax      || 'N/A';
+                              const monto   = Number(row.monto) || 0;
 
 displayBookings();
 updateDashboard();
