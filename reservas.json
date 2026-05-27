@@ -310,5 +310,17 @@
     "hotel": "Hotel Villas HM Paraiso Del Mar",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 27,
+    "nombre": "Jennifer Lynn  Hamilton-Carrasco",
+    "telefono": "+15095289463",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "21 Jun 2026",
+    "hotel": "Beachfront Hotel Lapalapa",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
