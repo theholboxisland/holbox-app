@@ -262,5 +262,17 @@
     "hotel": "Hotel Villas Flamingos",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 23,
+    "nombre": "quere",
+    "telefono": "+33651308141",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "23 Aug 2026",
+    "hotel": "Villas Palmar Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
