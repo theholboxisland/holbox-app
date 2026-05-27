@@ -250,5 +250,17 @@
     "hotel": "Coconut by OOL",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 22,
+    "nombre": "Jakob  Norr",
+    "telefono": "+4530315666",
+    "pax": 6,
+    "monto": 16800,
+    "monto_pendiente": 13800,
+    "fecha": "4 Aug 2026",
+    "hotel": "Hotel Villas Flamingos",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
