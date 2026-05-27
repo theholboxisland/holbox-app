@@ -226,5 +226,17 @@
     "hotel": "MADRE Holbox Apartments & Suites",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 20,
+    "nombre": "ISAAC  RODRIGUEZ",
+    "telefono": "+525566287242",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "16 Jul 2026",
+    "hotel": "Ensueño Holbox and Beach Club",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
