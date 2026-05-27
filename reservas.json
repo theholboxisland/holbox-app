@@ -550,5 +550,17 @@
     "hotel": "Hotel Encanto Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 47,
+    "nombre": "michele  wasserman",
+    "telefono": "+12127498418",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "22 Aug 2025",
+    "hotel": "Casa las Tortugas",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
