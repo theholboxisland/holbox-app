@@ -514,5 +514,17 @@
     "hotel": "Casa las Tortugas",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 44,
+    "nombre": "Jon  Peterson",
+    "telefono": "+14806952969",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "13 Sep 2025",
+    "hotel": "Royal Mystique at Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
