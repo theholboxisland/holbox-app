@@ -418,5 +418,17 @@
     "hotel": "AWA",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 36,
+    "nombre": "Barbara Costa de  Araujo",
+    "telefono": "+5511941991227",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "11 Jan 2026",
+    "hotel": "Casa much",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
