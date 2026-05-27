@@ -538,5 +538,17 @@
     "hotel": "Villas Margaritas Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 46,
+    "nombre": "Neil W  Morris",
+    "telefono": "+18019496438",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "19 Aug 2025",
+    "hotel": "Hotel Encanto Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
