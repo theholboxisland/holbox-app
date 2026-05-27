@@ -562,5 +562,17 @@
     "hotel": "Casa las Tortugas",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 48,
+    "nombre": "Alberto  Díaz",
+    "telefono": "+34679801565",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "13 Aug 2025",
+    "hotel": "Casa del viento by OOL hoteles",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
