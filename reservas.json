@@ -598,5 +598,17 @@
     "hotel": "La Puerta Azul Beachfront",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 51,
+    "nombre": "Alberto Carrobles Saez",
+    "telefono": "+34630204634",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "19 Aug 2025",
+    "hotel": "Hotel Villa Tiburon",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
