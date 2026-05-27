@@ -454,5 +454,17 @@
     "hotel": "Marina Sunrise",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 39,
+    "nombre": "Natalia  Rakauskene",
+    "telefono": "+447366474062",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "1 Jan 2026",
+    "hotel": "Marina Sunrise",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
