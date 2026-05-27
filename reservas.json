@@ -622,5 +622,17 @@
     "hotel": "Hotel Macondo Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 53,
+    "nombre": "Carla Yarheli Trejo López",
+    "telefono": "+525537342095",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "1 Aug 2025",
+    "hotel": "AIRBNB Shankara 5, Holbox.",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
