@@ -502,5 +502,17 @@
     "hotel": "La Aldea Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 43,
+    "nombre": "Alexandra  Heinle",
+    "telefono": "+18327016394",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "15 Feb 2026",
+    "hotel": "Casa las Tortugas",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
