@@ -394,5 +394,17 @@
     "hotel": "Holbox midtown suites",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 34,
+    "nombre": "Peter Eg  Larsen",
+    "telefono": "+4542679939",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "14 Jul 2026",
+    "hotel": "Casa del Viento",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
