@@ -214,5 +214,17 @@
     "hotel": "Hotel Boutique Naj Casa Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 19,
+    "nombre": "Dakota  Salazar",
+    "telefono": "+19727620149",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "7 Jul 2026",
+    "hotel": "MADRE Holbox Apartments & Suites",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
