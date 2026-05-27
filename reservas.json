@@ -490,5 +490,17 @@
     "hotel": "Holbox by Xaloc",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 42,
+    "nombre": "Carla  Schrade",
+    "telefono": "+491632798454",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "4 Sep 2025",
+    "hotel": "La Aldea Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
