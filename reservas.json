@@ -610,5 +610,17 @@
     "hotel": "Hotel Villa Tiburon",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 52,
+    "nombre": "Valeria",
+    "telefono": "+393479883211",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "31 Jul 2025",
+    "hotel": "Hotel Macondo Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
