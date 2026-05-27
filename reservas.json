@@ -526,5 +526,17 @@
     "hotel": "Royal Mystique at Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 45,
+    "nombre": "Rebecca  Lloyd",
+    "telefono": "+447702699306",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "1 Sep 2025",
+    "hotel": "Villas Margaritas Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
