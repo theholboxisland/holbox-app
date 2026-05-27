@@ -646,5 +646,17 @@
     "hotel": "Airbnb",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 55,
+    "nombre": "test",
+    "telefono": "123456789",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "5 Jul 2025",
+    "hotel": "test",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
