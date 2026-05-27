@@ -334,5 +334,17 @@
     "hotel": "Beachfront Hotel Lapalapa",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 29,
+    "nombre": "Nina  Dettling",
+    "telefono": "+491632948448",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "12 Aug 2026",
+    "hotel": "Casa Peregrino",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
