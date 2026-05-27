@@ -1,1 +1,12 @@
-
+[
+  [1, "Carlos Rodriguez", "+52 984 1234567", 2, 2800, "2025-06-15", "Hotel Xcaret", "Whale Shark Tour", "Cliente VIP"],
+  [2, "María González", "+52 984 2345678", 4, 1800, "2025-06-20", "Hotel Xcaret", "Bioluminiscencia Clásica", "Familia"],
+  [3, "Juan López", "+52 984 3456789", 3, 3000, "2025-07-05", "Hotel Xcaret", "Whale Shark Tour", ""],
+  [4, "Ana Martinez", "+52 984 4567890", 2, 900, "2025-07-10", "Hotel Xcaret", "Bioluminiscencia Kayak", "Aniversario"],
+  [5, "David Hernandez", "+52 984 5678901", 5, 4000, "2025-07-15", "Hotel Xcaret", "3 Islands Tour", "Grupo"],
+  [6, "Laura Pérez", "+52 984 6789012", 1, 450, "2025-08-01", "Hotel Xcaret", "Bioluminiscencia Clásica", ""],
+  [7, "Miguel Sanchez", "+52 984 7890123", 3, 2400, "2025-08-10", "Hotel Xcaret", "Whale Shark Tour", "Con guía en inglés"],
+  [8, "Sofia Castro", "+52 984 8901234", 2, 1600, "2025-08-20", "Hotel Xcaret", "Bioluminiscencia Kayak", "Pareja"],
+  [9, "Ricardo Flores", "+52 984 9012345", 4, 3200, "2025-09-05", "Hotel Xcaret", "Whale Shark Tour", ""],
+  [10, "Valentina Ruiz", "+52 984 0123456", 2, 800, "2025-09-15", "Hotel Xcaret", "3 Islands Tour", "Viaje de negocios"]
+]
