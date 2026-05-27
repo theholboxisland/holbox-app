@@ -286,5 +286,17 @@
     "hotel": "Las Nubes",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 25,
+    "nombre": "Veronique de  Kort",
+    "telefono": "+31646431788",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "1 Aug 2026",
+    "hotel": "Mis Sueños Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
