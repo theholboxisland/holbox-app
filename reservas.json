@@ -658,5 +658,17 @@
     "hotel": "test",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 56,
+    "nombre": "Carla Maria Ayala Castillo",
+    "telefono": "+393477845525",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "21 Sep 2025",
+    "hotel": "Airbnb - Bungalow @ Mayab Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
