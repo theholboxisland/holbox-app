@@ -274,5 +274,17 @@
     "hotel": "Villas Palmar Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 24,
+    "nombre": "Melissa  Adler",
+    "telefono": "+529991189351",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "2 Aug 2026",
+    "hotel": "Las Nubes",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
