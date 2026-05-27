@@ -466,5 +466,17 @@
     "hotel": "Marina Sunrise",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 40,
+    "nombre": "WALTER  TASSONE",
+    "telefono": "+393382739274",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "12 Dec 2025",
+    "hotel": "Holbox by Xaloc",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
