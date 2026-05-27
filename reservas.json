@@ -238,5 +238,17 @@
     "hotel": "Ensueño Holbox and Beach Club",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 21,
+    "nombre": "Catherine  Mackay",
+    "telefono": "+61448835996",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "10 Jul 2026",
+    "hotel": "Coconut by OOL",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
