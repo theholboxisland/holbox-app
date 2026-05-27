@@ -430,5 +430,17 @@
     "hotel": "Casa much",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 37,
+    "nombre": "Lenny",
+    "telefono": "+31653548041",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "5 Jul 2026",
+    "hotel": "Holbox Deluxe Apartments",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
