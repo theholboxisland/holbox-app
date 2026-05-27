@@ -670,5 +670,17 @@
     "hotel": "Airbnb - Bungalow @ Mayab Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 57,
+    "nombre": "Jeremy Katz",
+    "telefono": "17187576749",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "21 Jul 2025",
+    "hotel": "Soho Holbox Hotel",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
