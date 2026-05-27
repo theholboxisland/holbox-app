@@ -166,5 +166,17 @@
     "hotel": "Airbnb",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 15,
+    "nombre": "Renaux  Alexandre",
+    "telefono": "+33635908472",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "21 May 2026",
+    "hotel": "Casa Hridaya Hotel Boutique",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
