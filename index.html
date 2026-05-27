@@ -229,8 +229,16 @@ return;
 document.getElementById('analyticsTotal').textContent = allReservas.length;
 let html = '<div style="text-align: left; padding: 10px 0;">';
 allReservas.forEach((row) => {
-const [numero, nombre, telefono, pax, monto, fecha, hotel, tour, comentarios] = Array.isArray(row) ? row : [];
-html += `<div class="card" style="margin: 10px 0; padding: 10px;"><h4 style="margin: 0 0 5px 0;">${nombre || 'Sin nombre'}</h4><p style="margin: 3px 0; font-size: 12px;"><strong>Tour:</strong> ${tour || 'N/A'}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Pax:</strong> ${pax || 'N/A'}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Fecha:</strong> ${fecha || 'N/A'}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Monto Pendiente:</strong> $${monto || '0'}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Teléfono:</strong> ${telefono || 'N/A'}</p>${comentarios ? `<p style="margin: 3px 0; font-size: 12px;"><strong>Comentarios:</strong> ${comentarios}</p>` : ''}</div>`;
+          const nombre = row.nombre || row[1] || 'Sin nombre';
+          const telefono = row.telefono || row[2] || 'N/A';
+          const pax = row.pax || row[3] || 'N/A';
+          const monto = row.monto || row[4] || 0;
+          const monto_pendiente = row.monto_pendiente !== undefined ? row.monto_pendiente : (row[4] || 0);
+          const fecha = row.fecha || row[5] || 'N/A';
+          const hotel = row.hotel || row[6] || 'N/A';
+          const tour = row.tour || row[7] || 'N/A';
+          const notas = row.notas || row[8] || '';
+          html += `<div class="card" style="margin: 10px 0; padding: 10px;"><h4 style="margin: 0 0 5px 0;">${nombre}</h4><p style="margin: 3px 0; font-size: 12px;"><strong>Tour:</strong> ${tour}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Pax:</strong> ${pax}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Fecha:</strong> ${fecha}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Hotel:</strong> ${hotel}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Monto Total:</strong> $${monto}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Monto Pendiente:</strong> $${monto_pendiente}</p><p style="margin: 3px 0; font-size: 12px;"><strong>Teléfono:</strong> ${telefono}</p>${notas ? `<p style="margin: 3px 0; font-size: 12px;"><strong>Notas:</strong> ${notas}</p>` : ''}</div>`;
 });
 html += '</div>';
 document.getElementById('analyticsData').innerHTML = html;
