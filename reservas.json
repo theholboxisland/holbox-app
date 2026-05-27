@@ -574,5 +574,17 @@
     "hotel": "Casa del viento by OOL hoteles",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 49,
+    "nombre": "Dana Strobl  Enderlein",
+    "telefono": "+4915117806845",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "8 Sep 2025",
+    "hotel": "Holbox Deluxe Apartments - Calle Caguama con Calle Erizo",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
