@@ -586,5 +586,17 @@
     "hotel": "Holbox Deluxe Apartments - Calle Caguama con Calle Erizo",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 50,
+    "nombre": "Solene Joigner",
+    "telefono": "+33618638311",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "10 Aug 2025",
+    "hotel": "La Puerta Azul Beachfront",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
