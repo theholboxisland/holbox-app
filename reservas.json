@@ -142,5 +142,17 @@
     "hotel": "CASA MUUCH HOLLBOX",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía sistema de booking"
+  },
+  {
+    "id": 13,
+    "nombre": "William  Haynes",
+    "telefono": "+18647354374",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "24 May 2026",
+    "hotel": "Cocoloba",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía sistema de booking"
   }
 ]
