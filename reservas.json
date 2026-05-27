@@ -634,5 +634,17 @@
     "hotel": "AIRBNB Shankara 5, Holbox.",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 54,
+    "nombre": "Valeria Sharypova",
+    "telefono": "9176916581",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "15 Jul 2025",
+    "hotel": "Airbnb",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
