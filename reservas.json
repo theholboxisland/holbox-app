@@ -682,5 +682,17 @@
     "hotel": "Soho Holbox Hotel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 58,
+    "nombre": "erwin<br/>",
+    "telefono": "No proporcionado",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "Thursday, March 23, 2023 8:00 AM CST<br/>",
+    "hotel": "Por confirmar",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
