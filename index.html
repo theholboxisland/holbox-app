@@ -93,8 +93,8 @@ h2 { font-size: 18px; color: #333; margin-bottom: 15px; }
       </div>
       <div class="stat"><p class="stat-number" id="totalBookings">0</p><p class="stat-label">Reservas</p></div>
       <div class="stat" style="background:linear-gradient(135deg,#00b894,#00cec9);"><p class="stat-number" id="totalRevenue">$0</p><p class="stat-label">Ingresos (lo tuyo)</p></div>
-      <div class="stat" style="background:linear-gradient(135deg,#e17055,#d63031);"><p class="stat-number" id="totalEgresos">$0</p><p class="stat-label">Egresos (proveedor)</p></div>
-      <div class="stat" style="background:linear-gradient(135deg,#0099cc,#00d4ff);"><p class="stat-number" id="totalBruto">$0</p><p class="stat-label">Total Bruto Clientes</p></div>
+      <div class="form-group" style="margin-top:10px;margin-bottom:0;"><label>Gastos Google Ads (MXN)</label><input type="number" id="googleAdsCost" value="0" min="0" onchange="cargarDashboard()" style="margin:0;"></div>
+      <div class="stat" style="background:linear-gradient(135deg,#f39c12,#e74c3c);margin-top:12px;"><p class="stat-number" id="netProfit">$0</p><p class="stat-label">Ganancia Neta</p></div>
       <button class="btn btn-secondary" onclick="exportCSV()" style="margin-top:4px;">&#128229; Exportar CSV</button>
     </div>
 
