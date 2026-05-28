@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Holbox Island Tours</title>
+<title>Holbox Island Tours</title> 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 10px; }
@@ -50,628 +50,244 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: #0099cc
 @keyframes slideDown { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 .price-calc { background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); padding: 12px; border-radius: 8px; margin: 15px 0; text-align: center; font-weight: 700; color: #333; }
 h2 { font-size: 18px; color: #333; margin-bottom: 15px; }
-.filtros-wrap { display: flex; gap: 8px; margin: 8px 0 12px 0; flex-wrap: wrap; }
-.filtros-wrap select { flex: 1; padding: 8px; border-radius: 8px; border: 2px solid #ddd; font-size: 12px; width: auto; }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/theholboxisland/holbox-app/main/Logo_Tours__3.png" alt="Logo" onerror="this.style.display='none'">
-    </div>
-    <h1>Holbox Island Tours</h1>
-    <p>&#127796; Tours de lujo en la Isla de Holbox &#127796;</p>
-  </div>
+<div class="header">
+<div class="logo">
+<img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAACgnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAYbBhsDASIAAhEBAxEB/8QAHQEBAAICAwEBAAAAAAAAAAAAAAcIBgkDBAUCAv/EAGYQAQABAwMBAwYGCQ0LCgUACwABAgMEBQYRBxIhMQgTQVFhcRQiMoGRoRUjN0JScrGzwQkzOGJ0dYKSorK0wtEWFyRDU1RmdpOU0hg0VWNkg6PT4fAlJjZFVkSRh7Kztf/EABwEBAAIDAQEBAAAAAAAAAAAAAAUGAwQHAQII/8QARBEBAAECAwMJBQMKBQUBAQAAAAECAwQFEQYhMRJBUWFxgZGx0RMUIqHBMuHwFRYjMzRCUlNiciRDkrLxNYKiwtIl4v/aAAwDAQACEQMRAD8AuWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8rrpt0VV11RTTTHNVUzxER62H7P3tTuTdGoaldi2KYwse127N2ee1XxVETM+qJ57v8A3x0Otm4J07QadIx6+MjP5ivie+m1Hj9M93u5eD5P2NNWdq2Xx3UWrduJ/GmZ/qpexgaYwNeIuR2ePFVcZnNyrOLOAsTujfV4TOnhv8EvAIhagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDdTdza3tfM0/Mw7Vi9p92Krd23cp+/jvj41Z7pZsPYqxFyLdHGWpjsbbwVmb93Xkxppv4zozkY1s/eujblpi1j3Jx83s81Y12fje3sz4VR7u/1xDJXzds12auRXGksmGxVnFW4u2aoqpnngAY2cAAfNyui3bquXKppopyLlVU8RET6nhaoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8rrpt0VV11RTTTHNVUzxER62H7P3tTuTdGoaldi2KYwse127N2ee1XxVETM+qJ57v8A3x0Otm4J07QadIx6+MjP5ivie+m1Hj9M93u5eD5P2NNWdq2Xx3UWrduJ/GmZ/qpexgaYwNeIuR2ePFVcZnNyrOLOAsTujfV4TOnhv8EvAIhagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDdTdza3tfM0/Mw7Vi9p92Krd23cp+/jvj41Z7pZsPYqxFyLdHGWpjsbbwVmb93Xkxppv4zozkY1s/eujblpi1j3Jx83s81Y12fje3sz4VR7u/1xDJXzds12auRXGksmGxVnFW4u2aoqpnngAY2cAAfNyui3bquXKppopyLlVU8RET6nhaoAAAAAAAAA" alt="Logo">
+</div>
+<h1>Holbox Island Tours</h1>
+<p>ð´ Tours de lujo en la Isla de Holbox ð´</p>
+</div>
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="openTab(event, 'dashboard')">Dashboard</button>
-    <button class="tab-btn" onclick="openTab(event, 'book')">Nueva Reserva</button>
-    <button class="tab-btn" onclick="openTab(event, 'bookings')">Reservas</button>
-    <button class="tab-btn" onclick="openTab(event, 'tours')">Tours</button>
-    <button class="tab-btn" onclick="openTab(event, 'contact')">Contacto</button>
-    <button class="tab-btn" onclick="openTab(event, 'analytics')">&#128202; Analytics</button>
-  </div>
+<div class="tabs">
+<button class="tab-btn active" onclick="openTab(event, 'dashboard')">Dashboard</button>
+<button class="tab-btn" onclick="openTab(event, 'book')">Nueva Reserva</button>
+<button class="tab-btn" onclick="openTab(event, 'bookings')">Reservas</button>
+<button class="tab-btn" onclick="openTab(event, 'tours')">Tours</button>
+<button class="tab-btn" onclick="openTab(event, 'contact')">Contacto</button>
+<button class="tab-btn" onclick="openTab(event, 'analytics')">ð Analytics</button>
+</div>
 
-  <div class="content">
+<div class="content">
+<div id="dashboard" class="tab-content active">
+<h2>&#128202; Dashboard</h2>
+<div class="filtros-wrap" style="margin-bottom:12px;">
+<select id="dashMes" onchange="cargarDashboard()" style="flex:1;padding:8px;border-radius:8px;border:2px solid #ddd;font-size:12px;">
+<option value="">Todos los meses</option>
+<option value="1">Enero</option><option value="2">Febrero</option><option value="3">Marzo</option><option value="4">Abril</option><option value="5">Mayo</option><option value="6">Junio</option><option value="7">Julio</option><option value="8">Agosto</option><option value="9">Septiembre</option><option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option>
+</select>
+<select id="dashAnio" onchange="cargarDashboard()" style="flex:1;padding:8px;border-radius:8px;border:2px solid #ddd;font-size:12px;">
+<option value="">Todos los anos</option>
+</select>
+</div>
+<div class="stat"><p class="stat-number" id="totalBookings">0</p><p class="stat-label">Reservas</p></div>
+<div class="stat" style="background:linear-gradient(135deg,#00b894,#00cec9);"><p class="stat-number" id="totalRevenue">$0</p><p class="stat-label">Ingresos (lo tuyo)</p></div>
+<div class="stat" style="background:linear-gradient(135deg,#e17055,#d63031);"><p class="stat-number" id="totalEgresos">$0</p><p class="stat-label">Egresos (proveedor)</p></div>
+<div class="stat" style="background:linear-gradient(135deg,#0099cc,#00d4ff);"><p class="stat-number" id="totalBruto">$0</p><p class="stat-label">Total Bruto Clientes</p></div>
+<button class="btn btn-secondary" onclick="exportCSV()" style="margin-top:8px;">&#128229; Exportar CSV</button>
+</div>
+<div id="book" class="tab-content">
+<h2>âï¸ Nueva Reserva</h2>
+<div class="success-message" id="successMsg">â Â¡Reserva guardada correctamente!</div>
+<form onsubmit="addBooking(event)">
+<div class="form-group"><label>Nombre Completo *</label><input type="text" id="name" required placeholder="Ej: Juan GarcÃ­a"></div>
+<div class="form-group"><label>Email *</label><input type="email" id="email" required placeholder="tu@email.com"></div>
+<div class="form-group"><label>TelÃ©fono *</label><input type="tel" id="phone" required placeholder="+52 984 111 3302"></div>
+<div class="form-group"><label>Tour *</label><select id="tour" required onchange="updatePrice()"><option value="">Selecciona un tour...</option><option value="Whale Shark Tour">Whale Shark Tour - $2,800</option><option value="Bioluminiscencia ClÃ¡sica">Bioluminiscencia ClÃ¡sica - $450</option><option value="Bioluminiscencia Kayak">Bioluminiscencia Kayak - $1,000</option><option value="3 Islands Tour">3 Islands Tour - $800</option></select></div>
+<div class="form-group"><label>Cantidad de Personas *</label><input type="number" id="guests" min="1" max="50" required placeholder="1" onchange="updatePrice()"></div>
+<div class="form-group"><label>Fecha del Tour *</label><input type="date" id="date" required></div>
+<div class="form-group"><label>Notas (Opcional)</label><textarea id="notes" placeholder="Preferencias especiales..." rows="3"></textarea></div>
+<div class="price-calc" id="priceDisplay">Precio Total: $0</div>
+<button type="submit" class="btn">ð³ Guardar Reserva</button>
+</form>
+</div>
 
-    <div id="dashboard" class="tab-content active">
-      <h2>&#128202; Dashboard</h2>
-      <div class="filtros-wrap" style="margin-bottom:12px;">
-        <select id="dashMes" onchange="cargarDashboard()" style="flex:1;padding:8px;border-radius:8px;border:2px solid #ddd;font-size:12px;">
-          <option value="">Todos los meses</option>
-          <option value="1">Enero</option><option value="2">Febrero</option>
-          <option value="3">Marzo</option><option value="4">Abril</option>
-          <option value="5">Mayo</option><option value="6">Junio</option>
-          <option value="7">Julio</option><option value="8">Agosto</option>
-          <option value="9">Septiembre</option><option value="10">Octubre</option>
-          <option value="11">Noviembre</option><option value="12">Diciembre</option>
-        </select>
-        <select id="dashAnio" onchange="cargarDashboard()" style="flex:1;padding:8px;border-radius:8px;border:2px solid #ddd;font-size:12px;">
-          <option value="">Todos los anos</option>
-        </select>
-      </div>
-      <div class="stat"><p class="stat-number" id="totalBookings">0</p><p class="stat-label">Reservas</p></div>
-      <div class="stat" style="background:linear-gradient(135deg,#00b894,#00cec9);"><p class="stat-number" id="totalRevenue">$0</p><p class="stat-label">Ingresos (lo tuyo)</p></div>
-      <div class="stat" style="background:linear-gradient(135deg,#e17055,#d63031);"><p class="stat-number" id="totalEgresos">$0</p><p class="stat-label">Egresos (proveedor)</p></div>
-      <div class="stat" style="background:linear-gradient(135deg,#0099cc,#00d4ff);"><p class="stat-number" id="totalBruto">$0</p><p class="stat-label">Total Bruto Clientes</p></div>
-      <button class="btn btn-secondary" onclick="exportCSV()" style="margin-top:8px;">&#128229; Exportar CSV</button>
-    </div>
+<div id="bookings" class="tab-content">
+<h2>ð Mis Reservas</h2>
+<div class="booking-list" id="bookingsList"><p style="color: #999; text-align: center; padding: 20px;">No hay reservas aÃºn</p></div>
+</div>
 
-    <div id="book" class="tab-content">
-      <h2>&#9999;&#65039; Nueva Reserva</h2>
-      <div class="success-message" id="successMsg">&#9989; Reserva guardada correctamente!</div>
-      <form onsubmit="addBooking(event)">
-        <div class="form-group"><label>Nombre Completo *</label><input type="text" id="name" required placeholder="Ej: Juan Garcia"></div>
-        <div class="form-group"><label>Email *</label><input type="email" id="email" required placeholder="tu@email.com"></div>
-        <div class="form-group"><label>Telefono *</label><input type="tel" id="phone" required placeholder="+52 984 111 3302"></div>
-        <div class="form-group"><label>Tour *</label>
-          <select id="tour" required onchange="updatePrice()">
-            <option value="">Selecciona un tour...</option>
-            <option value="Whale Shark Tour">Whale Shark Tour - $2,800</option>
-            <option value="Bioluminiscencia Clasica">Bioluminiscencia Clasica - $450</option>
-            <option value="Bioluminiscencia Kayak">Bioluminiscencia Kayak - $1,000</option>
-            <option value="3 Islands Tour">3 Islands Tour - $800</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Cantidad de Personas *</label><input type="number" id="guests" min="1" max="50" required placeholder="1" onchange="updatePrice()"></div>
-        <div class="form-group"><label>Fecha del Tour *</label><input type="date" id="date" required></div>
-        <div class="form-group"><label>Hotel</label><input type="text" id="hotel" placeholder="Nombre del hotel"></div>
-        <div class="form-group"><label>Notas (Opcional)</label><textarea id="notes" placeholder="Preferencias especiales..." rows="3"></textarea></div>
-        <div class="price-calc" id="priceDisplay">Precio Total: $0</div>
-        <button type="submit" class="btn">&#128179; Guardar Reserva</button>
-      </form>
-    </div>
+<div id="tours" class="tab-content">
+<h2>ðï¸ Nuestros Tours</h2>
+<div class="tour-item"><h4>ð¦ Whale Shark Tour</h4><p>Nada con los tiburones ballena mÃ¡s grandes del mundo. Experiencia Ãºnica e inolvidable.</p><div class="tour-price">$2,800 p/p</div></div>
+<div class="tour-item"><h4>â¨ Bioluminiscencia ClÃ¡sica</h4><p>Observa el brillo mÃ¡gico del mar nocturno. Un espectÃ¡culo natural increÃ­ble.</p><div class="tour-price">$450 p/p</div></div>
+<div class="tour-item"><h4>ð£ Bioluminiscencia Kayak</h4><p>Kayak nocturno en las aguas brillantes. Adrenalina + naturaleza.</p><div class="tour-price">$1,000 p/p</div></div>
+<div class="tour-item"><h4>â±ï¸ 3 Islands Tour</h4><p>Visita las 3 islas mÃ¡s hermosas de Holbox en un solo dÃ­a.</p><div class="tour-price">$800 p/p</div></div>
+</div>
 
-    <div id="bookings" class="tab-content">
-      <h2>&#128203; Mis Reservas</h2>
-      <div class="booking-list" id="bookingsList"><p style="color:#999;text-align:center;padding:20px;">No hay reservas aun</p></div>
-    </div>
+<div id="contact" class="tab-content">
+<h2>ð Contacto</h2>
+<div class="contact-info"><p><strong>ð Website</strong></p><a href="https://www.theholboxisland.com" target="_blank">www.theholboxisland.com</a></div>
+<div class="contact-info"><p><strong>ð± TelÃ©fono</strong></p><p>+52 984 111 3302</p></div>
+<div class="contact-info"><p><strong>âï¸ Email</strong></p><a href="mailto:info@theholboxisland.com">info@theholboxisland.com</a><br><a href="mailto:erwinayvar@gmail.com">erwinayvar@gmail.com</a></div>
+<div class="contact-info"><p><strong>ð UbicaciÃ³n</strong></p><p>Isla Holbox, Quintana Roo, MÃ©xico</p></div>
+</div>
 
-    <div id="tours" class="tab-content">
-      <h2>&#127958;&#65039; Nuestros Tours</h2>
-      <div class="tour-item"><h4>&#129416; Whale Shark Tour</h4><p>Nada con los tiburones ballena mas grandes del mundo. Experiencia unica e inolvidable.</p><div class="tour-price">$2,800 p/p</div></div>
-      <div class="tour-item"><h4>&#10024; Bioluminiscencia Clasica</h4><p>Observa el brillo magico del mar nocturno. Un espectaculo natural increible.</p><div class="tour-price">$450 p/p</div></div>
-      <div class="tour-item"><h4>&#128675; Bioluminiscencia Kayak</h4><p>Kayak nocturno en las aguas brillantes. Adrenalina + naturaleza.</p><div class="tour-price">$1,000 p/p</div></div>
-      <div class="tour-item"><h4>&#9961;&#65039; 3 Islands Tour</h4><p>Visita las 3 islas mas hermosas de Holbox en un solo dia.</p><div class="tour-price">$800 p/p</div></div>
-    </div>
-
-    <div id="contact" class="tab-content">
-      <h2>&#128222; Contacto</h2>
-      <div class="contact-info"><p><strong>&#127760; Website</strong></p><a href="https://www.theholboxisland.com" target="_blank">www.theholboxisland.com</a></div>
-      <div class="contact-info"><p><strong>&#128241; Telefono</strong></p><p>+52 984 111 3302</p></div>
-      <div class="contact-info"><p><strong>&#9993;&#65039; Email</strong></p><a href="mailto:info@theholboxisland.com">info@theholboxisland.com</a></div>
-      <div class="contact-info"><p><strong>&#128205; Ubicacion</strong></p><p>Isla Holbox, Quintana Roo, Mexico</p></div>
-    </div>
-
-    <div id="analytics" class="tab-content">
-      <h2>&#128202; Analytics - Reservas</h2>
-      <div class="stat"><p class="stat-number" id="analyticsTotal">0</p><p class="stat-label">Reservas desde reservas.json</p></div>
-      <div class="filtros-wrap">
-        <select id="filtroMes" onchange="cargarAnalytics()">
-          <option value="">Todos los meses</option>
-          <option value="1">Enero</option><option value="2">Febrero</option>
-          <option value="3">Marzo</option><option value="4">Abril</option>
-          <option value="5">Mayo</option><option value="6">Junio</option>
-          <option value="7">Julio</option><option value="8">Agosto</option>
-          <option value="9">Septiembre</option><option value="10">Octubre</option>
-          <option value="11">Noviembre</option><option value="12">Diciembre</option>
-        </select>
-        <select id="filtroAnio" onchange="cargarAnalytics()">
-          <option value="">Todos los anos</option>
-        </select>
-      </div>
-      <button class="btn btn-secondary" onclick="cargarAnalytics()" style="width:auto;margin:0 0 12px 0;">&#128260; Cargar Datos</button>
-      <div id="analyticsData" style="padding:10px 0;color:#999;text-align:center;">Cargando...</div>
-    </div>
-
-  </div>
+<div id="analytics" class="tab-content">
+<h2>ð Analytics - Reservas JSON</h2>
+<div class="stat"><p class="stat-number" id="analyticsTotal">0</p><p class="stat-label">Reservas desde reservas.json</p></div>
+<button class="btn btn-secondary" onclick="cargarAnalytics()" style="width: auto; margin: 10px 0;">ð Cargar Datos</button>
+<div id="analyticsData" style="padding: 20px; color: #999; text-align: center;">Cargando...</div>
+</div>
+</div>
 </div>
 
 <script>
-var TOUR_PRICES = {
-  'Whale Shark Tour': 2800,
-  'Bioluminiscencia Clasica': 450,
-  'Bioluminiscencia Kayak': 1000,
-  '3 Islands Tour': 800
-};
-
-var bookings = JSON.parse(localStorage.getItem('holbox_bookings') || '[]');
+const TOUR_PRICES = { 'Whale Shark Tour': 2800, 'Bioluminiscencia ClÃ¡sica': 450, 'Bioluminiscencia Kayak': 1000, '3 Islands Tour': 800 };
+let bookings = JSON.parse(localStorage.getItem('holbox_bookings')) || [];
 
 function openTab(event, tabName) {
-  document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
-  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-  document.getElementById(tabName).classList.add('active');
-  event.currentTarget.classList.add('active');
-  if (tabName === 'analytics') cargarAnalytics();
+const contents = document.querySelectorAll('.tab-content');
+contents.forEach(content => content.classList.remove('active'));
+const buttons = document.querySelectorAll('.tab-btn');
+buttons.forEach(button => button.classList.remove('active'));
+document.getElementById(tabName).classList.add('active');
+event.currentTarget.classList.add('active');
+if (tabName === 'analytics') cargarAnalytics();
 }
 
 function updatePrice() {
-  var tour = document.getElementById('tour').value;
-  var guests = parseInt(document.getElementById('guests').value) || 1;
-  var price = TOUR_PRICES[tour] || 0;
-  document.getElementById('priceDisplay').textContent = 'Precio Total: $' + (price * guests).toLocaleString();
+const tour = document.getElementById('tour').value;
+const guests = parseInt(document.getElementById('guests').value) || 1;
+const price = TOUR_PRICES[tour] || 0;
+const total = price * guests;
+document.getElementById('priceDisplay').textContent = `Precio Total: $${total.toLocaleString()}`;
 }
 
 function addBooking(event) {
-  event.preventDefault();
-  var booking = {
-    id: Date.now(),
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    tour: document.getElementById('tour').value,
-    guests: parseInt(document.getElementById('guests').value),
-    date: document.getElementById('date').value,
-    hotel: document.getElementById('hotel').value,
-    notes: document.getElementById('notes').value,
-    totalPrice: (TOUR_PRICES[document.getElementById('tour').value] || 0) * parseInt(document.getElementById('guests').value),
-    createdAt: new Date().toLocaleDateString('es-MX')
-  };
-  bookings.push(booking);
-  localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
-  var msg = document.getElementById('successMsg');
-  msg.classList.add('show');
-  setTimeout(function(){ msg.classList.remove('show'); }, 3000);
-  event.target.reset();
-  updatePrice();
-  updateDashboard();
-  displayBookings();
+event.preventDefault();
+const booking = {
+id: Date.now(),
+name: document.getElementById('name').value,
+email: document.getElementById('email').value,
+phone: document.getElementById('phone').value,
+tour: document.getElementById('tour').value,
+guests: parseInt(document.getElementById('guests').value),
+date: document.getElementById('date').value,
+notes: document.getElementById('notes').value,
+totalPrice: TOUR_PRICES[document.getElementById('tour').value] * parseInt(document.getElementById('guests').value),
+createdAt: new Date().toLocaleDateString('es-MX')
+};
+bookings.push(booking);
+localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
+const successMsg = document.getElementById('successMsg');
+successMsg.classList.add('show');
+setTimeout(() => successMsg.classList.remove('show'), 3000);
+event.target.reset();
+updatePrice();
+updateDashboard();
+displayBookings();
 }
 
 function displayBookings() {
-  var list = document.getElementById('bookingsList');
-  if (bookings.length === 0) {
-    list.innerHTML = '<p style="color:#999;text-align:center;padding:20px;">No hay reservas aun</p>';
-    return;
-  }
-  list.innerHTML = bookings.map(function(b){
-    return '<div class="card"><h3>' + b.name + '</h3>' +
-      '<p><strong>Tour:</strong> ' + b.tour + '</p>' +
-      '<p><strong>Personas:</strong> ' + b.guests + '</p>' +
-      '<p><strong>Fecha:</strong> ' + b.date + '</p>' +
-      '<p><strong>Precio Total:</strong> $' + b.totalPrice.toLocaleString() + '</p>' +
-      '<p><strong>Email:</strong> ' + b.email + '</p>' +
-      '<p><strong>Telefono:</strong> ' + b.phone + '</p>' +
-      (b.notes ? '<p><strong>Notas:</strong> ' + b.notes + '</p>' : '') +
-      '<button class="btn delete-btn" onclick="deleteBooking(' + b.id + ')">Eliminar</button></div>';
-  }).join('');
+const list = document.getElementById('bookingsList');
+if (bookings.length === 0) {
+list.innerHTML = '<p style="color: #999; text-align: center; padding: 20px;">No hay reservas aÃºn</p>';
+return;
+}
+list.innerHTML = bookings.map(booking => `<div class="card"><h3>${booking.name}</h3><p><strong>Tour:</strong> ${booking.tour}</p><p><strong>Personas:</strong> ${booking.guests}</p><p><strong>Fecha:</strong> ${booking.date}</p><p><strong>Precio Total:</strong> $${booking.totalPrice.toLocaleString()}</p><p><strong>Email:</strong> ${booking.email}</p><p><strong>TelÃ©fono:</strong> ${booking.phone}</p>${booking.notes ? `<p><strong>Notas:</strong> ${booking.notes}</p>` : ''}<button class="btn delete-btn" onclick="deleteBooking(${booking.id})">ðï¸ Eliminar</button></div>`).join('');
 }
 
 function deleteBooking(id) {
-  bookings = bookings.filter(function(b){ return b.id !== id; });
-  localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
-  updateDashboard();
-  displayBookings();
+bookings = bookings.filter(b => b.id !== id);
+localStorage.setItem('holbox_bookings', JSON.stringify(bookings));
+updateDashboard();
+displayBookings();
 }
 
 function updateDashboard() { cargarDashboard(); }
 
 async function cargarDashboard() {
   try {
-    var url = 'https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=' + Date.now();
+    var url = "https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=" + Date.now();
     var res = await fetch(url);
     var data = await res.json();
     var all = Array.isArray(data) ? data : [];
-
-    var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-    var selAnio = document.getElementById('dashAnio');
+    var meses = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+    var selAnio = document.getElementById("dashAnio");
     var anios = [];
-    all.forEach(function(r){ var m=(r.fecha||'').match(/\d{4}/); if(m && anios.indexOf(m[0])===-1) anios.push(m[0]); });
+    all.forEach(function(r){ var m=(r.fecha||"").match(/\d{4}/); if(m && anios.indexOf(m[0])===-1) anios.push(m[0]); });
     anios.sort().reverse();
     if (selAnio && selAnio.options.length <= 1) {
-      anios.forEach(function(a){ var o=document.createElement('option'); o.value=a; o.textContent=a; selAnio.appendChild(o); });
+      anios.forEach(function(a){ var o=document.createElement("option"); o.value=a; o.textContent=a; selAnio.appendChild(o); });
     }
-
-    var mesVal  = document.getElementById('dashMes')  ? document.getElementById('dashMes').value  : '';
-    var anioVal = document.getElementById('dashAnio') ? document.getElementById('dashAnio').value : '';
-
+    var mesVal  = document.getElementById("dashMes")  ? document.getElementById("dashMes").value  : "";
+    var anioVal = document.getElementById("dashAnio") ? document.getElementById("dashAnio").value : "";
     var filtradas = all.filter(function(r){
-      var f = r.fecha || '';
+      var f = r.fecha || "";
       var ok = true;
       if (anioVal) ok = ok && f.indexOf(anioVal) !== -1;
       if (mesVal)  ok = ok && f.toLowerCase().indexOf(meses[parseInt(mesVal)-1].toLowerCase()) !== -1;
       return ok;
     });
-
-    var PRECIOS = { 'Whale Shark Tour':{mio:500,prov:2300}, 'Bioluminiscencia Clasica':{mio:250,prov:200}, 'Bioluminiscencia Kayak':{mio:400,prov:600}, '3 Islands Tour':{mio:400,prov:400} };
-
-    var totalRes=0, totalMio=0, totalProv=0, totalBruto=0;
+    var P = {"Whale Shark Tour":{mio:500,prov:2300},"Bioluminiscencia Clasica":{mio:250,prov:200},"Bioluminiscencia Kayak":{mio:400,prov:600},"3 Islands Tour":{mio:400,prov:400}};
+    var totalRes=0,totalMio=0,totalProv=0,totalBruto=0;
     filtradas.forEach(function(r){
-      var pax = Number(r.pax)||1;
-      var monto = Number(r.monto)||0;
-      var tourKey = r.tour||'';
-      var p = PRECIOS[tourKey] || {mio:0,prov:0};
-      totalRes++;
-      totalBruto += monto;
-      totalMio   += p.mio * pax;
-      totalProv  += p.prov * pax;
+      var pax=Number(r.pax)||1; var monto=Number(r.monto)||0;
+      var p=P[r.tour]||{mio:0,prov:0};
+      totalRes++; totalBruto+=monto; totalMio+=p.mio*pax; totalProv+=p.prov*pax;
     });
-
-    document.getElementById('totalBookings').textContent = totalRes;
-    document.getElementById('totalRevenue').textContent  = '
+    document.getElementById("totalBookings").textContent = totalRes;
+    document.getElementById("totalRevenue").textContent  = "$" + totalMio.toLocaleString("es-MX");
+    document.getElementById("totalEgresos").textContent  = "$" + totalProv.toLocaleString("es-MX");
+    document.getElementById("totalBruto").textContent    = "$" + totalBruto.toLocaleString("es-MX");
+  } catch(e) { document.getElementById("totalBookings").textContent = "Error"; }
+}
 
 function exportCSV() {
-  if (bookings.length === 0) { alert('No hay reservas para exportar'); return; }
-  var csv = 'Nombre,Email,Telefono,Tour,Personas,Fecha,Precio Total,Notas\n';
-  bookings.forEach(function(b){
-    csv += '"' + b.name + '","' + b.email + '","' + b.phone + '","' + b.tour + '",' + b.guests + ',"' + b.date + '",' + b.totalPrice + ',"' + b.notes + '"\n';
-  });
-  var blob = new Blob([csv], { type: 'text/csv' });
-  var url = window.URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'holbox-bookings.csv';
-  a.click();
+if (bookings.length === 0) { alert('No hay reservas para exportar'); return; }
+let csv = 'Nombre,Email,TelÃ©fono,Tour,Personas,Fecha,Precio Total,Notas,Creado\n';
+bookings.forEach(b => { csv += `"${b.name}","${b.email}","${b.phone}","${b.tour}",${b.guests},"${b.date}",${b.totalPrice},"${b.notes}","${b.createdAt}"\n`; });
+const blob = new Blob([csv], { type: 'text/csv' });
+const url = window.URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = 'holbox-bookings.csv';
+a.click();
 }
 
-async function cargarAnalytics() {
-  try {
-    var url = 'https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=' + Date.now();
-    var response = await fetch(url);
-    if (!response.ok) throw new Error('No se pudo cargar reservas.json');
-    var data = await response.json();
-    var allReservas = Array.isArray(data) ? data : [];
-
-    if (allReservas.length === 0) {
-      document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
-      document.getElementById('analyticsTotal').textContent = '0';
-      return;
+    if (!allReservas || allReservas.length === 0) {
+                    document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
+                    document.getElementById('analyticsTotal').textContent = '0';
+                    return;
     }
 
-    var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-    var selAnio = document.getElementById('filtroAnio');
-    var anios = [];
-    allReservas.forEach(function(r){
-      var m = (r.fecha || '').match(/\d{4}/);
-      if (m && anios.indexOf(m[0]) === -1) anios.push(m[0]);
-    });
-    anios.sort().reverse();
-    if (selAnio && selAnio.options.length <= 1) {
-      anios.forEach(function(a){
-        var o = document.createElement('option');
-        o.value = a; o.textContent = a;
-        selAnio.appendChild(o);
-      });
-    }
+              // Poblar filtros
+              const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+              const selMes  = document.getElementById('filtroMes');
+              const selAnio = document.getElementById('filtroAnio');
+              const anios = [...new Set(allReservas.map(r => {
+                              const m = (r.fecha||'').match(/\d{4}/);
+                              return m ? m[0] : null;
+              }).filter(Boolean))].sort().reverse();
+              if (selAnio && selAnio.options.length <= 1) {
+                              anios.forEach(a => { const o = document.createElement('option'); o.value=a; o.textContent=a; selAnio.appendChild(o); });
+              }
 
-    var mesVal  = document.getElementById('filtroMes')  ? document.getElementById('filtroMes').value  : '';
-    var anioVal = document.getElementById('filtroAnio') ? document.getElementById('filtroAnio').value : '';
+              // Filtrar
+              const mesVal  = selMes  ? selMes.value  : '';
+              const anioVal = selAnio ? selAnio.value : '';
+              let filtradas = allReservas.filter(r => {
+                              const f = r.fecha || '';
+                              let ok = true;
+                              if (anioVal) ok = ok && f.includes(anioVal);
+                              if (mesVal)  ok = ok && f.toLowerCase().includes(meses[parseInt(mesVal)-1].toLowerCase());
+                              return ok;
+              });
 
-    var filtradas = allReservas.filter(function(r){
-      var f = r.fecha || '';
-      var ok = true;
-      if (anioVal) ok = ok && f.indexOf(anioVal) !== -1;
-      if (mesVal)  ok = ok && f.toLowerCase().indexOf(meses[parseInt(mesVal)-1].toLowerCase()) !== -1;
-      return ok;
-    });
-
-    document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
-
-    var html = '';
-    filtradas.forEach(function(row){
-      var nombre  = row.nombre   || 'Sin nombre';
-      var tel     = row.telefono || 'N/A';
-      var pax     = row.pax      || 'N/A';
-      var monto   = Number(row.monto)            || 0;
-      var pend    = Number(row.monto_pendiente)  || 0;
-      var fecha   = row.fecha    || 'N/A';
-      var hotel   = row.hotel    || 'N/A';
-      var tour    = row.tour     || 'N/A';
-      var notas   = row.notas    || '';
-      html += '<div class="card" style="margin:8px 0;">' +
-        '<h3 style="margin:0 0 6px 0;font-size:14px;">' + nombre + '</h3>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tour:</strong> ' + tour + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Fecha:</strong> ' + fecha + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pax:</strong> ' + pax + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Hotel:</strong> ' + hotel + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Total:</strong> $' + monto.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pendiente:</strong> $' + pend.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tel:</strong> ' + tel + '</p>' +
-        (notas ? '<p style="margin:2px 0;font-size:12px;"><strong>Notas:</strong> ' + notas + '</p>' : '') +
-        '</div>';
-    });
-
-    document.getElementById('analyticsData').innerHTML = html || '<p style="color:#999;">Sin resultados para ese filtro</p>';
-
-  } catch(error) {
-    document.getElementById('analyticsData').innerHTML = '<p style="color:#ff4444;">Error: ' + error.message + '</p>';
-  }
-}
+              document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
+              let html = '<div style="text-align:left;padding:10px 0;">';
+              filtradas.forEach((row) => {
+                              const nombre  = row.nombre   || 'Sin nombre';
+                              const tel     = row.telefono || 'N/A';
+                              const pax     = row.pax      || 'N/A';
+                              const monto   = Number(row.monto) || 0;
 
 displayBookings();
 cargarDashboard();
-</script>
-</body>
-</html>
- + totalMio.toLocaleString('es-MX');
-    document.getElementById('totalEgresos').textContent  = '
-
-function exportCSV() {
-  if (bookings.length === 0) { alert('No hay reservas para exportar'); return; }
-  var csv = 'Nombre,Email,Telefono,Tour,Personas,Fecha,Precio Total,Notas\n';
-  bookings.forEach(function(b){
-    csv += '"' + b.name + '","' + b.email + '","' + b.phone + '","' + b.tour + '",' + b.guests + ',"' + b.date + '",' + b.totalPrice + ',"' + b.notes + '"\n';
-  });
-  var blob = new Blob([csv], { type: 'text/csv' });
-  var url = window.URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'holbox-bookings.csv';
-  a.click();
-}
-
-async function cargarAnalytics() {
-  try {
-    var url = 'https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=' + Date.now();
-    var response = await fetch(url);
-    if (!response.ok) throw new Error('No se pudo cargar reservas.json');
-    var data = await response.json();
-    var allReservas = Array.isArray(data) ? data : [];
-
-    if (allReservas.length === 0) {
-      document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
-      document.getElementById('analyticsTotal').textContent = '0';
-      return;
-    }
-
-    var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-    var selAnio = document.getElementById('filtroAnio');
-    var anios = [];
-    allReservas.forEach(function(r){
-      var m = (r.fecha || '').match(/\d{4}/);
-      if (m && anios.indexOf(m[0]) === -1) anios.push(m[0]);
-    });
-    anios.sort().reverse();
-    if (selAnio && selAnio.options.length <= 1) {
-      anios.forEach(function(a){
-        var o = document.createElement('option');
-        o.value = a; o.textContent = a;
-        selAnio.appendChild(o);
-      });
-    }
-
-    var mesVal  = document.getElementById('filtroMes')  ? document.getElementById('filtroMes').value  : '';
-    var anioVal = document.getElementById('filtroAnio') ? document.getElementById('filtroAnio').value : '';
-
-    var filtradas = allReservas.filter(function(r){
-      var f = r.fecha || '';
-      var ok = true;
-      if (anioVal) ok = ok && f.indexOf(anioVal) !== -1;
-      if (mesVal)  ok = ok && f.toLowerCase().indexOf(meses[parseInt(mesVal)-1].toLowerCase()) !== -1;
-      return ok;
-    });
-
-    document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
-
-    var html = '';
-    filtradas.forEach(function(row){
-      var nombre  = row.nombre   || 'Sin nombre';
-      var tel     = row.telefono || 'N/A';
-      var pax     = row.pax      || 'N/A';
-      var monto   = Number(row.monto)            || 0;
-      var pend    = Number(row.monto_pendiente)  || 0;
-      var fecha   = row.fecha    || 'N/A';
-      var hotel   = row.hotel    || 'N/A';
-      var tour    = row.tour     || 'N/A';
-      var notas   = row.notas    || '';
-      html += '<div class="card" style="margin:8px 0;">' +
-        '<h3 style="margin:0 0 6px 0;font-size:14px;">' + nombre + '</h3>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tour:</strong> ' + tour + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Fecha:</strong> ' + fecha + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pax:</strong> ' + pax + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Hotel:</strong> ' + hotel + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Total:</strong> $' + monto.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pendiente:</strong> $' + pend.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tel:</strong> ' + tel + '</p>' +
-        (notas ? '<p style="margin:2px 0;font-size:12px;"><strong>Notas:</strong> ' + notas + '</p>' : '') +
-        '</div>';
-    });
-
-    document.getElementById('analyticsData').innerHTML = html || '<p style="color:#999;">Sin resultados para ese filtro</p>';
-
-  } catch(error) {
-    document.getElementById('analyticsData').innerHTML = '<p style="color:#ff4444;">Error: ' + error.message + '</p>';
-  }
-}
-
-displayBookings();
-updateDashboard();
-</script>
-</body>
-</html>
- + totalProv.toLocaleString('es-MX');
-    document.getElementById('totalBruto').textContent    = '
-
-function exportCSV() {
-  if (bookings.length === 0) { alert('No hay reservas para exportar'); return; }
-  var csv = 'Nombre,Email,Telefono,Tour,Personas,Fecha,Precio Total,Notas\n';
-  bookings.forEach(function(b){
-    csv += '"' + b.name + '","' + b.email + '","' + b.phone + '","' + b.tour + '",' + b.guests + ',"' + b.date + '",' + b.totalPrice + ',"' + b.notes + '"\n';
-  });
-  var blob = new Blob([csv], { type: 'text/csv' });
-  var url = window.URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'holbox-bookings.csv';
-  a.click();
-}
-
-async function cargarAnalytics() {
-  try {
-    var url = 'https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=' + Date.now();
-    var response = await fetch(url);
-    if (!response.ok) throw new Error('No se pudo cargar reservas.json');
-    var data = await response.json();
-    var allReservas = Array.isArray(data) ? data : [];
-
-    if (allReservas.length === 0) {
-      document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
-      document.getElementById('analyticsTotal').textContent = '0';
-      return;
-    }
-
-    var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-    var selAnio = document.getElementById('filtroAnio');
-    var anios = [];
-    allReservas.forEach(function(r){
-      var m = (r.fecha || '').match(/\d{4}/);
-      if (m && anios.indexOf(m[0]) === -1) anios.push(m[0]);
-    });
-    anios.sort().reverse();
-    if (selAnio && selAnio.options.length <= 1) {
-      anios.forEach(function(a){
-        var o = document.createElement('option');
-        o.value = a; o.textContent = a;
-        selAnio.appendChild(o);
-      });
-    }
-
-    var mesVal  = document.getElementById('filtroMes')  ? document.getElementById('filtroMes').value  : '';
-    var anioVal = document.getElementById('filtroAnio') ? document.getElementById('filtroAnio').value : '';
-
-    var filtradas = allReservas.filter(function(r){
-      var f = r.fecha || '';
-      var ok = true;
-      if (anioVal) ok = ok && f.indexOf(anioVal) !== -1;
-      if (mesVal)  ok = ok && f.toLowerCase().indexOf(meses[parseInt(mesVal)-1].toLowerCase()) !== -1;
-      return ok;
-    });
-
-    document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
-
-    var html = '';
-    filtradas.forEach(function(row){
-      var nombre  = row.nombre   || 'Sin nombre';
-      var tel     = row.telefono || 'N/A';
-      var pax     = row.pax      || 'N/A';
-      var monto   = Number(row.monto)            || 0;
-      var pend    = Number(row.monto_pendiente)  || 0;
-      var fecha   = row.fecha    || 'N/A';
-      var hotel   = row.hotel    || 'N/A';
-      var tour    = row.tour     || 'N/A';
-      var notas   = row.notas    || '';
-      html += '<div class="card" style="margin:8px 0;">' +
-        '<h3 style="margin:0 0 6px 0;font-size:14px;">' + nombre + '</h3>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tour:</strong> ' + tour + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Fecha:</strong> ' + fecha + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pax:</strong> ' + pax + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Hotel:</strong> ' + hotel + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Total:</strong> $' + monto.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pendiente:</strong> $' + pend.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tel:</strong> ' + tel + '</p>' +
-        (notas ? '<p style="margin:2px 0;font-size:12px;"><strong>Notas:</strong> ' + notas + '</p>' : '') +
-        '</div>';
-    });
-
-    document.getElementById('analyticsData').innerHTML = html || '<p style="color:#999;">Sin resultados para ese filtro</p>';
-
-  } catch(error) {
-    document.getElementById('analyticsData').innerHTML = '<p style="color:#ff4444;">Error: ' + error.message + '</p>';
-  }
-}
-
-displayBookings();
-updateDashboard();
-</script>
-</body>
-</html>
- + totalBruto.toLocaleString('es-MX');
-  } catch(e) {
-    document.getElementById('totalBookings').textContent = 'Error';
-  }
-}
-
-function exportCSV() {
-  if (bookings.length === 0) { alert('No hay reservas para exportar'); return; }
-  var csv = 'Nombre,Email,Telefono,Tour,Personas,Fecha,Precio Total,Notas\n';
-  bookings.forEach(function(b){
-    csv += '"' + b.name + '","' + b.email + '","' + b.phone + '","' + b.tour + '",' + b.guests + ',"' + b.date + '",' + b.totalPrice + ',"' + b.notes + '"\n';
-  });
-  var blob = new Blob([csv], { type: 'text/csv' });
-  var url = window.URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'holbox-bookings.csv';
-  a.click();
-}
-
-async function cargarAnalytics() {
-  try {
-    var url = 'https://raw.githubusercontent.com/theholboxisland/holbox-app/main/reservas.json?t=' + Date.now();
-    var response = await fetch(url);
-    if (!response.ok) throw new Error('No se pudo cargar reservas.json');
-    var data = await response.json();
-    var allReservas = Array.isArray(data) ? data : [];
-
-    if (allReservas.length === 0) {
-      document.getElementById('analyticsData').innerHTML = '<p style="color:#999;">No hay datos</p>';
-      document.getElementById('analyticsTotal').textContent = '0';
-      return;
-    }
-
-    var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-    var selAnio = document.getElementById('filtroAnio');
-    var anios = [];
-    allReservas.forEach(function(r){
-      var m = (r.fecha || '').match(/\d{4}/);
-      if (m && anios.indexOf(m[0]) === -1) anios.push(m[0]);
-    });
-    anios.sort().reverse();
-    if (selAnio && selAnio.options.length <= 1) {
-      anios.forEach(function(a){
-        var o = document.createElement('option');
-        o.value = a; o.textContent = a;
-        selAnio.appendChild(o);
-      });
-    }
-
-    var mesVal  = document.getElementById('filtroMes')  ? document.getElementById('filtroMes').value  : '';
-    var anioVal = document.getElementById('filtroAnio') ? document.getElementById('filtroAnio').value : '';
-
-    var filtradas = allReservas.filter(function(r){
-      var f = r.fecha || '';
-      var ok = true;
-      if (anioVal) ok = ok && f.indexOf(anioVal) !== -1;
-      if (mesVal)  ok = ok && f.toLowerCase().indexOf(meses[parseInt(mesVal)-1].toLowerCase()) !== -1;
-      return ok;
-    });
-
-    document.getElementById('analyticsTotal').textContent = filtradas.length + ' / ' + allReservas.length;
-
-    var html = '';
-    filtradas.forEach(function(row){
-      var nombre  = row.nombre   || 'Sin nombre';
-      var tel     = row.telefono || 'N/A';
-      var pax     = row.pax      || 'N/A';
-      var monto   = Number(row.monto)            || 0;
-      var pend    = Number(row.monto_pendiente)  || 0;
-      var fecha   = row.fecha    || 'N/A';
-      var hotel   = row.hotel    || 'N/A';
-      var tour    = row.tour     || 'N/A';
-      var notas   = row.notas    || '';
-      html += '<div class="card" style="margin:8px 0;">' +
-        '<h3 style="margin:0 0 6px 0;font-size:14px;">' + nombre + '</h3>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tour:</strong> ' + tour + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Fecha:</strong> ' + fecha + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pax:</strong> ' + pax + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Hotel:</strong> ' + hotel + '</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Total:</strong> $' + monto.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Pendiente:</strong> $' + pend.toLocaleString('es-MX') + ' MXN</p>' +
-        '<p style="margin:2px 0;font-size:12px;"><strong>Tel:</strong> ' + tel + '</p>' +
-        (notas ? '<p style="margin:2px 0;font-size:12px;"><strong>Notas:</strong> ' + notas + '</p>' : '') +
-        '</div>';
-    });
-
-    document.getElementById('analyticsData').innerHTML = html || '<p style="color:#999;">Sin resultados para ese filtro</p>';
-
-  } catch(error) {
-    document.getElementById('analyticsData').innerHTML = '<p style="color:#ff4444;">Error: ' + error.message + '</p>';
-  }
-}
-
-displayBookings();
-updateDashboard();
 </script>
 </body>
 </html>
