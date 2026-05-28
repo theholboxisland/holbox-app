@@ -52,6 +52,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: #0099cc
 h2 { font-size: 18px; color: #333; margin-bottom: 15px; }
 .filtros-wrap { display: flex; gap: 8px; margin: 0 0 12px 0; flex-wrap: wrap; }
 .filtros-wrap select { flex: 1; padding: 8px; border-radius: 8px; border: 2px solid #ddd; font-size: 12px; width: auto; margin-top: 0; }
+.form-group input[type="number"] { margin: 0; }
 </style>
 </head>
 <body>
@@ -93,8 +94,8 @@ h2 { font-size: 18px; color: #333; margin-bottom: 15px; }
       </div>
       <div class="stat"><p class="stat-number" id="totalBookings">0</p><p class="stat-label">Reservas</p></div>
       <div class="stat" style="background:linear-gradient(135deg,#00b894,#00cec9);"><p class="stat-number" id="totalRevenue">$0</p><p class="stat-label">Ingresos (lo tuyo)</p></div>
-      <div class="form-group" style="margin-top:10px;margin-bottom:0;"><label>Gastos Google Ads (MXN)</label><input type="number" id="googleAdsCost" value="0" min="0" onchange="cargarDashboard()" style="margin:0;"></div>
-      <div class="stat" style="background:linear-gradient(135deg,#f39c12,#e74c3c);margin-top:12px;"><p class="stat-number" id="netProfit">$0</p><p class="stat-label">Ganancia Neta</p></div>
+      <div class="form-group"><label>Gastos Google Ads (MXN)</label><input type="number" id="googleAdsCost" value="0" min="0" onchange="cargarDashboard()"></div>
+      <div class="stat" style="background:linear-gradient(135deg,#f39c12,#e74c3c);"><p class="stat-number" id="netProfit">$0</p><p class="stat-label">Ganancia Neta</p></div>
       <button class="btn btn-secondary" onclick="exportCSV()" style="margin-top:4px;">&#128229; Exportar CSV</button>
     </div>
 
@@ -133,7 +134,7 @@ h2 { font-size: 18px; color: #333; margin-bottom: 15px; }
       <div class="tour-item"><h4>&#129416; Whale Shark Tour</h4><p>Nada con los tiburones ballena mas grandes del mundo.</p><div class="tour-price">$2,800 p/p</div></div>
       <div class="tour-item"><h4>&#10024; Bioluminiscencia Clasica</h4><p>Observa el brillo magico del mar nocturno.</p><div class="tour-price">$450 p/p</div></div>
       <div class="tour-item"><h4>&#128675; Bioluminiscencia Kayak</h4><p>Kayak nocturno en las aguas brillantes.</p><div class="tour-price">$1,000 p/p</div></div>
-      <div class="tour-item"><h4>&#9961;&#65039; 3 Islands Tour</h4><p>Visita las 3 islas mas hermosas de Holbox en un solo dia.</p><div class="tour-price">$800 p/p</div></div>
+      <div class="tour-item"><h4>&#9961;&#65039; 3 Islands Tour</h4><p>Visita las 3 islas mas hermosas de Holbox.</p><div class="tour-price">$800 p/p</div></div>
     </div>
 
     <div id="contact" class="tab-content">
@@ -177,10 +178,10 @@ var TOUR_PRICES = {
 };
 
 var TOUR_SPLIT = {
-  'Whale Shark Tour':       { mio: 500,  prov: 2300 },
-  'Bioluminiscencia Clasica':{ mio: 250,  prov: 200  },
-  'Bioluminiscencia Kayak': { mio: 400,  prov: 600  },
-  '3 Islands Tour':         { mio: 400,  prov: 400  }
+  'Whale Shark Tour':       { mio: 500 },
+  'Bioluminiscencia Clasica':{ mio: 250 },
+  'Bioluminiscencia Kayak': { mio: 400 },
+  '3 Islands Tour':         { mio: 400 }
 };
 
 var bookings = JSON.parse(localStorage.getItem('holbox_bookings') || '[]');
@@ -305,21 +306,20 @@ async function cargarDashboard() {
     poblarAnios(all, 'dashAnio');
     var filtradas = filtrarPorPeriodo(all, 'dashMes', 'dashAnio');
 
-    var totalRes=0, totalMio=0, totalProv=0, totalBruto=0;
+    var totalRes=0, totalMio=0;
     filtradas.forEach(function(r){
       var pax   = Number(r.pax)   || 1;
-      var monto = Number(r.monto) || 0;
-      var sp    = TOUR_SPLIT[r.tour] || { mio:0, prov:0 };
+      var sp    = TOUR_SPLIT[r.tour] || { mio:0 };
       totalRes++;
-      totalBruto += monto;
       totalMio   += sp.mio  * pax;
-      totalProv  += sp.prov * pax;
     });
+
+    var googleAds = Number(document.getElementById('googleAdsCost').value) || 0;
+    var netProfit = totalMio - googleAds;
 
     document.getElementById('totalBookings').textContent = totalRes;
     document.getElementById('totalRevenue').textContent  = '$' + totalMio.toLocaleString('es-MX');
-    document.getElementById('totalEgresos').textContent  = '$' + totalProv.toLocaleString('es-MX');
-    document.getElementById('totalBruto').textContent    = '$' + totalBruto.toLocaleString('es-MX');
+    document.getElementById('netProfit').textContent     = '$' + netProfit.toLocaleString('es-MX');
   } catch(e) {
     document.getElementById('totalBookings').textContent = 'Error';
     console.error(e);
