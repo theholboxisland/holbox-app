@@ -694,5 +694,17 @@
     "hotel": "Por confirmar",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 59,
+    "nombre": "Paul  Flora",
+    "telefono": "+15597308915",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "14 Aug 2026",
+    "hotel": "Mystique Holbox by Royalton",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
