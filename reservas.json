@@ -718,5 +718,17 @@
     "hotel": "Aldea Kuká",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 61,
+    "nombre": "Davide Di  Dio",
+    "telefono": "+41789202054",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26 Jul 2026",
+    "hotel": "Villas Palmar Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
