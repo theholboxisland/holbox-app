@@ -706,5 +706,17 @@
     "hotel": "Mystique Holbox by Royalton",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 60,
+    "nombre": "Jack",
+    "telefono": "+447802423732",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "6 Jun 2026",
+    "hotel": "Aldea Kuká",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
