@@ -766,5 +766,17 @@
     "hotel": "Casa las tortugas",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 65,
+    "nombre": "Chiara  Casini",
+    "telefono": "+393279536163",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "16 Jun 2026",
+    "hotel": "Spirit Holbox, Calle Zargo, 77310 Isola Holbox, Messico",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
