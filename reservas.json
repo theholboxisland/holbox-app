@@ -754,5 +754,17 @@
     "hotel": "Blue Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 64,
+    "nombre": "Dellis  Bodden",
+    "telefono": "+15167078779",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "9 Jul 2026",
+    "hotel": "Casa las tortugas",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
