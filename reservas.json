@@ -778,5 +778,17 @@
     "hotel": "Spirit Holbox, Calle Zargo, 77310 Isola Holbox, Messico",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 66,
+    "nombre": "Mindy  Lowe",
+    "telefono": "+17204608752",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "15 Jun 2026",
+    "hotel": "La Palma Holbox Wellness Suites and Apartments",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
