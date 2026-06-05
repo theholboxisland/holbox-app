@@ -742,5 +742,17 @@
     "hotel": "Casa Noma-Noma",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 63,
+    "nombre": "Jacobo  Sanchez",
+    "telefono": "+18152121285",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "19 Jun 2026",
+    "hotel": "Blue Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
