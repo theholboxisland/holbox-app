@@ -730,5 +730,17 @@
     "hotel": "Villas Palmar Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 62,
+    "nombre": "Markus  Noçon",
+    "telefono": "+491733465818",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "5 Jun 2026",
+    "hotel": "Casa Noma-Noma",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
