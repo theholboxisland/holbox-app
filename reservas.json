@@ -790,5 +790,17 @@
     "hotel": "La Palma Holbox Wellness Suites and Apartments",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 67,
+    "nombre": "Prueba 3",
+    "telefono": "PRUEBA 3",
+    "pax": 1,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "PRUEBA 3",
+    "hotel": "PRUEBA 3",
+    "tour": "PRUEBA 3",
+    "notas": "PRUEBA 3 "
   }
 ]
