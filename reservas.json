@@ -826,5 +826,17 @@
     "hotel": "Wed Jul 01 2026 00:00:00 GMT-0600 (Central Standard Time)",
     "tour": "Hotel Pendiente",
     "notas": "Whale Shark Tour"
+  },
+  {
+    "id": 70,
+    "nombre": "Rolien De Bruyn",
+    "telefono": "+31642862849",
+    "pax": 4,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "MXN9200.00 día del tour",
+    "hotel": "Wed Aug 26 2026 00:00:00 GMT-0600 (Central Standard Time)",
+    "tour": "Beachfront Hotel La Palapa",
+    "notas": "Whale Shark Tour"
   }
 ]
