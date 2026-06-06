@@ -802,5 +802,17 @@
     "hotel": "PRUEBA 3",
     "tour": "PRUEBA 3",
     "notas": "PRUEBA 3 "
+  },
+  {
+    "id": 68,
+    "nombre": "Nancy Maes",
+    "telefono": "+32475206984",
+    "pax": 4,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "MXN9200.00 día del tour",
+    "hotel": "Fri Jul 03 2026 00:00:00 GMT-0600 (Central Standard Time)",
+    "tour": "Ana y José Hotel & Beach Club Holbox",
+    "notas": "Whale Shark Tour"
   }
 ]
