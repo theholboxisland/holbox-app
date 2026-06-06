@@ -814,5 +814,17 @@
     "hotel": "Fri Jul 03 2026 00:00:00 GMT-0600 (Central Standard Time)",
     "tour": "Ana y José Hotel & Beach Club Holbox",
     "notas": "Whale Shark Tour"
+  },
+  {
+    "id": 69,
+    "nombre": "Thomas Gomon",
+    "telefono": "+41796291939",
+    "pax": 4,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "MXN9200.00 día del tour",
+    "hotel": "Wed Jul 01 2026 00:00:00 GMT-0600 (Central Standard Time)",
+    "tour": "Hotel Pendiente",
+    "notas": "Whale Shark Tour"
   }
 ]
