@@ -838,5 +838,17 @@
     "hotel": "Wed Aug 26 2026 00:00:00 GMT-0600 (Central Standard Time)",
     "tour": "Beachfront Hotel La Palapa",
     "notas": "Whale Shark Tour"
+  },
+  {
+    "id": 71,
+    "nombre": "Tina  Schiemanck",
+    "telefono": "+491774479090",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "17 Jun 2026",
+    "hotel": "La Puerta Azul Beachfront",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
