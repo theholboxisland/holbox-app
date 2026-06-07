@@ -850,5 +850,17 @@
     "hotel": "La Puerta Azul Beachfront",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 72,
+    "nombre": "Priscila  Balcàzar",
+    "telefono": "+525537915710",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "8 Jun 2026",
+    "hotel": "Villas Paraiso del Mar",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
