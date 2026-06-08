@@ -862,5 +862,17 @@
     "hotel": "Villas Paraiso del Mar",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 73,
+    "nombre": "Jonathan  Davis",
+    "telefono": "+18037073801",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "15 Jun 2026",
+    "hotel": "Nomade Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
