@@ -874,5 +874,17 @@
     "hotel": "Nomade Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 74,
+    "nombre": "Thomas  Tuymans",
+    "telefono": "+32487868290",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "9 Jul 2026",
+    "hotel": "Che Holbox Hostel & Bar",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
