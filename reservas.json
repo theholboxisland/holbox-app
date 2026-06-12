@@ -910,5 +910,17 @@
     "hotel": "Hotel Boutique Naj Casa Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 77,
+    "nombre": "Pawel  Benben",
+    "telefono": "+48600598298",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "13 Jun 2026",
+    "hotel": "Golden Paradise Beach",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
