@@ -922,5 +922,17 @@
     "hotel": "Golden Paradise Beach",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 78,
+    "nombre": "Søren  Vistisen",
+    "telefono": "+4561701083",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "29 Jun 2026",
+    "hotel": "Casa Las Tortugas",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
