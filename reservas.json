@@ -934,5 +934,17 @@
     "hotel": "Casa Las Tortugas",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 79,
+    "nombre": "Jose  Marcos",
+    "telefono": "+18016748212",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "16 Jun 2026",
+    "hotel": "Amaite",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
