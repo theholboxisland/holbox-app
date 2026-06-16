@@ -946,5 +946,17 @@
     "hotel": "Amaite",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 80,
+    "nombre": "Joe  Lockhart",
+    "telefono": "+353896047014",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "17 Jun 2026",
+    "hotel": "Che hostel Isla hoblox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
