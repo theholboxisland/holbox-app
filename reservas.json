@@ -958,5 +958,17 @@
     "hotel": "Che hostel Isla hoblox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 81,
+    "nombre": "Charlie  McGrath",
+    "telefono": "+447753366302",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "19 Jun 2026",
+    "hotel": "Casa Las Tortugas",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
