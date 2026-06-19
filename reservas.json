@@ -982,5 +982,17 @@
     "hotel": "ÓOL Hotel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 83,
+    "nombre": "Quinton",
+    "telefono": "+33672023457",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "16 Jul 2026",
+    "hotel": "Casa Chujul by spirit group",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
