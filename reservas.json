@@ -994,5 +994,17 @@
     "hotel": "Casa Chujul by spirit group",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 84,
+    "nombre": "Juuso  Volotinen",
+    "telefono": "+358505753298",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "23 Jun 2026",
+    "hotel": "Hotel La Palapa",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
