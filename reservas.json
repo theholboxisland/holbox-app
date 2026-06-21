@@ -1006,5 +1006,17 @@
     "hotel": "Hotel La Palapa",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 85,
+    "nombre": "Berry  Boeckman",
+    "telefono": "+12146734114",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "6 Jul 2026",
+    "hotel": "Ser Casasandra",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
