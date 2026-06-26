@@ -1018,5 +1018,17 @@
     "hotel": "Ser Casasandra",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 86,
+    "nombre": "Cerritelli Pier  Francesco",
+    "telefono": "+393358759659",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "17 Aug 2026",
+    "hotel": "Villas HM Paraiso del Mar",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
