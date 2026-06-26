@@ -1030,5 +1030,17 @@
     "hotel": "Villas HM Paraiso del Mar",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 87,
+    "nombre": "Emillie  Kirven",
+    "telefono": "+16128010048",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "2 Aug 2026",
+    "hotel": "Airbnb (C. Caguama 6, 77310 Holbox, Q.R., Mexico)",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
