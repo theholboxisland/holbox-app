@@ -1042,5 +1042,17 @@
     "hotel": "Airbnb (C. Caguama 6, 77310 Holbox, Q.R., Mexico)",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 88,
+    "nombre": "Cadori",
+    "telefono": "+16263649468",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "14 Jul 2026",
+    "hotel": "Airbnb",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
