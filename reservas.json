@@ -1054,5 +1054,17 @@
     "hotel": "Airbnb",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 89,
+    "nombre": "Maia  Adleman",
+    "telefono": "+16096343321",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "1 Jul 2026",
+    "hotel": "Casa Astral",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
