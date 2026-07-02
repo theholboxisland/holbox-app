@@ -1066,5 +1066,17 @@
     "hotel": "Casa Astral",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 90,
+    "nombre": "Wilf  Wheeler",
+    "telefono": "+447896344703",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "4 Jul 2026",
+    "hotel": "Hostel Tribu",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
