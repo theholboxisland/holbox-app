@@ -1078,5 +1078,17 @@
     "hotel": "Hostel Tribu",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 91,
+    "nombre": "Anthony  Parce",
+    "telefono": "+14256527599",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "8 Jul 2026",
+    "hotel": "Nomade Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
