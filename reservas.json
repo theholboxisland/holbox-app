@@ -1090,5 +1090,17 @@
     "hotel": "Nomade Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 92,
+    "nombre": "Carla Maria Ayala  Castillo",
+    "telefono": "+393477845525",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "14 Sep 2026",
+    "hotel": "Villas Margaritas Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
