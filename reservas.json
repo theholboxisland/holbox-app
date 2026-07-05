@@ -1114,5 +1114,17 @@
     "hotel": "prueba",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 94,
+    "nombre": "Clifford  Kurtzman",
+    "telefono": "+12813524970",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "7 Jul 2026",
+    "hotel": "Casa Peregrino",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
