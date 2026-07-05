@@ -1102,5 +1102,17 @@
     "hotel": "Villas Margaritas Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 93,
+    "nombre": "ERWIN AYVAR  ORTEGA",
+    "telefono": "+524442785684",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "6 de julio de 2026 a las 7:00 a.m. GMT-6",
+    "hotel": "prueba",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
