@@ -1138,5 +1138,17 @@
     "hotel": "Che holbox Hotel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 96,
+    "nombre": "Jessica  Jordanova",
+    "telefono": "+32492766780",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "17 Jul 2026",
+    "hotel": "no reservation yet",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
