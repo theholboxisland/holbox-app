@@ -1126,5 +1126,17 @@
     "hotel": "Casa Peregrino",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 95,
+    "nombre": "Yassine  Kabbali",
+    "telefono": "+33787195997",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "15 Jul 2026",
+    "hotel": "Che holbox Hotel",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
