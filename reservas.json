@@ -1150,5 +1150,17 @@
     "hotel": "no reservation yet",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 97,
+    "nombre": "Olivia  Peters",
+    "telefono": "+447443290603",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "8 Jul 2026",
+    "hotel": "Villa los mangles boutique hotel",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
