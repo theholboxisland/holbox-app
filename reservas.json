@@ -1162,5 +1162,17 @@
     "hotel": "Villa los mangles boutique hotel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 98,
+    "nombre": "Emma  Fumoux",
+    "telefono": "+33620705227",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "2 Aug 2026",
+    "hotel": "Hotel Boutique Naj Casa Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
