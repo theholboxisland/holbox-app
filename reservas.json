@@ -1174,5 +1174,17 @@
     "hotel": "Hotel Boutique Naj Casa Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 99,
+    "nombre": "Sara Traver  Gual",
+    "telefono": "+34687486025",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "14 Jul 2026",
+    "hotel": "Alcobas del mar",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
