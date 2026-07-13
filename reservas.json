@@ -1186,5 +1186,17 @@
     "hotel": "Alcobas del mar",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 100,
+    "nombre": "Chiara",
+    "telefono": "+393334766650",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "14 Aug 2026",
+    "hotel": "Holbox Dream BeachFront Hotel",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
