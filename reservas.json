@@ -1198,5 +1198,17 @@
     "hotel": "Holbox Dream BeachFront Hotel",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 101,
+    "nombre": "Mathijs  Vanheers",
+    "telefono": "+32471097380",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "17 Jul 2026",
+    "hotel": "Coconut by óol hotels",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
