@@ -1210,5 +1210,17 @@
     "hotel": "Coconut by óol hotels",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 102,
+    "nombre": "Pascal  Muehlheim",
+    "telefono": "+41764808868",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "20 Jul 2026",
+    "hotel": "Hotel Zomay",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
