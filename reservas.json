@@ -1222,5 +1222,17 @@
     "hotel": "Hotel Zomay",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 103,
+    "nombre": "Tom  Evans",
+    "telefono": "+447986241736",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "20 Jul 2026",
+    "hotel": "Tribu",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
