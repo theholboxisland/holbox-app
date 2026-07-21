@@ -1234,5 +1234,17 @@
     "hotel": "Tribu",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 104,
+    "nombre": "Silvia",
+    "telefono": "+34617536626",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "25 Aug 2026",
+    "hotel": "Hotel Villas Tiburon, Paseo Kuka 1, 77310 Isla Holbox, México",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
