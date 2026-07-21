@@ -1246,5 +1246,17 @@
     "hotel": "Hotel Villas Tiburon, Paseo Kuka 1, 77310 Isla Holbox, México",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 105,
+    "nombre": "Bryan  Glonchak",
+    "telefono": "+17147250435",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "23 Jul 2026",
+    "hotel": "Rhincodon Typus cabins",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
