@@ -1318,5 +1318,17 @@
     "hotel": "Por Confirmar",
     "tour": "Whale Shark Tour",
     "notas": "Restan 9200 pesos"
+  },
+  {
+    "id": 111,
+    "nombre": "Cecilia Torre",
+    "telefono": "4525262136",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "07/01/2026",
+    "hotel": "Coconut",
+    "tour": "Whale Shark Tour",
+    "notas": "Restan 6900 pesos hotel"
   }
 ]
