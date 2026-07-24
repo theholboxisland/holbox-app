@@ -1294,5 +1294,17 @@
     "hotel": "Villas Flamingos",
     "tour": "Whale Shark Tour",
     "notas": "pide guía en inglés"
+  },
+  {
+    "id": 109,
+    "nombre": "Rolien De Bruyn",
+    "telefono": "+31642862849",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "26/08/2026",
+    "hotel": "Beachfront Hotel La Palapa",
+    "tour": "Whale Shark Tour",
+    "notas": "pagado online, debo 9200 a Roy"
   }
 ]
