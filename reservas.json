@@ -1282,5 +1282,17 @@
     "hotel": "Villas Flamingos",
     "tour": "3 Islands Tour",
     "notas": "pide guía en inglés"
+  },
+  {
+    "id": 108,
+    "nombre": "Ana García",
+    "telefono": "No proporcionado",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "01/08/2026",
+    "hotel": "Villas Flamingos",
+    "tour": "Whale Shark Tour",
+    "notas": "pide guía en inglés"
   }
 ]
