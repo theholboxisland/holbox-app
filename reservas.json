@@ -1270,5 +1270,17 @@
     "hotel": "Punta Sam",
     "tour": "Whale Shark Tour",
     "notas": "Restan 3200 pesos"
+  },
+  {
+    "id": 107,
+    "nombre": "Ana García",
+    "telefono": "No proporcionado",
+    "pax": 4,
+    "monto": 3200,
+    "monto_pendiente": 1600,
+    "fecha": "01/08/2026",
+    "hotel": "Villas Flamingos",
+    "tour": "3 Islands Tour",
+    "notas": "pide guía en inglés"
   }
 ]
