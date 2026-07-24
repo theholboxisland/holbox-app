@@ -1258,5 +1258,17 @@
     "hotel": "Rhincodon Typus cabins",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 106,
+    "nombre": "Viviana",
+    "telefono": "55 4441 8485",
+    "pax": 2,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "25/07/2026",
+    "hotel": "Punta Sam",
+    "tour": "Whale Shark Tour",
+    "notas": "Restan 3200 pesos"
   }
 ]
