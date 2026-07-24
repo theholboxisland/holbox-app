@@ -1306,5 +1306,17 @@
     "hotel": "Beachfront Hotel La Palapa",
     "tour": "Whale Shark Tour",
     "notas": "pagado online, debo 9200 a Roy"
+  },
+  {
+    "id": 110,
+    "nombre": "Wendy",
+    "telefono": "55 4593 5001",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "27/07/2026",
+    "hotel": "Por Confirmar",
+    "tour": "Whale Shark Tour",
+    "notas": "Restan 9200 pesos"
   }
 ]
