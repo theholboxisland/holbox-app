@@ -1390,5 +1390,17 @@
     "hotel": "Hotel las nubes holbox",
     "tour": "Whale Shark Tour",
     "notas": "7:00 AM CST"
+  },
+  {
+    "id": 117,
+    "nombre": "Jesper Luther",
+    "telefono": "+4540256915",
+    "pax": 5,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "07/01/2026",
+    "hotel": "Holbox Deluxe Wellness Apartments",
+    "tour": "Whale Shark Tour",
+    "notas": "Debe 500 pesos"
   }
 ]
