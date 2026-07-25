@@ -1366,5 +1366,17 @@
     "hotel": "Awa Boutique Hotel",
     "tour": "Whale Shark Tour",
     "notas": "Deben 16,000 pesos"
+  },
+  {
+    "id": 115,
+    "nombre": "Karime Acosta",
+    "telefono": "No proporcionado",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "08/08/2026",
+    "hotel": "Casa barbara",
+    "tour": "Whale Shark Tour",
+    "notas": ""
   }
 ]
