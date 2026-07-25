@@ -1342,5 +1342,17 @@
     "hotel": "Calle 21B #93B x 26 Privada Tulipanes 21B Col. Chuburná de Hidalgo",
     "tour": "Whale Shark Tour",
     "notas": "Debe 2000 pesos"
+  },
+  {
+    "id": 113,
+    "nombre": "Meir",
+    "telefono": "415 125 0365",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "25/07/2026",
+    "hotel": "Luxury Arena Apartment",
+    "tour": "Whale Shark Tour",
+    "notas": "restan 4600 pesos"
   }
 ]
