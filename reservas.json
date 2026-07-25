@@ -1354,5 +1354,17 @@
     "hotel": "Luxury Arena Apartment",
     "tour": "Whale Shark Tour",
     "notas": "restan 4600 pesos"
+  },
+  {
+    "id": 114,
+    "nombre": "Nancy",
+    "telefono": "No proporcionado",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "29/07/2026",
+    "hotel": "Awa Boutique Hotel",
+    "tour": "Whale Shark Tour",
+    "notas": "Deben 16,000 pesos"
   }
 ]
