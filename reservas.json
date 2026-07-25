@@ -1378,5 +1378,17 @@
     "hotel": "Casa barbara",
     "tour": "Whale Shark Tour",
     "notas": ""
+  },
+  {
+    "id": 116,
+    "nombre": "Sheena McNeal",
+    "telefono": "+18052159099",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "30/07/2026",
+    "hotel": "Hotel las nubes holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "7:00 AM CST"
   }
 ]
