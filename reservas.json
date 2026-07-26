@@ -1402,5 +1402,17 @@
     "hotel": "Holbox Deluxe Wellness Apartments",
     "tour": "Whale Shark Tour",
     "notas": "Debe 500 pesos"
+  },
+  {
+    "id": 118,
+    "nombre": "Ana Luisa Sousa",
+    "telefono": "9841561799",
+    "pax": 2,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "16/01/2026",
+    "hotel": "Hotel Awa",
+    "tour": "Whale Shark Tour",
+    "notas": "restan 4600"
   }
 ]
