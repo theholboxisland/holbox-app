@@ -1414,5 +1414,17 @@
     "hotel": "Hotel Awa",
     "tour": "Whale Shark Tour",
     "notas": "restan 4600"
+  },
+  {
+    "id": 119,
+    "nombre": "Javi de Sena",
+    "telefono": "+447894998709",
+    "pax": 2,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "27/07/2026",
+    "hotel": "AWA Hotel Boutique, Holbox, Quintana Roo, Mexico",
+    "tour": "Whale Shark Tour",
+    "notas": "Idioma del tour: Español (Live tour guide). Idioma del cliente: English"
   }
 ]
