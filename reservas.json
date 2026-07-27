@@ -1486,5 +1486,17 @@
     "hotel": "Spirit Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Privado"
+  },
+  {
+    "id": 125,
+    "nombre": "Jeanne Marie Kremers",
+    "telefono": "+31628998288",
+    "pax": 6,
+    "monto": 16800,
+    "monto_pendiente": 13800,
+    "fecha": "29/01/2026",
+    "hotel": "Spirit Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Privado"
   }
 ]
