@@ -1474,5 +1474,17 @@
     "hotel": "Mystique by Royalton",
     "tour": "Whale Shark Tour",
     "notas": "7:00 AM CST"
+  },
+  {
+    "id": 124,
+    "nombre": "Jeanne Marie Kremers",
+    "telefono": "+31628998288",
+    "pax": 6,
+    "monto": 16800,
+    "monto_pendiente": 13800,
+    "fecha": "28/07/2026",
+    "hotel": "Spirit Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": "Privado"
   }
 ]
