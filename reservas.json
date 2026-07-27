@@ -1426,5 +1426,17 @@
     "hotel": "AWA Hotel Boutique, Holbox, Quintana Roo, Mexico",
     "tour": "Whale Shark Tour",
     "notas": "Idioma del tour: Español (Live tour guide). Idioma del cliente: English"
+  },
+  {
+    "id": 120,
+    "nombre": "Everaldo Moreira",
+    "telefono": "+5561984062345",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29/07/2026",
+    "hotel": "Hotel Amadeo",
+    "tour": "Whale Shark Tour",
+    "notas": "Restan 4600 pesos"
   }
 ]
