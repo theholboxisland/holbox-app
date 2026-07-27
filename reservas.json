@@ -1438,5 +1438,17 @@
     "hotel": "Hotel Amadeo",
     "tour": "Whale Shark Tour",
     "notas": "Restan 4600 pesos"
+  },
+  {
+    "id": 121,
+    "nombre": "Raul Matla",
+    "telefono": "9995451251",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29/07/2026",
+    "hotel": "por definir",
+    "tour": "Whale Shark Tour",
+    "notas": "restan 4600 pesos"
   }
 ]
