@@ -1450,5 +1450,17 @@
     "hotel": "por definir",
     "tour": "Whale Shark Tour",
     "notas": "restan 4600 pesos"
+  },
+  {
+    "id": 122,
+    "nombre": "Sin nombre",
+    "telefono": "No proporcionado",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "Por confirmar",
+    "hotel": "Por confirmar",
+    "tour": "Whale Shark Tour",
+    "notas": ""
   }
 ]
