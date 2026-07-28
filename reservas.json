@@ -1498,5 +1498,17 @@
     "hotel": "Spirit Holbox",
     "tour": "Whale Shark Tour",
     "notas": "Privado"
+  },
+  {
+    "id": 126,
+    "nombre": "Charles  Fugger",
+    "telefono": "+19082461988",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "29 Jul 2026",
+    "hotel": "Mystique by Royalton",
+    "tour": "Whale Shark Tour",
+    "notas": "Reserva vía booking"
   }
 ]
