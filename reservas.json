@@ -1510,5 +1510,17 @@
     "hotel": "Mystique by Royalton",
     "tour": "Whale Shark Tour",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 127,
+    "nombre": "Ilona Ruijer",
+    "telefono": "+31621671133",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29/07/2026",
+    "hotel": "Shankara Holbox",
+    "tour": "Whale Shark Tour",
+    "notas": ""
   }
 ]
