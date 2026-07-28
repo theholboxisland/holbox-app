@@ -1522,5 +1522,17 @@
     "hotel": "Shankara Holbox",
     "tour": "Whale Shark Tour",
     "notas": ""
+  },
+  {
+    "id": 128,
+    "nombre": "Vanessa",
+    "telefono": "+1 (514) 816-5798",
+    "pax": 2,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "29/07/2026",
+    "hotel": "casa muuch",
+    "tour": "Whale Shark Tour",
+    "notas": "deben 4600 pesos"
   }
 ]
