@@ -1534,5 +1534,17 @@
     "hotel": "casa muuch",
     "tour": "Whale Shark Tour",
     "notas": "deben 4600 pesos"
+  },
+  {
+    "id": 129,
+    "nombre": "Yann",
+    "telefono": "+33 7 81 47 40 62",
+    "pax": 1,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "12/08/2026",
+    "hotel": "Barco Verde Hostel",
+    "tour": "Whale Shark Tour",
+    "notas": ""
   }
 ]
