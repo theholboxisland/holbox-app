@@ -1546,5 +1546,17 @@
     "hotel": "Barco Verde Hostel",
     "tour": "Whale Shark Tour",
     "notas": ""
+  },
+  {
+    "id": 130,
+    "nombre": "María López",
+    "telefono": "No proporcionado",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "30/07/2026",
+    "hotel": "Hotel Xaloc",
+    "tour": "Whale Shark Tour",
+    "notas": ""
   }
 ]
