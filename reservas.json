@@ -1570,5 +1570,17 @@
     "hotel": "Hotel en Cancún",
     "tour": "Tiburon Ballena Cancun",
     "notas": ""
+  },
+  {
+    "id": 132,
+    "nombre": "María López",
+    "telefono": "No proporcionado",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "30/07/2026",
+    "hotel": "Hotel Xaloc",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
