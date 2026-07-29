@@ -1594,5 +1594,17 @@
     "hotel": "casa del mar",
     "tour": "Tiburon Ballena Holbox",
     "notas": "pagado online, debe 4600 pesos"
+  },
+  {
+    "id": 134,
+    "nombre": "Tim Bakker",
+    "telefono": "+31 6 21557013",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "31/07/2026",
+    "hotel": "Hotel Zomay",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos"
   }
 ]
