@@ -1582,5 +1582,17 @@
     "hotel": "Hotel Xaloc",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 133,
+    "nombre": "Roberto Garcia",
+    "telefono": "55 3200 2182",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "30/07/2026",
+    "hotel": "casa del mar",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "pagado online, debe 4600 pesos"
   }
 ]
