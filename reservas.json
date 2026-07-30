@@ -1630,5 +1630,17 @@
     "hotel": "Hotel Aurora",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Deben 13800"
+  },
+  {
+    "id": 137,
+    "nombre": "Roland Feldman",
+    "telefono": "+1 (843) 518-0807",
+    "pax": 8,
+    "monto": 22400,
+    "monto_pendiente": 18400,
+    "fecha": "22/01/2026",
+    "hotel": "Hotel Villas Hm Paraiso del Mar",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Privado"
   }
 ]
