@@ -1618,5 +1618,17 @@
     "hotel": "Casa astral hotel boutique",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 136,
+    "nombre": "Jenthe Tack",
+    "telefono": "+32471889642",
+    "pax": 6,
+    "monto": 16800,
+    "monto_pendiente": 13800,
+    "fecha": "03/08/2026",
+    "hotel": "Hotel Aurora",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Deben 13800"
   }
 ]
