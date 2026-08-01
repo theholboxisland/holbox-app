@@ -1642,5 +1642,17 @@
     "hotel": "Hotel Villas Hm Paraiso del Mar",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Privado"
+  },
+  {
+    "id": 138,
+    "nombre": "Franziska Uecker",
+    "telefono": "+436706585658",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "02/08/2026",
+    "hotel": "Beachfront Hotel La Palapa",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Whale Shark Tour Holbox. Hora: 7:00 AM CST. Ubicación: Hotel Lobby. Staff: Holbox Island Tour Boat 1. Precio total: MX$5,600.00. Monto pagado: MX$4,600.00"
   }
 ]
