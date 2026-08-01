@@ -1654,5 +1654,17 @@
     "hotel": "Beachfront Hotel La Palapa",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Whale Shark Tour Holbox. Hora: 7:00 AM CST. Ubicación: Hotel Lobby. Staff: Holbox Island Tour Boat 1. Precio total: MX$5,600.00. Monto pagado: MX$4,600.00"
+  },
+  {
+    "id": 139,
+    "nombre": "Daniel Gutierrez  Saborio",
+    "telefono": "+50683270494",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "19 Aug 2026",
+    "hotel": "Casa Vainilla Holbox Island",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
