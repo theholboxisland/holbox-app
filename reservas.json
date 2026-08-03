@@ -1678,5 +1678,17 @@
     "hotel": "Muelle",
     "tour": "Tiburon Ballena Cancun",
     "notas": "Llega al muelle"
+  },
+  {
+    "id": 141,
+    "nombre": "Folliet",
+    "telefono": "+41798976443",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "10/08/2026",
+    "hotel": "Mystique",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
