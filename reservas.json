@@ -1666,5 +1666,17 @@
     "hotel": "Casa Vainilla Holbox Island",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 140,
+    "nombre": "Rosa Elvia Cid Zúñiga",
+    "telefono": "No proporcionado",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 8000,
+    "fecha": "06/08/2026",
+    "hotel": "Muelle",
+    "tour": "Tiburon Ballena Cancun",
+    "notas": "Llega al muelle"
   }
 ]
