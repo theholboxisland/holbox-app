@@ -1702,5 +1702,17 @@
     "hotel": "Por confirmar",
     "tour": "",
     "notas": ""
+  },
+  {
+    "id": 143,
+    "nombre": "Siri Bjornsen",
+    "telefono": "+47 932 01 913",
+    "pax": 6,
+    "monto": 16800,
+    "monto_pendiente": 13800,
+    "fecha": "Por confirmar",
+    "hotel": "Hotel Soho",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "privado tb"
   }
 ]
