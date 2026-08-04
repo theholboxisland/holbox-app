@@ -1726,5 +1726,17 @@
     "hotel": "Villas HM Paraiso del Mar",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 145,
+    "nombre": "María López",
+    "telefono": "No proporcionado",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "07/08/2026",
+    "hotel": "hotel Xcaret",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "vino de instagram"
   }
 ]
