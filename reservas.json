@@ -1738,5 +1738,17 @@
     "hotel": "hotel Xcaret",
     "tour": "Tiburon Ballena Holbox",
     "notas": "vino de instagram"
+  },
+  {
+    "id": 146,
+    "nombre": "Kelly  Howard",
+    "telefono": "+17132564698",
+    "pax": 8,
+    "monto": 22400,
+    "monto_pendiente": 18400,
+    "fecha": "7 Aug 2026",
+    "hotel": "Private house - VRBO https://vrbo.onelink.me/ItNz/8215lly4 Casa Milu",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
