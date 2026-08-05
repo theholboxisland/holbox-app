@@ -1750,5 +1750,17 @@
     "hotel": "Private house - VRBO https://vrbo.onelink.me/ItNz/8215lly4 Casa Milu",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 147,
+    "nombre": "Pablo Alonso Hernaez",
+    "telefono": "+34663989583",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "06/08/2026",
+    "hotel": "La Palma Holbox Wellnes Suites & Apartments",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Hora: 7:00 a.m. GMT-6. Monto: $4,600.00"
   }
 ]
