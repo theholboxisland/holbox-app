@@ -1762,5 +1762,17 @@
     "hotel": "La Palma Holbox Wellnes Suites & Apartments",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Hora: 7:00 a.m. GMT-6. Monto: $4,600.00"
+  },
+  {
+    "id": 148,
+    "nombre": "Lead #16944320",
+    "telefono": "+34663989583",
+    "pax": 1,
+    "monto": 0,
+    "monto_pendiente": 0,
+    "fecha": "Por confirmar",
+    "hotel": "Por confirmar",
+    "tour": "",
+    "notas": ""
   }
 ]
