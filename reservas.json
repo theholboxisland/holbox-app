@@ -1786,5 +1786,17 @@
     "hotel": "Hotel Naj Casa Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 150,
+    "nombre": "Raul Matla",
+    "telefono": "9995451251",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "28/08/2026",
+    "hotel": "Hotel Marina Sunrise",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
