@@ -1774,5 +1774,17 @@
     "hotel": "Por confirmar",
     "tour": "",
     "notas": ""
+  },
+  {
+    "id": 149,
+    "nombre": "Armanda  Kouwenhoven",
+    "telefono": "+31652075987",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "10 Aug 2026",
+    "hotel": "Hotel Naj Casa Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
