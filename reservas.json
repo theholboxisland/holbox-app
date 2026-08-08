@@ -1798,5 +1798,17 @@
     "hotel": "Hotel Marina Sunrise",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 151,
+    "nombre": "Borja",
+    "telefono": "+34 672 76 16 49",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "09/08/2026",
+    "hotel": "Nômade Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
