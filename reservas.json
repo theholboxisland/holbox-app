@@ -1834,5 +1834,17 @@
     "hotel": "Casa Blanca bed and breakfast Geronimo de Anguilar and vulkay.",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 154,
+    "nombre": "Silvia Ávila García y Luis Alberto Rangel López",
+    "telefono": "4431645376",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "09/08/2026",
+    "hotel": "Villas Tiburon",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Anticipo requerido para apartar lugar. Resto a liquidar el día del tour."
   }
 ]
