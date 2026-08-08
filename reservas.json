@@ -1822,5 +1822,17 @@
     "hotel": "Por confirmar",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600 pesos, hotel pendiente"
+  },
+  {
+    "id": 153,
+    "nombre": "Rachel  Schumm",
+    "telefono": "+447854266745",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "9 Aug 2026",
+    "hotel": "Casa Blanca bed and breakfast Geronimo de Anguilar and vulkay.",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
