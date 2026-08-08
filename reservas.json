@@ -1810,5 +1810,17 @@
     "hotel": "Nômade Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 152,
+    "nombre": "Michka Deck",
+    "telefono": "+33 7 68 83 97 73",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "11/08/2026",
+    "hotel": "Por confirmar",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos, hotel pendiente"
   }
 ]
