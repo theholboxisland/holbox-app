@@ -1882,5 +1882,17 @@
     "hotel": "CHE Hostel",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 158,
+    "nombre": "MARIO GIMÉNEZ",
+    "telefono": "+34688923005",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "10/08/2026",
+    "hotel": "CASA BALAM HOLBOX",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Whale Shark Tour Holbox. Hora: 7:00 a.m. GMT-6. Ubicación: Hotel Lobby. Personal: Holbox Island Tour Boat 1. Precio total: $5,600.00"
   }
 ]
