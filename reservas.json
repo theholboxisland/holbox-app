@@ -1858,5 +1858,17 @@
     "hotel": "Villas Palmar Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 156,
+    "nombre": "Giuseppe  D'avanzo",
+    "telefono": "+393928794609",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "11 Aug 2026",
+    "hotel": "Hotel Amadeo",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
