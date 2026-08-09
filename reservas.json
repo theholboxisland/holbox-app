@@ -1894,5 +1894,17 @@
     "hotel": "CASA BALAM HOLBOX",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Whale Shark Tour Holbox. Hora: 7:00 a.m. GMT-6. Ubicación: Hotel Lobby. Personal: Holbox Island Tour Boat 1. Precio total: $5,600.00"
+  },
+  {
+    "id": 159,
+    "nombre": "Jorge",
+    "telefono": "9991572779",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "10/01/2026",
+    "hotel": "Mystique",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
