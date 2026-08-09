@@ -1846,5 +1846,17 @@
     "hotel": "Villas Tiburon",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Anticipo requerido para apartar lugar. Resto a liquidar el día del tour."
+  },
+  {
+    "id": 155,
+    "nombre": "Michael  Kraftner",
+    "telefono": "+436802112490",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "10 Aug 2026",
+    "hotel": "Villas Palmar Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
