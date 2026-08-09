@@ -1870,5 +1870,17 @@
     "hotel": "Hotel Amadeo",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 157,
+    "nombre": "Peter  JACK",
+    "telefono": "+33629604215",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "11 Aug 2026",
+    "hotel": "CHE Hostel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
