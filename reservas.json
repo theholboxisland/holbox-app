@@ -1906,5 +1906,17 @@
     "hotel": "Mystique",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 160,
+    "nombre": "Daniela",
+    "telefono": "+52 55 2302 6970",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4000,
+    "fecha": "11/09/2026",
+    "hotel": "Muelle Punta Sam",
+    "tour": "Tiburon Ballena Cancun",
+    "notas": ""
   }
 ]
