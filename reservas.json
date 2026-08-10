@@ -1918,5 +1918,17 @@
     "hotel": "Muelle Punta Sam",
     "tour": "Tiburon Ballena Cancun",
     "notas": ""
+  },
+  {
+    "id": 161,
+    "nombre": "Celine Makowski",
+    "telefono": "+33632907914",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "07/01/2026",
+    "hotel": "Hotel Puerto Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 9,200 pesos"
   }
 ]
