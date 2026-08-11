@@ -1930,5 +1930,17 @@
     "hotel": "Hotel Puerto Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 9,200 pesos"
+  },
+  {
+    "id": 162,
+    "nombre": "Patrick  Souto",
+    "telefono": "+41794290450",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "14 Aug 2026",
+    "hotel": "Ensueño Holbox & Beach Club",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
