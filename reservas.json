@@ -1942,5 +1942,17 @@
     "hotel": "Ensueño Holbox & Beach Club",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 163,
+    "nombre": "Nina Dettling",
+    "telefono": "+491632948448",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "12/08/2026",
+    "hotel": "Casa Peregrino",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Pickup en Hotel Lobby a las 7:00 AM CST. Staff: Holbox Island Tour Boat 1. Precio total: MX$11,200.00"
   }
 ]
