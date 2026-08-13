@@ -1966,5 +1966,17 @@
     "hotel": "Punta Sam",
     "tour": "Tiburon Ballena Cancun",
     "notas": "11200 pesos"
+  },
+  {
+    "id": 165,
+    "nombre": "Paulo  Resende",
+    "telefono": "+351918971755",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "14 Aug 2026",
+    "hotel": "Villas Tiburon",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
