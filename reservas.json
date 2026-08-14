@@ -1978,5 +1978,17 @@
     "hotel": "Villas Tiburon",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 166,
+    "nombre": "Dutilh",
+    "telefono": "+31631002565",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "15 Aug 2026",
+    "hotel": "Holbox dream",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
