@@ -1990,5 +1990,17 @@
     "hotel": "Holbox dream",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 167,
+    "nombre": "Montserrat Moreno",
+    "telefono": "+34600410007",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "18/08/2026",
+    "hotel": "Hotel Holbox Dream Beachfront",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 6900"
   }
 ]
