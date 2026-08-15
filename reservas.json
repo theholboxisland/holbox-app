@@ -2002,5 +2002,17 @@
     "hotel": "Hotel Holbox Dream Beachfront",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 6900"
+  },
+  {
+    "id": 168,
+    "nombre": "Tim Coffey",
+    "telefono": "+447984653494",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "20/08/2026",
+    "hotel": "Hotel Holbox Dream beach",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 6900 pesos"
   }
 ]
