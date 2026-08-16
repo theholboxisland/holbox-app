@@ -2062,5 +2062,17 @@
     "hotel": "Che Holbox Hostel & Bar",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 2300 pesos"
+  },
+  {
+    "id": 173,
+    "nombre": "Roger  Mensa",
+    "telefono": "+17206301252",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "25 Aug 2026",
+    "hotel": "La Aldea Glampling",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
