@@ -2038,5 +2038,17 @@
     "hotel": "Hotel Villa Sanara",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600"
+  },
+  {
+    "id": 171,
+    "nombre": "Maud Decottignies",
+    "telefono": "+33629714132",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "27/08/2026",
+    "hotel": "airbnb Calle bagre",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "tour en francés"
   }
 ]
