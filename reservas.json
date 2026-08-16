@@ -2050,5 +2050,17 @@
     "hotel": "airbnb Calle bagre",
     "tour": "Tiburon Ballena Holbox",
     "notas": "tour en francés"
+  },
+  {
+    "id": 172,
+    "nombre": "Kaja Dillschneider",
+    "telefono": "+41775052765",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "17/08/2026",
+    "hotel": "Che Holbox Hostel & Bar",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 2300 pesos"
   }
 ]
