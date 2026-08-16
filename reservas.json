@@ -2014,5 +2014,17 @@
     "hotel": "Hotel Holbox Dream beach",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 6900 pesos"
+  },
+  {
+    "id": 169,
+    "nombre": "Pedro  Rivero",
+    "telefono": "+529987180600",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "20 Aug 2026",
+    "hotel": "Delek",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
