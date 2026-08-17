@@ -2074,5 +2074,17 @@
     "hotel": "La Aldea Glampling",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 174,
+    "nombre": "Nora",
+    "telefono": "+34638878321",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "18/08/2026",
+    "hotel": "Ana y José",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
