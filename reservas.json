@@ -2086,5 +2086,17 @@
     "hotel": "Ana y José",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 175,
+    "nombre": "Aad Van der Werf",
+    "telefono": "+31651594596",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "19/08/2026",
+    "hotel": "Hotel Casa Astral",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
