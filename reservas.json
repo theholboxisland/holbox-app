@@ -2098,5 +2098,17 @@
     "hotel": "Hotel Casa Astral",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 176,
+    "nombre": "Jaclyn",
+    "telefono": "+15098593310",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "25 Aug 2026",
+    "hotel": "Holbox Dream Hotel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
