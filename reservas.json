@@ -2110,5 +2110,17 @@
     "hotel": "Holbox Dream Hotel",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 177,
+    "nombre": "Sara",
+    "telefono": "+34660436932",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "22 Aug 2026",
+    "hotel": "Holbox Dream",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
