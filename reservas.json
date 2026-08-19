@@ -2122,5 +2122,17 @@
     "hotel": "Holbox Dream",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 178,
+    "nombre": "Céline Giraud",
+    "telefono": "+33610805552",
+    "pax": 5,
+    "monto": 14000,
+    "monto_pendiente": 11500,
+    "fecha": "22/08/2026",
+    "hotel": "Hôtel Palapas del sol",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Con guía francés"
   }
 ]
