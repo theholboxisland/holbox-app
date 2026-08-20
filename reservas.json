@@ -2146,5 +2146,17 @@
     "hotel": "Sirenas Caribbean Rooms",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600 pesos"
+  },
+  {
+    "id": 180,
+    "nombre": "Cristina Gomez",
+    "telefono": "9984960467",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "21/08/2026",
+    "hotel": "Hotel Mystique",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos"
   }
 ]
