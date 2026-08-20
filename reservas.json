@@ -2134,5 +2134,17 @@
     "hotel": "Hôtel Palapas del sol",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Con guía francés"
+  },
+  {
+    "id": 179,
+    "nombre": "Gorka Oficialdegui Piñeiro",
+    "telefono": "+34684612988",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "20/08/2026",
+    "hotel": "Sirenas Caribbean Rooms",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos"
   }
 ]
