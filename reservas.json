@@ -2170,5 +2170,17 @@
     "hotel": "Pendiente",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600 pesos"
+  },
+  {
+    "id": 182,
+    "nombre": "Ana Velazquez",
+    "telefono": "4424126453",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "27/08/2026",
+    "hotel": "Delek Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Privado. Cliente debe 16000, proveedor debe 500"
   }
 ]
