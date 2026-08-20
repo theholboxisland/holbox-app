@@ -2182,5 +2182,17 @@
     "hotel": "Delek Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Privado. Cliente debe 16000, proveedor debe 500"
+  },
+  {
+    "id": 183,
+    "nombre": "Oriol Codina",
+    "telefono": "+34669443616",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "22/08/2026",
+    "hotel": "hotel amadeo",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
