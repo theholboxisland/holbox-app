@@ -2158,5 +2158,17 @@
     "hotel": "Hotel Mystique",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600 pesos"
+  },
+  {
+    "id": 181,
+    "nombre": "Jorge Gonzalez",
+    "telefono": "5539773274",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "22/03/2026",
+    "hotel": "Pendiente",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos"
   }
 ]
