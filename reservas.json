@@ -2194,5 +2194,17 @@
     "hotel": "hotel amadeo",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 184,
+    "nombre": "Vera",
+    "telefono": "+393336587776",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "18/01/2026",
+    "hotel": "hotel aldea kuka",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
