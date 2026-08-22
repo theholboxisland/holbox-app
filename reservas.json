@@ -2242,5 +2242,17 @@
     "hotel": "Blue Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 188,
+    "nombre": "Ksenia Papazian",
+    "telefono": "+971551787659",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "23/08/2026",
+    "hotel": "Blue holbox hôtel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 4600 pesos"
   }
 ]
