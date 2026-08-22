@@ -2230,5 +2230,17 @@
     "hotel": "Hotel MAYARI Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Whale Shark Tour Holbox. Hora: 7:00 a.m. GMT-6. Ubicación: Hotel Lobby. Miembro del personal: Holbox Island Tour Boat 1. Precio total: $5,600.00"
+  },
+  {
+    "id": 187,
+    "nombre": "Nicolas  Audren",
+    "telefono": "+33752321309",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "23 Aug 2026",
+    "hotel": "Blue Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
