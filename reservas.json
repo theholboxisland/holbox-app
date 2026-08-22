@@ -2254,5 +2254,17 @@
     "hotel": "Blue holbox hôtel",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600 pesos"
+  },
+  {
+    "id": 189,
+    "nombre": "quere",
+    "telefono": "+33651308141",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "23/08/2026",
+    "hotel": "Villas Palmar Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
