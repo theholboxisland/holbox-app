@@ -2206,5 +2206,17 @@
     "hotel": "hotel aldea kuka",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 185,
+    "nombre": "Louise  Devismes",
+    "telefono": "+33764261864",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "24 Aug 2026",
+    "hotel": "Boheme",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
