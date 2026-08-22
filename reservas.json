@@ -2218,5 +2218,17 @@
     "hotel": "Boheme",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 186,
+    "nombre": "Iosu Cueli Aizcorbe",
+    "telefono": "+34690945899",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "22/08/2026",
+    "hotel": "Hotel MAYARI Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Whale Shark Tour Holbox. Hora: 7:00 a.m. GMT-6. Ubicación: Hotel Lobby. Miembro del personal: Holbox Island Tour Boat 1. Precio total: $5,600.00"
   }
 ]
