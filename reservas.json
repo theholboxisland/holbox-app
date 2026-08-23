@@ -2278,5 +2278,17 @@
     "hotel": "Sunsteps Casa Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 191,
+    "nombre": "Flavio Cubedu",
+    "telefono": "No proporcionado",
+    "pax": 7,
+    "monto": 19600,
+    "monto_pendiente": 16100,
+    "fecha": "24/08/2026",
+    "hotel": "Airbnb",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Solicita guía en francés"
   }
 ]
