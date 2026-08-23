@@ -2266,5 +2266,17 @@
     "hotel": "Villas Palmar Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 190,
+    "nombre": "Rico Koevoets",
+    "telefono": "+31634786970",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "23/08/2026",
+    "hotel": "Sunsteps Casa Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
