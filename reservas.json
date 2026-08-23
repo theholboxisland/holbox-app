@@ -2290,5 +2290,17 @@
     "hotel": "Airbnb",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Solicita guía en francés"
+  },
+  {
+    "id": 192,
+    "nombre": "Aj Shome",
+    "telefono": "+447785385510",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "24/08/2026",
+    "hotel": "Hotel Holbox Dream",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Deben 4600"
   }
 ]
