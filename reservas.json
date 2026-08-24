@@ -2326,5 +2326,17 @@
     "hotel": "Hotel Mariel Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Pendiente: $2300 MXN"
+  },
+  {
+    "id": 195,
+    "nombre": "Felix  Dresse",
+    "telefono": "+32479560184",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "30 Aug 2026",
+    "hotel": "Hotel Naj Casa",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
