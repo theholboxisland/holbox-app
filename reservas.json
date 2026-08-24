@@ -2302,5 +2302,17 @@
     "hotel": "Hotel Holbox Dream",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Deben 4600"
+  },
+  {
+    "id": 193,
+    "nombre": "Chiara Marcato",
+    "telefono": "+393207208753",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26/01/2027",
+    "hotel": "Hotel Mariel Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
