@@ -2338,5 +2338,17 @@
     "hotel": "Hotel Naj Casa",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 196,
+    "nombre": "Mateo",
+    "telefono": "5630373924",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "14/09/2026",
+    "hotel": "Villa Sanara",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Anticipo requerido para apartar lugar. Saldo se liquida el día del tour."
   }
 ]
