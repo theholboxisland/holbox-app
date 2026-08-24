@@ -2314,5 +2314,17 @@
     "hotel": "Hotel Mariel Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 194,
+    "nombre": "Chiara Marcato",
+    "telefono": "No proporcionado",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "26/08/2027",
+    "hotel": "Hotel Mariel Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Pendiente: $2300 MXN"
   }
 ]
