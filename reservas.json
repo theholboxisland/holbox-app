@@ -2350,5 +2350,17 @@
     "hotel": "Villa Sanara",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Anticipo requerido para apartar lugar. Saldo se liquida el día del tour."
+  },
+  {
+    "id": 197,
+    "nombre": "Enric Rovira",
+    "telefono": "+34 606 42 66 75",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "26/08/2026",
+    "hotel": "Blue Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Restan 6900"
   }
 ]
