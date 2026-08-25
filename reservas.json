@@ -2374,5 +2374,17 @@
     "hotel": "Hotel Joanza Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Restan 4600"
+  },
+  {
+    "id": 199,
+    "nombre": "CARLOS ALBERTO FERNANDEZ CAÑAS",
+    "telefono": "+34610666330",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26/08/2026",
+    "hotel": "Coconut by OOL hotels",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
