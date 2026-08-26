@@ -2458,5 +2458,17 @@
     "hotel": "AWA Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Hora: 7:00 a.m. GMT-6"
+  },
+  {
+    "id": 206,
+    "nombre": "Ana de la Torre Barranco",
+    "telefono": "+34645956465",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "27/08/2026",
+    "hotel": "Hotel casa barbara holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Hora: 7:00 a.m"
   }
 ]
