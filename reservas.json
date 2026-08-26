@@ -2446,5 +2446,17 @@
     "hotel": "Holbox Deluxe Apartments",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 205,
+    "nombre": "Roberto Rodriguez",
+    "telefono": "+529992975798",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "31/08/2026",
+    "hotel": "AWA Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Hora: 7:00 a.m. GMT-6"
   }
 ]
