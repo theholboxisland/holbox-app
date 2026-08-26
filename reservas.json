@@ -2422,5 +2422,17 @@
     "hotel": "Holbox Midtown Suites",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 203,
+    "nombre": "Rosa María López Berbel",
+    "telefono": "+34627518461",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "29/08/2026",
+    "hotel": "Hotel la casa del sol",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
