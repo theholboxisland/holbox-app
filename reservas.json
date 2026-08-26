@@ -2470,5 +2470,17 @@
     "hotel": "Hotel casa barbara holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Hora: 7:00 a.m"
+  },
+  {
+    "id": 207,
+    "nombre": "Savoie",
+    "telefono": "+33682224167",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "28 Aug 2026",
+    "hotel": "Blue holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
