@@ -2410,5 +2410,17 @@
     "hotel": "hotel holbox dream",
     "tour": "Tiburon Ballena Holbox",
     "notas": "pagado online (debo 4600)"
+  },
+  {
+    "id": 202,
+    "nombre": "Valerio Ferrante",
+    "telefono": "+393808917751",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "27/08/2026",
+    "hotel": "Holbox Midtown Suites",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
