@@ -2398,5 +2398,17 @@
     "hotel": "Hotel para ti",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 201,
+    "nombre": "francesca grillo",
+    "telefono": "+39 329 355 3760",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26/08/2026",
+    "hotel": "hotel holbox dream",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "pagado online (debo 4600)"
   }
 ]
