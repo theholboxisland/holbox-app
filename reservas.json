@@ -2386,5 +2386,17 @@
     "hotel": "Coconut by OOL hotels",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 200,
+    "nombre": "Stefanie",
+    "telefono": "+49 176 63000193",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "26/08/2026",
+    "hotel": "Hotel para ti",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
