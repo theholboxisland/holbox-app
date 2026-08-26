@@ -2434,5 +2434,17 @@
     "hotel": "Hotel la casa del sol",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 204,
+    "nombre": "Ellen Possemiers",
+    "telefono": "+32486176634",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "01/01/2026",
+    "hotel": "Holbox Deluxe Apartments",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
