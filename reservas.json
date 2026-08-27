@@ -2482,5 +2482,17 @@
     "hotel": "Blue holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 208,
+    "nombre": "Sofia",
+    "telefono": "4773932878",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "29/08/2026",
+    "hotel": "blue holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
