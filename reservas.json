@@ -2494,5 +2494,17 @@
     "hotel": "blue holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 209,
+    "nombre": "Simon Macht",
+    "telefono": "+491742092757",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "28/08/2026",
+    "hotel": "Hotel Naj Casa Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "debo 300"
   }
 ]
