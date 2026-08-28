@@ -2518,5 +2518,17 @@
     "hotel": "Hotel para ti",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 211,
+    "nombre": "Amy  McCoy",
+    "telefono": "+447437702887",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29 Aug 2026",
+    "hotel": "Hotel para ti",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
