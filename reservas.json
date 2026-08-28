@@ -2506,5 +2506,17 @@
     "hotel": "Hotel Naj Casa Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "debo 300"
+  },
+  {
+    "id": 210,
+    "nombre": "Amy McCoy",
+    "telefono": "+447437702887",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29/08/2026",
+    "hotel": "Hotel para ti",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
