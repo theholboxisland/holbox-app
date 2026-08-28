@@ -2530,5 +2530,17 @@
     "hotel": "Hotel para ti",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 212,
+    "nombre": "Laura Garceran",
+    "telefono": "+34 625 66 99 88",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "29/08/2026",
+    "hotel": "AWA hotel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
