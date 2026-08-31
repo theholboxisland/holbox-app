@@ -2542,5 +2542,17 @@
     "hotel": "AWA hotel",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 213,
+    "nombre": "Chris Neisz",
+    "telefono": "+31 6 41968053",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "01/09/2026",
+    "hotel": "Hotel Joanza",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
