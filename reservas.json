@@ -2554,5 +2554,17 @@
     "hotel": "Hotel Joanza",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 214,
+    "nombre": "Ignacio Contreras",
+    "telefono": "5620071707",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 8000,
+    "fecha": "06/09/2026",
+    "hotel": "Cancun",
+    "tour": "Tiburon Ballena Cancun",
+    "notas": "Llegada 7:45am"
   }
 ]
