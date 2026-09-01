@@ -2566,5 +2566,17 @@
     "hotel": "Cancun",
     "tour": "Tiburon Ballena Cancun",
     "notas": "Llegada 7:45am"
+  },
+  {
+    "id": 215,
+    "nombre": "Carolina Campilla",
+    "telefono": "5529491777",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "09/09/2026",
+    "hotel": "hotel riu cancun",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
