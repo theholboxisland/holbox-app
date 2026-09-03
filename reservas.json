@@ -2590,5 +2590,17 @@
     "hotel": "Che Nómadas Merida Hostel",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 217,
+    "nombre": "Alejandro",
+    "telefono": "7712669489",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "17/09/2026",
+    "hotel": "AWA Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
