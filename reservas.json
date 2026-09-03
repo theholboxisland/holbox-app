@@ -2602,5 +2602,17 @@
     "hotel": "AWA Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 218,
+    "nombre": "Alejandra de la Cruz",
+    "telefono": "+52 984 125 7356",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4000,
+    "fecha": "05/09/2026",
+    "hotel": "Paseo de los olivos 2 / Playa del Carmen",
+    "tour": "Tiburon Ballena Cancun",
+    "notas": "Restan 4000 pesos"
   }
 ]
