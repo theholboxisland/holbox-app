@@ -2578,5 +2578,17 @@
     "hotel": "hotel riu cancun",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 216,
+    "nombre": "Tomas Roldan  Rojo",
+    "telefono": "+573192111791",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "9 Sep 2026",
+    "hotel": "Che Nómadas Merida Hostel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
