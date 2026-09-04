@@ -2614,5 +2614,17 @@
     "hotel": "Paseo de los olivos 2 / Playa del Carmen",
     "tour": "Tiburon Ballena Cancun",
     "notas": "Restan 4000 pesos"
+  },
+  {
+    "id": 219,
+    "nombre": "Ane Aguirre",
+    "telefono": "+34633012182",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "06/09/2026",
+    "hotel": "hotel black flamingo",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
