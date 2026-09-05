@@ -2638,5 +2638,17 @@
     "hotel": "Casa Coyote Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 221,
+    "nombre": "Mikhaila  Estwick",
+    "telefono": "+12407158232",
+    "pax": 3,
+    "monto": 8400,
+    "monto_pendiente": 6900,
+    "fecha": "8 Sep 2026",
+    "hotel": "Mystique Holbox by Royalton",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
