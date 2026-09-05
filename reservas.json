@@ -2626,5 +2626,17 @@
     "hotel": "hotel black flamingo",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 220,
+    "nombre": "Femke  Versluis",
+    "telefono": "+31627289697",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "7 Sep 2026",
+    "hotel": "Casa Coyote Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
