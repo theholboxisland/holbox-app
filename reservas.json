@@ -2650,5 +2650,17 @@
     "hotel": "Mystique Holbox by Royalton",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 222,
+    "nombre": "JOSE ANTONIO PEREZ VIDAL",
+    "telefono": "4492588100",
+    "pax": 1,
+    "monto": 2800,
+    "monto_pendiente": 2300,
+    "fecha": "15/09/2026",
+    "hotel": "Nomate temple",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
