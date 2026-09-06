@@ -2662,5 +2662,17 @@
     "hotel": "Nomate temple",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 223,
+    "nombre": "Lorenzo Gioco",
+    "telefono": "+393479491978",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "07/09/2026",
+    "hotel": "Casa Astral hotel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
