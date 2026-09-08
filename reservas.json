@@ -2674,5 +2674,17 @@
     "hotel": "Casa Astral hotel",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 224,
+    "nombre": "Gilbert Chan",
+    "telefono": "+14166160071",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "09/09/2026",
+    "hotel": "Hotel Shankara",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
