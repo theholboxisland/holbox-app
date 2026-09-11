@@ -2686,5 +2686,17 @@
     "hotel": "Hotel Shankara",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 225,
+    "nombre": "mike",
+    "telefono": "+15126988186",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "15 Sep 2026",
+    "hotel": "exe el pueblito",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": "Reserva vía booking"
   }
 ]
