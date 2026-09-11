@@ -2698,5 +2698,17 @@
     "hotel": "exe el pueblito",
     "tour": "Tiburon Ballena Holbox",
     "notas": "Reserva vía booking"
+  },
+  {
+    "id": 226,
+    "nombre": "ERIC BALDERRAMA",
+    "telefono": "+525525400897",
+    "pax": 2,
+    "monto": 5600,
+    "monto_pendiente": 4600,
+    "fecha": "13/09/2026",
+    "hotel": "Spirit Holbox",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
