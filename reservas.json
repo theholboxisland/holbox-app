@@ -2710,5 +2710,17 @@
     "hotel": "Spirit Holbox",
     "tour": "Tiburon Ballena Holbox",
     "notas": ""
+  },
+  {
+    "id": 227,
+    "nombre": "Paul Edwards",
+    "telefono": "+995 591 80 50 55",
+    "pax": 4,
+    "monto": 11200,
+    "monto_pendiente": 9200,
+    "fecha": "12/09/2026",
+    "hotel": "Tekio Beach Hotel",
+    "tour": "Tiburon Ballena Holbox",
+    "notas": ""
   }
 ]
